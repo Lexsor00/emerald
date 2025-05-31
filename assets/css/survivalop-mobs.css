@@ -1,0 +1,863 @@
+
+/*
+
+    __  __       _         
+    |  \/  | ___ | |__  ___ 
+    | |\/| |/ _ \| '_ \/ __|
+    | |  | | (_) | |_) \__ \
+    |_|  |_|\___/|_.__/|___/
+
+*/
+/*
+    _____ _____ _____ _____ _____ _____ _____ 
+   |     |     |     |     |     |     |     |
+   |  S  |  U  |  R  |  V  |  I  |  V  |  A  |
+   |_____|_____|_____|_____|_____|_____|_____|
+   |     |     |     |     |     |     |     |
+   |  L  |  O  |  P  |  -  |  M  |  O  |  B  |
+   |_____|_____|_____|_____|_____|_____|_____|
+   |     |     |     |     |     |     |     |
+   |  S  |     |  S  |  T  |  Y  |  L  |  E  |
+   |_____|_____|_____|_____|_____|_____|_____|
+*/
+
+/* =============================================
+   SYSTEM TABS
+   ============================================= */
+.mobs-tabs {
+    display: flex;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--wiki-primary-light);
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+}
+
+.mobs-tabs::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.mobs-tab {
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--wiki-gray);
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.mobs-tab.active {
+    color: var(--wiki-primary);
+    border-bottom-color: var(--wiki-primary);
+}
+
+.mobs-tab:hover:not(.active) {
+    color: var(--wiki-dark);
+    background-color: rgba(88, 214, 141, 0.1);
+}
+
+.mobs-tab .badge {
+    background-color: var(--wiki-primary-light);
+    color: white;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    margin-left: 0.5rem;
+    font-weight: 700;
+}
+
+.mobs-tab.active .badge {
+    background-color: var(--wiki-primary);
+}
+
+.mobs-tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.mobs-tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =============================================
+    FILTER SYSTEM
+   ============================================= */
+.mobs-filters {
+    background-color: white;
+    border-radius: var(--wiki-border-radius);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--wiki-box-shadow);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .mobs-filters {
+    background-color: var(--wiki-dark-secondary);
+    border-color: rgba(88, 214, 141, 0.2);
+}
+
+.search-box {
+    flex: 1;
+    min-width: 250px;
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 1px solid var(--wiki-gray-200);
+    border-radius: var(--wiki-border-radius);
+    font-size: 0.95rem;
+    transition: var(--wiki-transition);
+    background-color: var(--wiki-light);
+}
+
+.dark-mode .search-box input {
+    background-color: var(--wiki-dark-tertiary);
+    border-color: var(--wiki-dark-border);
+    color: white;
+}
+
+.search-box input:focus {
+    border-color: var(--wiki-primary);
+    box-shadow: 0 0 0 3px rgba(88, 214, 141, 0.2);
+    outline: none;
+}
+
+.search-box i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--wiki-gray);
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-label {
+    font-size: 0.9rem;
+    color: var(--wiki-gray);
+    white-space: nowrap;
+}
+
+.dark-mode .filter-label {
+    color: var(--wiki-gray-600);
+}
+
+.filter-select {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--wiki-gray-200);
+    border-radius: var(--wiki-border-radius);
+    font-size: 0.9rem;
+    background-color: var(--wiki-light);
+    cursor: pointer;
+    transition: var(--wiki-transition);
+    min-width: 120px;
+}
+
+.dark-mode .filter-select {
+    background-color: var(--wiki-dark-tertiary);
+    border-color: var(--wiki-dark-border);
+    color: white;
+}
+
+.filter-select:focus {
+    border-color: var(--wiki-primary);
+    box-shadow: 0 0 0 3px rgba(88, 214, 141, 0.2);
+    outline: none;
+}
+
+.btn-reset {
+    background-color: var(--wiki-gray-100);
+    color: var(--wiki-gray);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--wiki-border-radius);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--wiki-transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dark-mode .btn-reset {
+    background-color: var(--wiki-dark-tertiary);
+    color: var(--wiki-gray-600);
+}
+
+.btn-reset:hover {
+    background-color: var(--wiki-gray-200);
+    color: var(--wiki-dark);
+}
+
+.dark-mode .btn-reset:hover {
+    background-color: var(--wiki-dark-border);
+    color: white;
+}
+
+/* =============================================
+    MOB CARDS ENHANCEMENTS
+   ============================================= */
+.mobs-grid {
+    margin-bottom: 1.5rem;
+}
+.mob-card {
+    position: relative;
+    background-color: white;
+    border-radius: var(--wiki-border-radius);
+    overflow: hidden;
+    box-shadow: var(--wiki-box-shadow);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--wiki-primary);
+    margin-top: 1.5rem;
+}
+
+.dark-mode .mob-card {
+    background-color: var(--wiki-dark-secondary);
+    border-left-color: var(--wiki-primary-dark);
+}
+
+.mob-card:not(.expanded):hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.mob-card.expanded {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+}
+
+.mob-difficulty {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--wiki-primary-light);
+    color: white;
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.mob-card.easy .mob-difficulty {
+    background-color: #27ae60;
+}
+
+.mob-card.medium .mob-difficulty {
+    background-color: #f39c12;
+}
+
+.mob-card.hard .mob-difficulty {
+    background-color: #e74c3c;
+}
+
+.mob-card.boss .mob-difficulty {
+    background-color: #9b59b6;
+}
+
+.mob-card.mini-boss .mob-difficulty {
+    background-color: #3498db;
+}
+
+.mob-header {
+    display: flex;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--wiki-transition);
+    position: relative;
+}
+
+.mob-card:not(.expanded) .mob-header:hover {
+    background-color: rgba(88, 214, 141, 0.1);
+}
+
+.mob-card:not(.expanded) .mob-header:hover .mob-name {
+    color: var(--wiki-primary);
+}
+
+.mob-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid var(--wiki-primary-light);
+    flex-shrink: 0;
+    transition: var(--wiki-transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.mob-card:hover .mob-image {
+    border-color: var(--wiki-primary);
+    transform: scale(1.05);
+}
+
+.mob-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 50%);
+    border-radius: 50%;
+}
+
+.mob-info {
+    flex: 1;
+    min-width: 0; /* Prevent flex overflow */
+}
+
+.mob-name {
+    font-size: 1.4rem;
+    color: var(--wiki-dark);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    transition: var(--wiki-transition);
+}
+
+.dark-mode .mob-name {
+    color: var(--wiki-primary-light);
+}
+
+.mob-stats {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.mob-stat {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--wiki-gray);
+}
+
+.dark-mode .mob-stat {
+    color: var(--wiki-gray-600);
+}
+
+.mob-stat i {
+    color: var(--wiki-primary);
+    font-size: 1rem;
+}
+
+/* Enhanced stats */
+.mob-stats-enhanced {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.stat-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--wiki-gray);
+    width: 70px;
+    font-weight: 500;
+}
+
+.dark-mode .stat-label {
+    color: var(--wiki-gray-600);
+}
+
+.stat-progress {
+    flex: 1;
+    height: 8px;
+    background-color: var(--wiki-gray-100);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.dark-mode .stat-progress {
+    background-color: var(--wiki-dark-tertiary);
+}
+
+.stat-progress-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.health .stat-progress-fill {
+    background-color: #e74c3c;
+}
+
+.damage .stat-progress-fill {
+    background-color: #f39c12;
+}
+
+.speed .stat-progress-fill {
+    background-color: #3498db;
+}
+
+.defense .stat-progress-fill {
+    background-color: #9b59b6;
+}
+
+.stat-value {
+    font-size: 0.8rem;
+    color: var(--wiki-gray);
+    width: 40px;
+    text-align: right;
+    font-weight: 600;
+}
+
+.dark-mode .stat-value {
+    color: var(--wiki-gray-600);
+}
+
+/* Resistances/Weaknesses */
+.mob-resistances {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.resistance-badge, .weakness-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.resistance-badge {
+    background-color: rgba(46, 204, 113, 0.1);
+    color: #27ae60;
+}
+
+.dark-mode .resistance-badge {
+    background-color: rgba(46, 204, 113, 0.2);
+}
+
+.weakness-badge {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+}
+
+.dark-mode .weakness-badge {
+    background-color: rgba(231, 76, 60, 0.2);
+}
+
+.mob-content {
+    padding: 0 1.5rem 1.5rem;
+    display: none;
+}
+
+.mob-card.expanded .mob-content {
+    display: block;
+}
+
+.mob-desc {
+    color: var(--wiki-gray);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.dark-mode .mob-desc {
+    color: var(--wiki-gray-600);
+}
+
+.mob-category-title {
+    margin-left: 1.5rem;
+}
+
+/* =============================================
+    ABILITIES SECTION
+   ============================================= */
+.mob-abilities {
+    margin-bottom: 1.5rem;
+}
+
+.abilities-title {
+    font-size: 1.2rem;
+    color: var(--wiki-dark);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dark-mode .abilities-title {
+    color: var(--wiki-primary-light);
+}
+
+.abilities-title::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: var(--wiki-primary);
+    border-radius: 50%;
+}
+
+.abilities-list {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.ability-item {
+    background-color: rgba(88, 214, 141, 0.1);
+    border-radius: var(--wiki-border-radius);
+    padding: 1rem;
+    border-left: 3px solid var(--wiki-primary);
+    position: relative;
+    overflow: hidden;
+    transition: var(--wiki-transition);
+}
+
+.dark-mode .ability-item {
+    background-color: rgba(39, 174, 96, 0.1);
+}
+
+.ability-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ability-cooldown {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: var(--wiki-primary);
+    width: 100%;
+    transform-origin: left;
+    animation: cooldownAnimation 3s linear forwards;
+}
+
+@keyframes cooldownAnimation {
+    from { transform: scaleX(1); }
+    to { transform: scaleX(0); }
+}
+
+.ability-name {
+    font-weight: 600;
+    color: var(--wiki-primary);
+    margin-bottom: 0.5rem;
+    display: block;
+    font-size: 1rem;
+}
+
+.dark-mode .ability-name {
+    color: var(--wiki-primary-light);
+}
+
+.ability-desc {
+    color: var(--wiki-gray);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.dark-mode .ability-desc {
+    color: var(--wiki-gray-600);
+}
+
+/* =============================================
+    STRATEGY SECTION
+   ============================================= */
+.mob-strategy {
+    background-color: rgba(52, 152, 219, 0.1);
+    border-radius: var(--wiki-border-radius);
+    padding: 1.5rem;
+    border-left: 3px solid var(--wiki-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.dark-mode .mob-strategy {
+    background-color: rgba(41, 128, 185, 0.1);
+}
+
+.strategy-title {
+    font-size: 1.2rem;
+    color: var(--wiki-secondary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dark-mode .strategy-title {
+    color: var(--wiki-secondary);
+}
+
+.strategy-title::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: var(--wiki-secondary);
+    border-radius: 50%;
+}
+
+.mob-strategy p {
+    color: var(--wiki-gray);
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.dark-mode .mob-strategy p {
+    color: var(--wiki-gray-600);
+}
+
+/* =============================================
+    REWARDS SECTION
+   ============================================= */
+.mob-rewards {
+    margin-top: 2rem;
+    background-color: rgba(46, 204, 113, 0.08);
+    border-radius: var(--wiki-border-radius);
+    padding: 1.5rem;
+    border-left: 3px solid var(--wiki-primary);
+}
+
+.dark-mode .mob-rewards {
+    background-color: rgba(39, 174, 96, 0.1);
+    border-left-color: var(--wiki-primary-dark);
+}
+
+.rewards-title {
+    font-size: 1.3rem;
+    color: var(--wiki-primary);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.dark-mode .rewards-title {
+    color: var(--wiki-primary-light);
+}
+
+.rewards-title::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--wiki-primary);
+    border-radius: 50%;
+}
+
+.rewards-list {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.reward-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: var(--wiki-border-radius);
+    transition: var(--wiki-transition);
+    cursor: default;
+}
+
+.dark-mode .reward-item {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.reward-item:hover {
+    background-color: rgba(46, 204, 113, 0.2);
+    transform: translateX(5px);
+}
+
+.reward-item i {
+    width: 32px;
+    height: 32px;
+    background-color: var(--wiki-primary-light);
+    color: var(--wiki-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    transition: var(--wiki-transition);
+}
+
+.reward-item:hover i {
+    background-color: var(--wiki-primary);
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Specific reward icons colors */
+.reward-item .fa-gem {
+    background-color: rgba(155, 89, 182, 0.1);
+    color: #9b59b6;
+}
+
+.reward-item:hover .fa-gem {
+    background-color: #9b59b6;
+    color: white;
+}
+
+.reward-item .fa-helmet-battle,
+.reward-item .fa-hat-wizard {
+    background-color: rgba(52, 152, 219, 0.1);
+    color: #3498db;
+}
+
+.reward-item:hover .fa-helmet-battle,
+.reward-item:hover .fa-hat-wizard {
+    background-color: #3498db;
+    color: white;
+}
+
+.reward-item .fa-sword {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+}
+
+.reward-item:hover .fa-sword {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.reward-item .fa-scroll {
+    background-color: rgba(241, 196, 15, 0.1);
+    color: #f1c40f;
+}
+
+.reward-item:hover .fa-scroll {
+    background-color: #f1c40f;
+    color: #2c3e50;
+}
+
+.reward-item .fa-coins {
+    background-color: rgba(46, 204, 113, 0.1);
+    color: #27ae60;
+}
+
+.reward-item:hover .fa-coins {
+    background-color: #27ae60;
+    color: white;
+}
+
+/* =============================================
+    RESPONSIVE ADJUSTMENTS
+   ============================================= */
+@media (max-width: 992px) {
+    .mobs-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    
+    .abilities-list, .rewards-list {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .mobs-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-box {
+        min-width: 100%;
+    }
+    
+    .filter-group {
+        width: 100%;
+    }
+    
+    .filter-select {
+        flex: 1;
+    }
+    
+    .mob-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .mob-stats {
+        justify-content: center;
+    }
+    
+    .abilities-list, .rewards-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .mob-stats-enhanced {
+        margin-top: 1.5rem;
+    }
+    
+    .reward-item {
+        padding: 0.75rem 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .mob-category {
+        padding: 1.5rem;
+    }
+    
+    .mob-card {
+        border-left-width: 3px;
+    }
+    
+    .mob-name {
+        font-size: 1.25rem;
+    }
+
+    .mob-rewards {
+        padding: 1.25rem;
+    }
+    
+    .rewards-title {
+        font-size: 1.2rem;
+    }
+    
+    .mobs-tab {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .mob-difficulty {
+        font-size: 0.6rem;
+        padding: 0.2rem 0.5rem;
+    }
+}

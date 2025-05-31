@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mazmorras - SurvivalOP | Emerald Wiki</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="../assets/multimedia/img/esmeralda.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/survivalop.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="../assets/multimedia/img/esmeralda.png" alt="Emerald Wiki Logo">
+                <div class="logo-text">
+                    <h1 id="main-title">Emerald Wiki</h1>
+                    <span id="main-subtitle" data-text-es="La Wiki oficial de EsmeraldaMC" data-text-en="The official EsmeraldaMC Wiki">La Wiki oficial de EsmeraldaMC</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="navbar">
+        <div class="container nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> <span class="nav-text" data-text-es="Página Principal" data-text-en="Main Page">Página Principal</span></a></li>
+                <li class="nav-item"><a href="survivalop.html" class="nav-link"><i class="fas fa-list"></i> <span class="nav-text" data-text-es="SurvivalOP" data-text-en="SurvivalOP">SurvivalOP</span></a></li>
+                <li class="nav-item active"><a href="survivalop-dungeons.html" class="nav-link"><i class="fas fa-dungeon"></i> <span class="nav-text" data-text-es="Mazmorras" data-text-en="Dungeons">Mazmorras</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-book"></i> <span class="nav-text" data-text-es="Guías" data-text-en="Guides">Guías</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-question-circle"></i> <span class="nav-text" data-text-es="Ayuda" data-text-en="Help">Ayuda</span></a></li>
+            </ul>
+            
+            <div class="nav-tools">
+                <div class="nav-tool" id="themeToggle">
+                    <i class="fas fa-moon"></i> <span class="theme-text" data-text-es="Modo Oscuro" data-text-en="Dark Mode">Modo Oscuro</span>
+                </div>
+                
+                <div class="nav-tool language-selector">
+                    <i class="fas fa-globe"></i> <span class="language-text">Español</span>
+                    <div class="language-options">
+                        <div class="language-option active" data-lang="es">
+                            <i class="fas fa-check"></i> Español
+                        </div>
+                        <div class="language-option" data-lang="en">
+                            <span>English</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="container main-layout">
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <div class="sidebar-header">
+                    <i class="fas fa-compass"></i> <span class="sidebar-header-text" data-text-es="Navegación" data-text-en="Navigation">Navegación</span>
+                </div>
+                <div class="sidebar-content">
+                    <ul class="sidebar-list">
+                        <li class="sidebar-item"><a href="survivalop.html" class="sidebar-link" data-text-es="Introducción" data-text-en="Introduction">Introducción</a></li>
+                        <li class="sidebar-item active"><a href="survivalop-dungeons.html" class="sidebar-link" data-text-es="Mazmorras" data-text-en="Dungeons">Mazmorras</a></li>
+                        <li class="sidebar-item"><a href="survivalop-mobs.html" class="sidebar-link" data-text-es="Criaturas" data-text-en="Mobs">Criaturas</a></li>
+                        <li class="sidebar-item"><a href="survivalop-materials.html" class="sidebar-link" data-text-es="Materiales" data-text-en="Materials">Materiales</a></li>
+                        <li class="sidebar-item"><a href="survivalop-weapons.html" class="sidebar-link" data-text-es="Armas" data-text-en="Weapons">Armas</a></li>
+                        <li class="sidebar-item"><a href="survivalop-armor.html" class="sidebar-link" data-text-es="NPC" data-text-en="NPC">NPC</a></li>
+                        <li class="sidebar-item"><a href="survivalop-quests.html" class="sidebar-link" data-text-es="Mascotas" data-text-en="Pets">Mascotas</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="sidebar-card">
+                <div class="sidebar-header">
+                    <i class="fa-solid fa-gem"></i> <span class="sidebar-header-text" data-text-es="EsmeraldaMC" data-text-en="EmeraldMC">EsmeraldaMC</span>
+                </div>
+                <div class="sidebar-content">
+                    <ul class="sidebar-list">
+                        <li class="sidebar-item"><p class="sidebar-link" data-text-es="Ip: play.esmeraldamc.com" data-text-en="Ip: play.esmeraldamc.com">Ip: play.esmeraldamc.com</p></li>
+                        <li class="sidebar-item"><p class="sidebar-link" data-text-es="Puerto: 25525" data-text-en="Port: 25525">Puerto: 25525</p></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="sidebar-card pulse">
+                <div class="sidebar-header">
+                    <i class="fas fa-gamepad"></i> <span class="sidebar-header-text" data-text-es="Modalidades Populares" data-text-en="Popular Modalities">Modalidades Populares</span>
+                </div>
+                <div class="sidebar-content">
+                    <ul class="sidebar-list">
+                        <li class="sidebar-item"><a href="survivalop.html" class="sidebar-link"><i class="fas fa-cloud-sun"></i> <span data-text-es="SurvivalOp" data-text-en="SurvivalOp">SurvivalOp</span></a></li>
+                        <li class="sidebar-item"><p href="#" class="sidebar-link"><i class="fa-solid fa-tractor"></i> <span data-text-es="FarmBox" data-text-en="FarmBox">FarmBox</span></p></li>
+                        <li class="sidebar-item"><p href="#" class="sidebar-link"><i class="fa-solid fa-earth-europe"></i> <span data-text-es="LandBox" data-text-en="LandBox">LandBox</span></p></li>
+                        <li class="sidebar-item"><p href="#" class="sidebar-link"><i class="fa-solid fa-skull"></i> <span data-text-es="SurvivalSMP" data-text-en="SurvivalSMP">SurvivalSMP</span></p></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sidebar-card">
+                <div class="sidebar-header">
+                    <i class="fas fa-users"></i> <span class="sidebar-header-text" data-text-es="Comunidad" data-text-en="Community">Comunidad</span>
+                </div>
+                <div class="sidebar-content">
+                    <ul class="sidebar-list">
+                        <li class="sidebar-item"><a href="https://discord.gg/xDxEKtsMRa" class="sidebar-link" target="_blank" rel="noopener" rel="noreferrer" rel="nofollow"><i class="fab fa-discord"></i> <span data-text-es="Discord" data-text-en="Discord">Discord</span></a></li>
+                        <li class="sidebar-item"><a href="https://kick.com/theelivan" class="sidebar-link" target="_blank" rel="noopener" rel="noreferrer" rel="nofollow"><i class="fa-brands fa-kickstarter"></i> <span data-text-es="Kick" data-text-en="Kick">Kick</span></a></li>
+                        <li class="sidebar-item"><a href="https://www.tiktok.com/@theelivann" class="sidebar-link" target="_blank" rel="noopener" rel="noreferrer" rel="nofollow"><i class="fa-brands fa-tiktok"></i> <span data-text-es="Tiktok" data-text-en="Tiktok">Tiktok</span></a></li>
+                        <li class="sidebar-item"><a href="https://www.youtube.com/@TheElivan" class="sidebar-link" target="_blank" rel="noopener" rel="noreferrer" rel="nofollow"><i class="fa-brands fa-youtube"></i> <span data-text-es="YouTube" data-text-en="YouTube">YouTube</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        
+        <div class="content">
+            <div class="wiki-header">
+                <span class="wiki-badge" data-text-es="Mazmorras" data-text-en="Dungeons">Mazmorras</span>
+                <h1 class="wiki-title" data-text-es="Sistema de Mazmorras" data-text-en="Dungeons System">Sistema de Mazmorras</h1>
+                <p class="wiki-subtitle" data-text-es="Explora mazmorras únicas con jefes especiales, criaturas y recompensas exclusivas para los más valientes." data-text-en="Explore unique dungeons with special bosses, mobs and exclusive rewards for the bravest.">
+                    Explora mazmorras únicas con jefes especiales, criaturas y recompensas exclusivas para los más valientes.
+                </p>
+                <div class="quick-info">
+                    <div class="quick-info-item">
+                        <div class="quick-info-label" data-text-es="Mazmorras" data-text-en="Dungeons">Mazmorras</div>
+                        <div class="quick-info-value">5</div>
+                    </div>
+                    <div class="quick-info-item">
+                        <div class="quick-info-label" data-text-es="Dificultad" data-text-en="Difficulty">Dificultad</div>
+                        <div class="quick-info-value" data-text-es="Variable" data-text-en="Variable">Variable</div>
+                    </div>
+                    <div class="quick-info-item">
+                        <div class="quick-info-label" data-text-es="Recompensas" data-text-en="Rewards">Recompensas</div>
+                        <div class="quick-info-value" data-text-es="Únicas" data-text-en="Unique">Únicas</div>
+                    </div>
+                    <div class="quick-info-item">
+                        <div class="quick-info-label" data-text-es="Comando" data-text-en="Command">Comando</div>
+                        <div class="quick-info-value">/dungeons</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="article-content">
+                <div class="section">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            <i class="fas fa-dungeon"></i>
+                            <span data-text-es="Lista de Mazmorras" data-text-en="Dungeons List">Lista de Mazmorras</span>
+                        </h2>
+                    </div>
+                    
+                    <div class="dungeons-grid">
+                        <!-- Polo Norte -->
+                        <div class="dungeon-card">
+                            <div class="dungeon-header">
+                                <h3 class="dungeon-title">Polo Norte <span class="difficulty-badge">💀</span></h3>
+                                <span class="dungeon-level" data-text-es="Nivel recomendado: 10+" data-text-en="Recommended level: 10+">Nivel recomendado: 10+</span>
+                            </div>
+                            <p class="dungeon-desc" data-text-es="Un gélido paisaje lleno de peligros ocultos bajo la nieve. Los jugadores deberán enfrentarse al frío extremo y criaturas adaptadas a este clima hostil." data-text-en="A frozen landscape full of dangers hidden under the snow. Players will have to face extreme cold and creatures adapted to this hostile climate.">
+                                Un gélido paisaje lleno de peligros ocultos bajo la nieve. Los jugadores deberán enfrentarse al frío extremo y criaturas adaptadas a este clima hostil.
+                            </p>
+                            
+                            <div class="dungeon-mobs">
+                                <h4 class="mobs-title" data-text-es="Criaturas" data-text-en="Mobs">Criaturas</h4>
+                                <div class="mobs-grid">
+                                    <a href="survivalop-mobs.html" class="mob-card">
+                                        <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/oso-helado.png');"></div>
+                                        <span class="mob-name">Oso Helado</span>
+                                    </a>
+                                    <a href="survivalop-mobs.html" class="mob-card">
+                                        <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/regalo-sorpresa.png');"></div>
+                                        <span class="mob-name">Regalo Sorpresa</span>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="dungeon-boss">
+                                <h4 class="boss-title" data-text-es="Jefe" data-text-en="Boss">Jefe</h4>
+                                <a href="survivalop-mobs.html" class="boss-card">
+                                    <div class="boss-image" style="background-image: url('../assets/multimedia/img/mobs/sylfrig.gif');"></div>
+                                    <span class="boss-name">Sylfrig</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Cueva -->
+                        <div class="dungeon-card">
+                            <div class="dungeon-header">
+                                <h3 class="dungeon-title">Cueva <span class="difficulty-badge">💀💀</span></h3>
+                                <span class="dungeon-level" data-text-es="Nivel recomendado: 20+" data-text-en="Recommended level: 20+">Nivel recomendado: 20+</span>
+                            </div>
+                            <p class="dungeon-desc" data-text-es="Un sistema de cavernas infestado de plantas venenosas y criaturas que se han adaptado a la oscuridad. Precaución con las esporas tóxicas en el aire." data-text-en="A cave system infested with poisonous plants and creatures that have adapted to the darkness. Beware of toxic spores in the air.">
+                                Un sistema de cavernas infestado de plantas venenosas y criaturas que se han adaptado a la oscuridad. Precaución con las esporas tóxicas en el aire.
+                            </p>
+                            
+                            <div class="dungeon-mobs">
+                                <h4 class="mobs-title" data-text-es="Criaturas" data-text-en="Mobs">Criaturas</h4>
+                                <div class="mobs-grid">
+                                    <a href="survivalop-mobs.html" class="mob-card">
+                                        <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/planta-mini.png');"></div>
+                                        <span class="mob-name">Planta Venenosa Mini</span>
+                                    </a>
+                                    <a href="survivalop-mobs.html" class="mob-card">
+                                        <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/planta-venenosa.png');"></div>
+                                        <span class="mob-name">Planta Venenosa</span>
+                                    </a>
+                                    <a href="survivalop-mobs.html" class="mob-card">
+                                        <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/raptor.png');"></div>
+                                        <span class="mob-name">Raptor</span>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="dungeon-boss">
+                                <h4 class="boss-title" data-text-es="Jefe" data-text-en="Boss">Jefe</h4>
+                                <a href="survivalop-mobs.html" class="boss-card">
+                                    <div class="boss-image" style="background-image: url('../assets/multimedia/img/mobs/vilhortis.gif');"></div>
+                                    <span class="boss-name">Vilhortis</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Medieval -->
+                        <div class="dungeon-card">
+                            <div class="dungeon-header">
+                                <h3 class="dungeon-title">Medieval <span class="difficulty-badge">💀💀💀</span></h3>
+                                <span class="dungeon-level" data-text-es="Nivel recomendado: 30+" data-text-en="Recommended level: 30+">Nivel recomendado: 30+</span>
+                            </div>
+                            <p class="dungeon-desc" data-text-es="Un castillo abandonado lleno de trampas y criaturas que alguna vez fueron humanos. Las sombras parecen moverse por sí solas en este lugar maldito." data-text-en="An abandoned castle full of traps and creatures that were once human. Shadows seem to move on their own in this cursed place.">
+                                Un castillo abandonado lleno de trampas y criaturas que alguna vez fueron humanos. Las sombras parecen moverse por sí solas en este lugar maldito.
+                            </p>
+                            
+                            <div class="dungeon-mobs">
+                                <h4 class="mobs-title" data-text-es="Criaturas" data-text-en="Mobs">Criaturas</h4>
+                                <div class="mobs-grid">
+                                    <a href="survivalop-mobs.html" class="mob-card">
+                                        <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/conejo-saltarin.png');"></div>
+                                        <span class="mob-name">Conejo Saltarín</span>
+                                    </a>
+                                    <a href="survivalop-mobs.html" class="mob-card">
+                                        <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/cortapicos.png');"></div>
+                                        <span class="mob-name">Cortapicos</span>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="dungeon-boss">
+                                <h4 class="boss-title" data-text-es="Jefe" data-text-en="Boss">Jefe</h4>
+                                <a href="survivalop-mobs.html" class="boss-card">
+                                    <div class="boss-image" style="background-image: url('../assets/multimedia/img/mobs/maltherion.gif');"></div>
+                                    <span class="boss-name">Maltherion</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Catedral -->
+                        <div class="dungeon-card">
+                            <div class="dungeon-header">
+                                <h3 class="dungeon-title">Catedral <span class="difficulty-badge">💀💀💀💀💀</span></h3>
+                                <span class="dungeon-level" data-text-es="Nivel recomendado: 50+" data-text-en="Recommended level: 50+">Nivel recomendado: 50+</span>
+                            </div>
+                            <p class="dungeon-desc" data-text-es="Una catedral gótica donde lo divino y lo profano se mezclan. Solo los más fuertes podrán enfrentarse a los guardianes de este lugar sagrado." data-text-en="A gothic cathedral where the divine and the profane mix. Only the strongest will be able to face the guardians of this sacred place.">
+                                Una catedral gótica donde lo divino y lo profano se mezclan. Solo los más fuertes podrán enfrentarse a los guardianes de este lugar sagrado.
+                            </p>
+                            
+                            <div class="dungeon-mobs">
+                                <h4 class="mobs-title" data-text-es="Criaturas" data-text-en="Mobs">Criaturas</h4>
+                                <div class="mobs-grid">
+                                    <a href="survivalop-mobs.html" class="mob-card">
+                                        <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/flamegor.png');"></div>
+                                        <span class="mob-name">Flamegor</span>
+                                    </a>
+                                    <a href="survivalop-mobs.html" class="mob-card">
+                                        <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/erebys.png');"></div>
+                                        <span class="mob-name">Erebyss</span>
+                                    </a>
+                                    <a href="survivalop-mobs.html" class="mob-card">
+                                        <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/shirayuki.png');"></div>
+                                        <span class="mob-name">Shirayuki</span>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="dungeon-boss">
+                                <h4 class="boss-title" data-text-es="Jefe" data-text-en="Boss">Jefe</h4>
+                                <a href="survivalop-mobs.html" class="boss-card">
+                                    <div class="boss-image" style="background-image: url('../assets/multimedia/img/mobs/anubis.gif');"></div>
+                                    <span class="boss-name">Anubis</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            <i class="fas fa-trophy"></i>
+                            <span data-text-es="Recompensas" data-text-en="Rewards">Recompensas</span>
+                        </h2>
+                    </div>
+                    
+                    <div class="rewards-grid">
+                        <div class="reward-card">
+                            <div class="reward-icon">
+                                <i class="fa-solid fa-skull"></i>
+                            </div>
+                            <h3 class="reward-title" data-text-es="Deaths" data-text-en="Muertes">Muertes</h3>
+                            <p class="reward-desc" data-text-es="En las mazmorras te cansarás de morir mucho, ya que son zonas dificiles si no estas bien equipado." data-text-en="In the dungeons you will get tired of dying a lot, since they are difficult areas if you are not well equipped.">
+                                En las mazmorras te cansarás de morir mucho, ya que son zonas dificiles si no estas bien equipado.
+                            </p>
+                        </div>
+                        
+                        <div class="reward-card">
+                            <div class="reward-icon">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <h3 class="reward-title" data-text-es="Materiales Exclusivos" data-text-en="Exclusive Materials">Materiales Exclusivos</h3>
+                            <p class="reward-desc" data-text-es="Materiales que solo se pueden obtener en mazmorras y son necesarios para craftear equipo especial." data-text-en="Materials that can only be obtained in dungeons and are needed to craft special gear.">
+                                Materiales que solo se pueden obtener en mazmorras y son necesarios para craftear equipo especial.
+                            </p>
+                        </div>
+                        
+                        <div class="reward-card">
+                            <div class="reward-icon">
+                                <i class="fas fa-hat-wizard"></i>
+                            </div>
+                            <h3 class="reward-title" data-text-es="Equipo Épico" data-text-en="Epic Gear">Equipo Épico</h3>
+                            <p class="reward-desc" data-text-es="Armas y artefactos con estadísticas superiores y habilidades únicas." data-text-en="Weapons and artifacts with superior stats and unique abilities.">
+                                Armas y artefactos con estadísticas superiores y habilidades únicas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="section">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            <i class="fas fa-mountain"></i>
+                            <span data-text-es="La Mina - Mazmorra de Recursos" data-text-en="The Mine - Resource Dungeon">La Mina - Mazmorra de Recursos</span>
+                        </h2>
+                    </div>
+
+                    <div class="mine-dungeon">
+                        <div class="dungeon-card full-width">
+                            <div class="dungeon-header">
+                                <h3 class="dungeon-title">La Mina <span class="difficulty-badge">💀💀💀💀💀</span></h3>
+                                <span class="dungeon-level" data-text-es="Nivel recomendado: 20 - 50+" data-text-en="Recommended level: 20 - 50+">Nivel recomendado: 20 - 50+</span>
+                            </div>
+                            <p class="dungeon-desc" data-text-es="Una vasta red de túneles subterráneos llena de valiosos minerales y peligrosas criaturas que protegen sus tesoros. Esta mazmorra única combina combate con recolección de recursos, donde los minerales especiales pueden ser usados para fabricar equipo poderoso." data-text-en="A vast network of underground tunnels filled with valuable minerals and dangerous creatures guarding their treasures. This unique dungeon combines combat with resource gathering, where special ores can be used to craft powerful gear.">
+                                Una vasta red de túneles subterráneos llena de valiosos minerales y peligrosas criaturas que protegen sus tesoros. Esta mazmorra única combina combate con recolección de recursos, donde los minerales especiales pueden ser usados para fabricar equipo poderoso.
+                            </p>
+
+                            <div class="dungeon-mobs">
+                                <h4 class="mobs-title" data-text-es="Criaturas" data-text-en="Mobs">Criaturas</h4>
+                                <div class="mobs-grid">
+                                    <a href="survivalop-mobs.html" class="mob-card">
+                                        <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/murcielago-cueva.gif');"></div>
+                                        <span class="mob-name">Murciélago de la Cueva</span>
+                                    </a>
+                                    <a href="survivalop-mobs.html" class="mob-card">
+                                        <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/guardian-cueva.gif');"></div>
+                                        <span class="mob-name">Guardian de la Cueva</span>
+                                    </a>
+                                    <a href="survivalop-mobs.html" class="mob-card">
+                                        <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/sartin.gif');"></div>
+                                        <span class="mob-name">Sartin</span>
+                                    </a>
+                                    <a href="survivalop-mobs.html" class="mob-card">
+                                        <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/abeja-reina.gif');"></div>
+                                        <span class="mob-name">Abeja Reina</span>
+                                    </a>
+                                    <a href="survivalop-mobs.html" class="mob-card">
+                                        <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/aprendiz-magia.gif');"></div>
+                                        <span class="mob-name">Aprendiz de Magia Oscura</span>
+                                    </a>
+                                    <a href="survivalop-mobs.html" class="mob-card">
+                                        <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/escupin.gif');"></div>
+                                        <span class="mob-name">Escupin</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="dungeon-boss">
+                                <h4 class="boss-title" data-text-es="Jefe" data-text-en="Boss">Jefe</h4>
+                                <a href="survivalop-mobs.html" class="boss-card">
+                                    <div class="boss-image" style="background-image: url('../assets/multimedia/img/mobs/luxtharion.gif');"></div>
+                                    <span class="boss-name">Luxtharion</span>
+                                </a>
+                            </div>
+
+                            <div class="dungeon-mobs" style="margin-top: 2rem;">
+                                <h4 class="mobs-title" data-text-es="Recursos Exclusivos" data-text-en="Exclusive Resources">Recursos Exclusivos</h4>
+                                <div class="minerals-grid">
+                                    <div class="mineral-card anthracite">
+                                        <div class="mineral-image">
+                                            <i class="fas fa-gem"></i>
+                                        </div>
+                                        <span class="mineral-name">Antracita</span>
+                                        <div class="mineral-difficulty">
+                                            <i class="fas fa-hammer active"></i>
+                                            <i class="fas fa-hammer"></i>
+                                            <i class="fas fa-hammer"></i>
+                                            <i class="fas fa-hammer"></i>
+                                            <i class="fas fa-hammer"></i>
+                                        </div>
+                                    </div>
+                                    <div class="mineral-card malachite">
+                                        <div class="mineral-image">
+                                            <i class="fas fa-gem"></i>
+                                        </div>
+                                        <span class="mineral-name">Malaquita</span>
+                                        <div class="mineral-difficulty">
+                                            <i class="fas fa-hammer active"></i>
+                                            <i class="fas fa-hammer"></i>
+                                            <i class="fas fa-hammer"></i>
+                                            <i class="fas fa-hammer"></i>
+                                            <i class="fas fa-hammer"></i>
+                                        </div>
+                                    </div>
+                                    <div class="mineral-card carnelian">
+                                        <div class="mineral-image">
+                                            <i class="fas fa-gem"></i>
+                                        </div>
+                                        <span class="mineral-name">Cornalina</span>
+                                        <div class="mineral-difficulty">
+                                            <i class="fas fa-hammer active"></i>
+                                            <i class="fas fa-hammer active"></i>
+                                            <i class="fas fa-hammer"></i>
+                                            <i class="fas fa-hammer"></i>
+                                            <i class="fas fa-hammer"></i>
+                                        </div>
+                                    </div>
+                                    <div class="mineral-card azurite">
+                                        <div class="mineral-image">
+                                            <i class="fas fa-gem"></i>
+                                        </div>
+                                        <span class="mineral-name">Azurite</span>
+                                        <div class="mineral-difficulty">
+                                            <i class="fas fa-hammer active"></i>
+                                            <i class="fas fa-hammer active"></i>
+                                            <i class="fas fa-hammer"></i>
+                                            <i class="fas fa-hammer"></i>
+                                            <i class="fas fa-hammer"></i>
+                                        </div>
+                                    </div>
+                                    <div class="mineral-card jade">
+                                        <div class="mineral-image">
+                                            <i class="fas fa-gem"></i>
+                                        </div>
+                                        <span class="mineral-name">Jade</span>
+                                        <div class="mineral-difficulty">
+                                            <i class="fas fa-hammer active"></i>
+                                            <i class="fas fa-hammer active"></i>
+                                            <i class="fas fa-hammer active"></i>
+                                            <i class="fas fa-hammer"></i>
+                                            <i class="fas fa-hammer"></i>
+                                        </div>
+                                    </div>
+                                    <div class="mineral-card topaz">
+                                        <div class="mineral-image">
+                                            <i class="fas fa-gem"></i>
+                                        </div>
+                                        <span class="mineral-name">Topacio</span>
+                                        <div class="mineral-difficulty">
+                                            <i class="fas fa-hammer active"></i>
+                                            <i class="fas fa-hammer active"></i>
+                                            <i class="fas fa-hammer active"></i>
+                                            <i class="fas fa-hammer"></i>
+                                            <i class="fas fa-hammer"></i>
+                                        </div>
+                                    </div>
+                                    <div class="mineral-card kunzite">
+                                        <div class="mineral-image">
+                                            <i class="fas fa-gem"></i>
+                                        </div>
+                                        <span class="mineral-name">Kuncita</span>
+                                        <div class="mineral-difficulty">
+                                            <i class="fas fa-hammer active"></i>
+                                            <i class="fas fa-hammer active"></i>
+                                            <i class="fas fa-hammer active"></i>
+                                            <i class="fas fa-hammer active"></i>
+                                            <i class="fas fa-hammer"></i>
+                                        </div>
+                                    </div>
+                                    <div class="mineral-card brucite">
+                                        <div class="mineral-image">
+                                            <i class="fas fa-gem"></i>
+                                        </div>
+                                        <span class="mineral-name">Brucite</span>
+                                        <div class="mineral-difficulty">
+                                            <i class="fas fa-hammer active"></i>
+                                            <i class="fas fa-hammer active"></i>
+                                            <i class="fas fa-hammer active"></i>
+                                            <i class="fas fa-hammer active"></i>
+                                            <i class="fas fa-hammer active"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            <i class="fas fa-lightbulb"></i>
+                            <span data-text-es="Consejos para Mazmorras" data-text-en="Dungeon Tips">Consejos para Mazmorras</span>
+                        </h2>
+                    </div>
+
+                    <div class="tips-container">
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h3 class="tip-title" data-text-es="Juego en equipo" data-text-en="Team Play">Juego en equipo</h3>
+                                <p class="tip-desc" data-text-es="Explora en grupo para aumentar tus posibilidades de éxito. Coordina roles como tanque, sanador y DPS para maximizar la eficiencia." data-text-en="Explore in groups to increase your chances of success. Coordinate roles like tank, healer and DPS to maximize efficiency.">
+                                    Explora en grupo para aumentar tus posibilidades de éxito. Coordina roles como tanque, sanador y DPS para maximizar la eficiencia.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h3 class="tip-title" data-text-es="Preparación" data-text-en="Preparation">Preparación</h3>
+                                <p class="tip-desc" data-text-es="Lleva suficientes pociones de curación, comida y objetos útiles. Las pociones de resistencia y daño pueden marcar la diferencia." data-text-en="Bring enough healing potions, food and useful items. Resistance and damage potions can make the difference.">
+                                    Lleva suficientes pociones de curación, comida y objetos útiles. Las pociones de resistencia y daño pueden marcar la diferencia.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h3 class="tip-title" data-text-es="Equipamiento" data-text-en="Gear">Equipamiento</h3>
+                                <p class="tip-desc" data-text-es="Equípate con el mejor equipo posible antes de entrar. Mejora tus armas y armaduras con encantamientos y mejoras específicas para cada mazmorra." data-text-en="Equip yourself with the best possible gear before entering. Upgrade your weapons and armor with specific enchantments and upgrades for each dungeon.">
+                                    Equípate con el mejor equipo posible antes de entrar. Mejora tus armas y armaduras con encantamientos y mejoras específicas para cada mazmorra.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h3 class="tip-title" data-text-es="Estrategia" data-text-en="Strategy">Estrategia</h3>
+                                <p class="tip-desc" data-text-es="Estudia los patrones de ataque de los jefes y criaturas. Aprende cuándo atacar, esquivar o defenderte para minimizar el daño recibido." data-text-en="Study boss and mob attack patterns. Learn when to attack, dodge or defend to minimize damage taken.">
+                                    Estudia los patrones de ataque de los jefes y criaturas. Aprende cuándo atacar, esquivar o defenderte para minimizar el daño recibido.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h3 class="tip-title" data-text-es="Precaución" data-text-en="Caution">Precaución</h3>
+                                <p class="tip-desc" data-text-es="No subestimes a las criaturas comunes. Algunas pueden infligir efectos de estado peligrosos o tener habilidades sorpresa." data-text-en="Don't underestimate common creatures. Some can inflict dangerous status effects or have surprise abilities.">
+                                    No subestimes a las criaturas comunes. Algunas pueden infligir efectos de estado peligrosos o tener habilidades sorpresa.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h3 class="tip-title" data-text-es="Entorno" data-text-en="Environment">Entorno</h3>
+                                <p class="tip-desc" data-text-es="Usa el terreno a tu favor. Busca puntos elevados para atacar a distancia o pasillos estrechos para limitar el número de enemigos que te enfrentan simultáneamente." data-text-en="Use the terrain to your advantage. Look for high ground to attack from range or narrow corridors to limit the number of enemies you face simultaneously.">
+                                    Usa el terreno a tu favor. Busca puntos elevados para atacar a distancia o pasillos estrechos para limitar el número de enemigos que te enfrentan simultáneamente.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="content-nav">
+                <a href="survivalop.html" class="content-nav-link">
+                    <i class="fas fa-arrow-left"></i>
+                    <span data-text-es="Volver a SurvivalOP" data-text-en="Back to SurvivalOP">Volver a SurvivalOP</span>
+                </a>
+                <a href="survivalop-mobs.html" class="content-nav-link">
+                    <span data-text-es="Criaturas" data-text-en="Mobs">Criaturas</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="copyright" data-text-es="Esta wiki no está afiliada a Minecraft o Mojang. Última edición el 31 de mayo, 2025." data-text-en="This wiki is not affiliated with Minecraft or Mojang. Last edited on May 31, 2025.">Esta wiki no está afiliada a Minecraft o Mojang. Última edición el 31 de mayo, 2025.</div>
+            <ul class="footer-links">
+                <li class="footer-item"><a href="#" class="footer-link" data-text-es="Política de Privacidad" data-text-en="Privacy Policy">Política de Privacidad</a></li>
+                <li class="footer-item"><a href="#" class="footer-link" data-text-es="Acerca de Emerald Wiki" data-text-en="About Emerald Wiki">Acerca de Emerald Wiki</a></li>
+                <li class="footer-item"><a href="#" class="footer-link" data-text-es="Descargo de Responsabilidad" data-text-en="Disclaimers">Descargo de Responsabilidad</a></li>
+                <li class="footer-item"><a href="#" class="footer-link" data-text-es="Términos de Uso" data-text-en="Terms of Use">Términos de Uso</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main-page.js"></script>
+</body>
+</html>

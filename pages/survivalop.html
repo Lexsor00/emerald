@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SurvivalOP - Emerald Wiki</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="../assets/multimedia/img/esmeralda.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/survivalop.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="../assets/multimedia/img/esmeralda.png" alt="Emerald Wiki Logo">
+                <div class="logo-text">
+                    <h1 id="main-title">Emerald Wiki</h1>
+                    <span id="main-subtitle" data-text-es="La Wiki oficial de EsmeraldaMC" data-text-en="The official EsmeraldaMC Wiki">La Wiki oficial de EsmeraldaMC</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="navbar">
+        <div class="container nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> <span class="nav-text" data-text-es="Página Principal" data-text-en="Main Page">Página Principal</span></a></li>
+                <li class="nav-item active"><a href="survivalop.html" class="nav-link"><i class="fas fa-list"></i> <span class="nav-text" data-text-es="SurvivalOP" data-text-en="SurvivalOP">SurvivalOP</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-star"></i> <span class="nav-text" data-text-es="Destacados" data-text-en="Featured">Destacados</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-book"></i> <span class="nav-text" data-text-es="Guías" data-text-en="Guides">Guías</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-question-circle"></i> <span class="nav-text" data-text-es="Ayuda" data-text-en="Help">Ayuda</span></a></li>
+            </ul>
+            
+            <div class="nav-tools">
+                <div class="nav-tool" id="themeToggle">
+                    <i class="fas fa-moon"></i> <span class="theme-text" data-text-es="Modo Oscuro" data-text-en="Dark Mode">Modo Oscuro</span>
+                </div>
+                
+                <div class="nav-tool language-selector">
+                    <i class="fas fa-globe"></i> <span class="language-text">Español</span>
+                    <div class="language-options">
+                        <div class="language-option active" data-lang="es">
+                            <i class="fas fa-check"></i> Español
+                        </div>
+                        <div class="language-option" data-lang="en">
+                            <span>English</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="container main-layout">
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <div class="sidebar-header">
+                    <i class="fas fa-compass"></i> <span class="sidebar-header-text" data-text-es="Navegación" data-text-en="Navigation">Navegación</span>
+                </div>
+                <div class="sidebar-content">
+                    <ul class="sidebar-list">
+                        <li class="sidebar-item active"><a href="survivalop.html" class="sidebar-link" data-text-es="Introducción" data-text-en="Introduction">Introducción</a></li>
+                        <li class="sidebar-item"><a href="survivalop-dungeons.html" class="sidebar-link" data-text-es="Mazmorras" data-text-en="Dungeons">Mazmorras</a></li>
+                        <li class="sidebar-item"><a href="survivalop-mobs.html" class="sidebar-link" data-text-es="Criaturas" data-text-en="Mobs">Criaturas</a></li>
+                        <li class="sidebar-item"><a href="survivalop-materials.html" class="sidebar-link" data-text-es="Materiales" data-text-en="Materials">Materiales</a></li>
+                        <li class="sidebar-item"><a href="survivalop-weapons.html" class="sidebar-link" data-text-es="Armas" data-text-en="Weapons">Armas</a></li>
+                        <li class="sidebar-item"><a href="survivalop-armor.html" class="sidebar-link" data-text-es="NPC" data-text-en="NPC">NPC</a></li>
+                        <li class="sidebar-item"><a href="survivalop-quests.html" class="sidebar-link" data-text-es="Mascotas" data-text-en="Pets">Mascotas</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="sidebar-card">
+                <div class="sidebar-header">
+                    <i class="fa-solid fa-gem"></i> <span class="sidebar-header-text" data-text-es="EsmeraldaMC" data-text-en="EmeraldMC">EsmeraldaMC</span>
+                </div>
+                <div class="sidebar-content">
+                    <ul class="sidebar-list">
+                        <li class="sidebar-item"><p class="sidebar-link" data-text-es="Ip: play.esmeraldamc.com" data-text-en="Ip: play.esmeraldamc.com">Ip: play.esmeraldamc.com</p></li>
+                        <li class="sidebar-item"><p class="sidebar-link" data-text-es="Puerto: 25525" data-text-en="Port: 25525">Puerto: 25525</p></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="sidebar-card pulse">
+                <div class="sidebar-header">
+                    <i class="fas fa-gamepad"></i> <span class="sidebar-header-text" data-text-es="Modalidades Populares" data-text-en="Popular Modalities">Modalidades Populares</span>
+                </div>
+                <div class="sidebar-content">
+                    <ul class="sidebar-list">
+                        <li class="sidebar-item"><a href="survivalop.html" class="sidebar-link"><i class="fas fa-cloud-sun"></i> <span data-text-es="SurvivalOp" data-text-en="SurvivalOp">SurvivalOp</span></a></li>
+                        <li class="sidebar-item"><p href="#" class="sidebar-link"><i class="fa-solid fa-tractor"></i> <span data-text-es="FarmBox" data-text-en="FarmBox">FarmBox</span></p></li>
+                        <li class="sidebar-item"><p href="#" class="sidebar-link"><i class="fa-solid fa-earth-europe"></i> <span data-text-es="LandBox" data-text-en="LandBox">LandBox</span></p></li>
+                        <li class="sidebar-item"><p href="#" class="sidebar-link"><i class="fa-solid fa-skull"></i> <span data-text-es="SurvivalSMP" data-text-en="SurvivalSMP">SurvivalSMP</span></p></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sidebar-card">
+                <div class="sidebar-header">
+                    <i class="fas fa-users"></i> <span class="sidebar-header-text" data-text-es="Comunidad" data-text-en="Community">Comunidad</span>
+                </div>
+                <div class="sidebar-content">
+                    <ul class="sidebar-list">
+                        <li class="sidebar-item"><a href="https://discord.gg/xDxEKtsMRa" class="sidebar-link" target="_blank" rel="noopener" rel="noreferrer" rel="nofollow"><i class="fab fa-discord"></i> <span data-text-es="Discord" data-text-en="Discord">Discord</span></a></li>
+                        <li class="sidebar-item"><a href="https://kick.com/theelivan" class="sidebar-link" target="_blank" rel="noopener" rel="noreferrer" rel="nofollow"><i class="fa-brands fa-kickstarter"></i> <span data-text-es="Kick" data-text-en="Kick">Kick</span></a></li>
+                        <li class="sidebar-item"><a href="https://www.tiktok.com/@theelivann" class="sidebar-link" target="_blank" rel="noopener" rel="noreferrer" rel="nofollow"><i class="fa-brands fa-tiktok"></i> <span data-text-es="Tiktok" data-text-en="Tiktok">Tiktok</span></a></li>
+                        <li class="sidebar-item"><a href="https://www.youtube.com/@TheElivan" class="sidebar-link" target="_blank" rel="noopener" rel="noreferrer" rel="nofollow"><i class="fa-brands fa-youtube"></i> <span data-text-es="YouTube" data-text-en="YouTube">YouTube</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        
+        <div class="content">
+            <div class="wiki-header">
+                <span class="wiki-badge" data-text-es="Modo de Juego" data-text-en="Game Mode">Modo de Juego</span>
+                <h1 class="wiki-title" data-text-es="SurvivalOP" data-text-en="SurvivalOP">SurvivalOP</h1>
+                <p class="wiki-subtitle" data-text-es="Combina elementos de supervivencia clásica con características únicas y personalizadas" data-text-en="Combines classic survival elements with unique and custom features">
+                    Combina elementos de supervivencia clásica con características únicas y personalizadas
+                </p>
+                <div class="quick-info">
+                    <div class="quick-info-item">
+                        <div class="quick-info-label" data-text-es="Tipo" data-text-en="Type">Tipo</div>
+                        <div class="quick-info-value" data-text-es="Supervivencia" data-text-en="Survival">Supervivencia</div>
+                    </div>
+                    <div class="quick-info-item">
+                        <div class="quick-info-label" data-text-es="Versión" data-text-en="Version">Versión</div>
+                        <div class="quick-info-value">1.21.4</div>
+                    </div>
+                    <div class="quick-info-item">
+                        <div class="quick-info-label" data-text-es="Parche" data-text-en="Patches">Parche</div>
+                        <div class="quick-info-value">v1.0.1</div>
+                    </div>
+                    <div class="quick-info-item">
+                        <div class="quick-info-label" data-text-es="Estado" data-text-en="Status">Estado</div>
+                        <div class="quick-info-value" data-text-es="Activo" data-text-en="Active">Activo</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="article-content">
+                <div class="section">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            <i class="fas fa-star"></i>
+                            <span data-text-es="Características Principales" data-text-en="Main Features">Características Principales</span>
+                        </h2>
+                    </div>
+                    
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3 class="feature-title" data-text-es="Sistema de Niveles" data-text-en="Level System">Sistema de Niveles</h3>
+                            <p class="feature-desc" data-text-es="Al conseguir dinero, puedes intercambiar dicho dinero en el <span>/ranks</span> para adquirir un mejor nivel, donde este da mejores recompensas." data-text-en="When you earn money, you can exchange that money in the <span>/ranks</span> to acquire a better level, where it gives better rewards.">
+                                Al conseguir dinero, puedes intercambiar dicho dinero en el <span>/ranks</span> para adquirir un mejor nivel, donde este da mejores recompensas.
+                            </p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <h3 class="feature-title" data-text-es="Economía Dinámica" data-text-en="Dynamic Economy">Economía Dinámica</h3>
+                            <p class="feature-desc" data-text-es="Sistema económico completo con tiendas, comercio entre npc y precios que fluctúan según la oferta y demanda." data-text-en="Complete economic system with shops, npc trading and fluctuating prices based on supply and demand.">
+                                Sistema económico completo con tiendas, comercio entre npc y precios que fluctúan según la oferta y demanda.
+                            </p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-dungeon"></i>
+                            </div>
+                            <h3 class="feature-title" data-text-es="Mazmorras Personalizadas" data-text-en="Custom Dungeons">Mazmorras Personalizadas</h3>
+                            <p class="feature-desc" data-text-es="Explora mazmorras únicas con jefes especiales, criaturas y recompensas exclusivas para los más valientes." data-text-en="Explore unique dungeons with special bosses, mobs and exclusive rewards for the bravest.">
+                                Explora mazmorras únicas con jefes especiales, criaturas y recompensas exclusivas para los más valientes.
+                            </p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-hammer"></i>
+                            </div>
+                            <h3 class="feature-title" data-text-es="Equipamiento Único" data-text-en="Unique Gear">Equipamiento Único</h3>
+                            <p class="feature-desc" data-text-es="Crea herramientas especiales con habilidades únicas que te darán ventajas en tus aventuras." data-text-en="Craft special tools with unique abilities that will give you advantages in your adventures.">
+                                Crea herramientas especiales con habilidades únicas que te darán ventajas en tus aventuras.
+                            </p>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fa-solid fa-paw"></i>
+                            </div>
+                            <h3 class="feature-title" data-text-es="Mascotas" data-text-en="Pets">Mascotas</h3>
+                            <p class="feature-desc" data-text-es="Cuida de mascotas místicas que te acompañarán en todas tus aventuras." data-text-en="Take care of mystical pets that will accompany you on all your adventures.">
+                                Cuida de mascotas místicas que te acompañarán en todas tus aventuras.
+                            </p>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fa-solid fa-cubes"></i>
+                            </div>
+                            <h3 class="feature-title" data-text-es="Protecciones" data-text-en="Protections">Protecciones</h3>
+                            <p class="feature-desc" data-text-es="Puedes usar unas menas para poder proteger tu base y tus cosas preciadas." data-text-en="You can use ores to protect your base and your valuables.">
+                                Puedes usar unas menas para poder proteger tu base y tus cosas preciadas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            <i class="fas fa-route"></i>
+                            <span data-text-es="Cómo Empezar" data-text-en="Getting Started">Cómo Empezar</span>
+                        </h2>
+                    </div>
+                    
+                    <div class="progression-steps">
+                        <div class="progression-step">
+                            <div class="progression-content">
+                                <h3 data-text-es="NPCs del Spawn" data-text-en="Spawn NPCs">NPCs del Spawn</h3>
+                                <p data-text-es="En el Spawn tienes varios NPC que te ayudarán." data-text-en="In Spawn you have several NPCs to help you.">
+                                    En el Spawn tienes varios NPC que te ayudarán.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="progression-step">
+                            <div class="progression-content">
+                                <h3 data-text-es="Consigue Dinero" data-text-en="Get Money">Consigue Dinero</h3>
+                                <p data-text-es="Puedes conseguir dinero vendiendo tus items con /sell." data-text-en="Build a safe shelter before nightfall to protect yourself from more dangerous mobs.">
+                                    Puedes conseguir dinero vendiendo tus items con /sell.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="progression-step">
+                            <div class="progression-content">
+                                <h3 data-text-es="Sube de nivel tus Rankups" data-text-en="Level up your Rankups">Sube tus Rankups</h3>
+                                <p data-text-es="En el /ranks puedes comprar mejores rankups donde estos te darán acceso a minas." data-text-en="In /ranks you can buy better rankings where these will give you access to mines.">
+                                    En el /ranks puedes comprar mejores rankups donde estos te darán acceso a minas.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="progression-step">
+                            <div class="progression-content">
+                                <h3 data-text-es="Visita las Minas Rankups" data-text-en="Visit the Rankups Mines">Visita las Minas Rankups</h3>
+                                <p data-text-es="En las minas de rankups puedes farmear materiales y mucho dinero facilmente." data-text-en="In the rankup mines you can easily farm materials and a lot of money.">
+                                    En las minas de rankups puedes farmear materiales y mucho dinero facilmente.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="progression-step">
+                            <div class="progression-content">
+                                <h3 data-text-es="Sumergete en las Mazmorras" data-text-en="Immerse yourself in the Dungeons">Sumergete en las Mazmorras</h3>
+                                <p data-text-es="Adentrate en las misteriosas mazmorras donde se encuentran criaturas estrañas pero con buen loot." data-text-en="Enter mysterious dungeons where you will find strange creatures but with good loot.">
+                                    Adentrate en las misteriosas mazmorras donde se encuentran criaturas estrañas pero con buen loot.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            <i class="fas fa-lightbulb"></i>
+                            <span data-text-es="Consejos para Nuevos Jugadores" data-text-en="Tips for New Players">Consejos para Nuevos Jugadores</span>
+                        </h2>
+                    </div>
+
+                    <ul class="tips-list">
+                        <li data-text-es="Prioriza tu dinero en subir de nivel los rankups para mejorar mucho más rápido." data-text-en="Prioritize your money on leveling up your rankups to improve much faster.">
+                            Prioriza tu dinero en subir de nivel los rankups para mejorar mucho más rápido.
+                        </li>
+                        <li data-text-es="Recolecta cualquier tipo de item porque seguramente lo necesites más adelante." data-text-en="Collect any type of item because you will surely need it later.">
+                            Recolecta cualquier tipo de item porque seguramente lo necesites más adelante.
+                        </li>
+                        <li data-text-es="No desperdicies tus materiales en tonterías, y usa la cabeza para montar estrategias." data-text-en="Don't waste your materials on nonsense, and use your head to create strategies.">
+                            No desperdicies tus materiales en tonterías, y usa la cabeza para montar estrategias.
+                        </li>
+                        <li data-text-es="Explora las mazmorras en grupo para aumentar tus posibilidades de éxito." data-text-en="Explore dungeons in groups to increase your chances of success.">
+                            Explora las mazmorras en grupo para aumentar tus posibilidades de éxito.
+                        </li>
+                        <li data-text-es="Mantén tu inventario organizado para ser más eficiente en tus aventuras." data-text-en="Keep your inventory organized to be more efficient in your adventures.">
+                            Mantén tu inventario organizado para ser más eficiente en tus aventuras.
+                        </li>
+                        <li data-text-es="Invierte tus materiales en los artefactos de cada mazmorra para facilitar tu progreso." data-text-en="Invest your materials in the artifacts in each dungeon to facilitate your progress.">
+                            Invierte tus materiales en los artefactos de cada mazmorra para facilitar tu progreso.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="command-section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-bars"></i>
+                        <span data-text-es="Menús del Servidor" data-text-en="Server Menus">Menús del Servidor</span>
+                    </h2>
+                </div>
+            
+                <div class="command-grid">
+                    <!-- Menú principal -->
+                    <div class="command-card utility">
+                        <div class="command-header">
+                            <div class="command-title-wrapper">
+                                <div class="command-icon">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <h3 class="command-title" data-text-es="Menú Principal" data-text-en="Main Menu">Menú Principal</h3>
+                            </div>
+                            <span class="command-badge">/menu</span>
+                        </div>
+                        <p class="command-desc" data-text-es="Acceso rápido a todas las funciones principales del servidor." data-text-en="Quick access to all main server features.">
+                            Acceso rápido a todas las funciones principales del servidor.
+                        </p>
+                    </div>
+                
+                    <!-- Discord -->
+                    <div class="command-card social">
+                        <div class="command-header">
+                            <div class="command-title-wrapper">
+                                <div class="command-icon">
+                                    <i class="fab fa-discord"></i>
+                                </div>
+                                <h3 class="command-title">Discord</h3>
+                            </div>
+                            <span class="command-badge">/discord</span>
+                        </div>
+                        <p class="command-desc" data-text-es="Enlace a nuestra comunidad de Discord." data-text-en="Link to our Discord community.">
+                            Enlace a nuestra comunidad de Discord.
+                        </p>
+                    </div>
+                
+                    <!-- Wiki -->
+                    <div class="command-card utility">
+                        <div class="command-header">
+                            <div class="command-title-wrapper">
+                                <div class="command-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <h3 class="command-title">Wiki</h3>
+                            </div>
+                            <span class="command-badge">/wiki</span>
+                        </div>
+                        <p class="command-desc" data-text-es="Acceso rápido a la información del servidor." data-text-en="Quick access to server information.">
+                            Acceso rápido a la información del servidor.
+                        </p>
+                    </div>
+                
+                    <!-- Mejoras -->
+                    <div class="command-card gameplay">
+                        <div class="command-header">
+                            <div class="command-title-wrapper">
+                                <div class="command-icon">
+                                    <i class="fas fa-level-up-alt"></i>
+                                </div>
+                                <h3 class="command-title" data-text-es="Sistema de Mejoras" data-text-en="Upgrade System">Sistema de Mejoras</h3>
+                            </div>
+                            <span class="command-badge">/mejoras</span>
+                        </div>
+                        <p class="command-desc" data-text-es="Mejora tu cuenta y propiedades para obtener ventajas." data-text-en="Upgrade your account and properties for advantages.">
+                            Mejora tu cuenta y propiedades para obtener ventajas.
+                        </p>
+                        <div class="command-subsection">
+                            <div class="command-subitem">
+                                <span class="command-subtitle">
+                                    <i class="fas fa-vault"></i>
+                                    <span data-text-es="Bóvedas" data-text-en="Vaults">Bóvedas</span>
+                                </span>
+                                <span class="command-subbadge">/bovedas</span>
+                            </div>
+                            <div class="command-subitem">
+                                <span class="command-subtitle">
+                                    <i class="fas fa-home"></i>
+                                    <span data-text-es="Hogares" data-text-en="Homes">Hogares</span>
+                                </span>
+                                <span class="command-subbadge">/hogares</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Protecciones -->
+                    <div class="command-card utility">
+                        <div class="command-header">
+                            <div class="command-title-wrapper">
+                                <div class="command-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h3 class="command-title" data-text-es="Protecciones" data-text-en="Protections">Protecciones</h3>
+                            </div>
+                            <span class="command-badge">/protecciones</span>
+                        </div>
+                        <p class="command-desc" data-text-es="Protege tus construcciones y áreas importantes." data-text-en="Protect your builds and important areas.">
+                            Protege tus construcciones y áreas importantes.
+                        </p>
+                    </div>
+                
+                    <!-- Random TP -->
+                    <div class="command-card gameplay">
+                        <div class="command-header">
+                            <div class="command-title-wrapper">
+                                <div class="command-icon">
+                                    <i class="fas fa-random"></i>
+                                </div>
+                                <h3 class="command-title">RandomTP</h3>
+                            </div>
+                            <span class="command-badge">/randomtp</span>
+                        </div>
+                        <p class="command-desc" data-text-es="Teletransporte aleatorio a ubicaciones seguras." data-text-en="Random teleport to safe locations.">
+                            Teletransporte aleatorio a ubicaciones seguras.
+                        </p>
+                    </div>
+                
+                    <!-- Ranks -->
+                    <div class="command-card economy">
+                        <div class="command-header">
+                            <div class="command-title-wrapper">
+                                <div class="command-icon">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <h3 class="command-title" data-text-es="Sistema de Rangos" data-text-en="Rank System">Sistema de Rangos</h3>
+                            </div>
+                            <span class="command-badge">/ranks</span>
+                        </div>
+                        <p class="command-desc" data-text-es="Mejora tu rango para obtener beneficios exclusivos." data-text-en="Upgrade your rank for exclusive benefits.">
+                            Mejora tu rango para obtener beneficios exclusivos.
+                        </p>
+                    </div>
+                
+                    <!-- Minas -->
+                    <div class="command-card gameplay">
+                        <div class="command-header">
+                            <div class="command-title-wrapper">
+                                <div class="command-icon">
+                                    <i class="fas fa-mountain"></i>
+                                </div>
+                                <h3 class="command-title" data-text-es="Sistema de Minas" data-text-en="Mines System">Sistema de Minas</h3>
+                            </div>
+                            <span class="command-badge">/minas</span>
+                        </div>
+                        <p class="command-desc" data-text-es="Accede a diferentes minas según tu rango." data-text-en="Access different mines based on your rank.">
+                            Accede a diferentes minas según tu rango.
+                        </p>
+                    </div>
+                
+                    <!-- Dungeons -->
+                    <div class="command-card gameplay">
+                        <div class="command-header">
+                            <div class="command-title-wrapper">
+                                <div class="command-icon">
+                                    <i class="fas fa-dungeon"></i>
+                                </div>
+                                <h3 class="command-title" data-text-es="Mazmorras" data-text-en="Dungeons">Mazmorras</h3>
+                            </div>
+                            <span class="command-badge">/dungeons</span>
+                        </div>
+                        <p class="command-desc" data-text-es="Información y acceso a las mazmorras disponibles." data-text-en="Information and access to available dungeons.">
+                            Información y acceso a las mazmorras disponibles.
+                        </p>
+                    </div>
+                
+                    <!-- Bosses -->
+                    <div class="command-card gameplay">
+                        <div class="command-header">
+                            <div class="command-title-wrapper">
+                                <div class="command-icon">
+                                    <i class="fas fa-skull"></i>
+                                </div>
+                                <h3 class="command-title" data-text-es="Sistema de Jefes" data-text-en="Boss System">Sistema de Jefes</h3>
+                            </div>
+                            <span class="command-badge">/boses</span>
+                        </div>
+                        <p class="command-desc" data-text-es="Información sobre jefes y sus recompensas." data-text-en="Information about bosses and their rewards.">
+                            Información sobre jefes y sus recompensas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-nav">
+                <a href="../index.html" class="content-nav-link">
+                    <i class="fas fa-arrow-left"></i>
+                    <span data-text-es="Volver al Inicio" data-text-en="Back to Home">Volver al Inicio</span>
+                </a>
+                <a href="survivalop-dungeons.html" class="content-nav-link">
+                    <span data-text-es="Mazmorras" data-text-en="Dungeons">Mazmorras</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="copyright" data-text-es="Esta wiki no está afiliada a Minecraft o Mojang. Última edición el 31 de mayo, 2025." data-text-en="This wiki is not affiliated with Minecraft or Mojang. Last edited on May 31, 2025.">Esta wiki no está afiliada a Minecraft o Mojang. Última edición el 31 de mayo, 2025.</div>
+            <ul class="footer-links">
+                <li class="footer-item"><a href="#" class="footer-link" data-text-es="Política de Privacidad" data-text-en="Privacy Policy">Política de Privacidad</a></li>
+                <li class="footer-item"><a href="#" class="footer-link" data-text-es="Acerca de Emerald Wiki" data-text-en="About Emerald Wiki">Acerca de Emerald Wiki</a></li>
+                <li class="footer-item"><a href="#" class="footer-link" data-text-es="Descargo de Responsabilidad" data-text-en="Disclaimers">Descargo de Responsabilidad</a></li>
+                <li class="footer-item"><a href="#" class="footer-link" data-text-es="Términos de Uso" data-text-en="Terms of Use">Términos de Uso</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main-page.js"></script>
+</body>
+</html>

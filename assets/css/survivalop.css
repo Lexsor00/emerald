@@ -1,0 +1,1455 @@
+    /* Improved SurvivalOP styles with new color palette */
+    :root {
+        --wiki-primary: #2ecc71;
+        --wiki-primary-dark: #27ae60;
+        --wiki-primary-light: #58d68d;
+        --wiki-secondary: #3498db;
+        --wiki-dark: #2c3e50;
+        --wiki-light: #ecf0f1;
+        --wiki-gray: #95a5a6;
+        --wiki-gray-light: #f8f9fa;
+        --wiki-border-radius: 8px;
+        --wiki-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        --wiki-transition: all 0.3s ease;
+    }
+
+    .wiki-header {
+        background: linear-gradient(135deg, rgba(88, 214, 141, 0.1) 0%, rgba(88, 214, 141, 0.05) 100%);
+        padding: 2.5rem;
+        border-radius: var(--wiki-border-radius);
+        margin-bottom: 2.5rem;
+        position: relative;
+        overflow: hidden;
+        border-left: 4px solid var(--wiki-primary);
+    }
+    
+    .wiki-title {
+        font-size: 2.75rem;
+        color: var(--wiki-primary);
+        margin-bottom: 0.75rem;
+        font-weight: 700;
+        position: relative;
+        display: inline-block;
+    }
+    
+    .wiki-subtitle {
+        color: var(--wiki-dark);
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+        max-width: 800px;
+    }
+    
+    .wiki-badge {
+        background-color: var(--wiki-primary);
+        color: white;
+        padding: 0.35rem 1rem;
+        border-radius: 1.5rem;
+        font-size: 0.85rem;
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 1.25rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    
+    .section {
+        margin-bottom: 3.5rem;
+        background-color: white;
+        border-radius: var(--wiki-border-radius);
+        padding: 2rem;
+        box-shadow: var(--wiki-box-shadow);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .section-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid var(--wiki-primary-light);
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+        color: var(--wiki-dark);
+        margin: 0;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    
+    .section-title i {
+        color: var(--wiki-primary);
+        font-size: 1.5rem;
+    }
+    
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .feature-card {
+        background-color: white;
+        border-radius: var(--wiki-border-radius);
+        padding: 1.75rem;
+        border-top: 4px solid var(--wiki-primary);
+        box-shadow: var(--wiki-box-shadow);
+        transition: var(--wiki-transition);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .feature-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        background-color: var(--wiki-primary-light);
+        color: var(--wiki-primary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        transition: var(--wiki-transition);
+    }
+    
+    .feature-card:hover .feature-icon {
+        background-color: var(--wiki-primary);
+        color: white;
+    }
+    
+    .feature-title {
+        font-size: 1.3rem;
+        color: var(--wiki-dark);
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+    
+    .feature-desc {
+        color: var(--wiki-gray);
+        line-height: 1.7;
+        margin-bottom: 0;
+    }
+    .feature-desc span {
+        color: var(--wiki-primary);
+    }
+    
+    .progression-steps {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        counter-reset: step-counter;
+    }
+    
+    .progression-step {
+        display: flex;
+        gap: 1.5rem;
+        position: relative;
+        padding-left: 4rem;
+    }
+    
+    .progression-step::before {
+        counter-increment: step-counter;
+        content: counter(step-counter);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 3rem;
+        height: 3rem;
+        background-color: var(--wiki-primary);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.25rem;
+    }
+    
+    .progression-content h3 {
+        color: var(--wiki-dark);
+        margin-bottom: 0.75rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+    
+    .progression-content p {
+        color: var(--wiki-gray);
+        line-height: 1.7;
+        margin-bottom: 0;
+    }
+    
+    .tips-list {
+        list-style: none;
+        padding-left: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .tips-list li {
+        position: relative;
+        padding-left: 2.5rem;
+        margin-bottom: 0;
+        line-height: 1.7;
+    }
+    
+    .tips-list li::before {
+        content: "•";
+        color: var(--wiki-primary);
+        position: absolute;
+        left: 0;
+        font-size: 2rem;
+        line-height: 1;
+        top: -0.25rem;
+    }
+    
+    .quick-info {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .quick-info-item {
+        background-color: white;
+        border-radius: var(--wiki-border-radius);
+        padding: 1.25rem;
+        box-shadow: var(--wiki-box-shadow);
+        transition: var(--wiki-transition);
+    }
+    
+    .quick-info-item:hover {
+        transform: translateY(-3px);
+    }
+    
+    .quick-info-label {
+        font-size: 0.9rem;
+        color: var(--wiki-gray);
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    
+    .quick-info-value {
+        font-weight: 700;
+        color: var(--wiki-primary);
+        font-size: 1.25rem;
+    }
+    
+    .content-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--wiki-primary-light);
+    }
+    
+    .content-nav-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--wiki-primary);
+        font-weight: 600;
+        padding: 0.75rem 1.5rem;
+        border-radius: var(--wiki-border-radius);
+        transition: var(--wiki-transition);
+        text-decoration: none;
+    }
+    
+    .content-nav-link:hover {
+        background-color: rgba(88, 214, 141, 0.1);
+    }
+    
+    /* Dark mode adjustments */
+    :root.dark-mode {
+        --wiki-dark: #f5f5f5;
+        --wiki-light: #1a1a1a;
+        --wiki-gray-100: #252525;
+        --wiki-gray-200: #2e2e2e;
+        --wiki-gray-300: #333333;
+        --wiki-gray-400: #4d4d4d;
+        --wiki-gray-500: #666666;
+        --wiki-gray-600: #808080;
+        --wiki-gray-700: #999999;
+        --wiki-gray-800: #b3b3b3;
+        --wiki-gray-900: #cccccc;
+        --wiki-dark-secondary: #333;
+        --wiki-dark-tertiary: #444;
+    }
+
+    .dark-mode .section,
+    .dark-mode .feature-card,
+    .dark-mode .quick-info-item {
+        background-color: var(--wiki-dark-secondary);
+        color: var(--wiki-dark);
+        border-color: rgba(88, 214, 141, 0.2);
+    }
+    
+    .dark-mode .section-title,
+    .dark-mode .feature-title,
+    .dark-mode .progression-content h3 {
+        color: var(--wiki-primary-light);
+    }
+    
+    .dark-mode .feature-desc,
+    .dark-mode .progression-content p,
+    .dark-mode .wiki-subtitle {
+        color: var(--wiki-gray-600);
+    }
+    
+    .dark-mode .feature-card:hover {
+        border-top-color: var(--wiki-primary-light);
+    }
+    
+    .dark-mode .wiki-header {
+        background: linear-gradient(135deg, rgba(39, 174, 96, 0.1) 0%, rgba(39, 174, 96, 0.05) 100%);
+    }
+    
+    .dark-mode .quick-info-label {
+        color: var(--wiki-gray-600);
+    }
+    
+    .dark-mode .quick-info-value {
+        color: var(--wiki-primary-light);
+    }
+    
+
+
+
+    /* Menus */
+/* Improved command cards section */
+.command-section {
+    margin-bottom: 3.5rem;
+    background-color: white;
+    border-radius: var(--wiki-border-radius);
+    padding: 2rem;
+    box-shadow: var(--wiki-box-shadow);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .command-section {
+    background-color: var(--wiki-dark-secondary);
+    border-color: rgba(88, 214, 141, 0.2);
+}
+
+.command-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.75rem;
+    margin-top: 1.5rem;
+}
+
+.command-card {
+    background-color: white;
+    border-radius: var(--wiki-border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--wiki-box-shadow);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-left: 4px solid var(--wiki-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.dark-mode .command-card {
+    background-color: var(--wiki-dark-secondary);
+}
+
+.command-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.1) 0%, rgba(46, 204, 113, 0) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.command-card:hover::before {
+    opacity: 1;
+}
+
+.command-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.command-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.command-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--wiki-primary-light);
+    color: var(--wiki-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.command-title-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.command-title {
+    font-size: 1.3rem;
+    color: var(--wiki-primary);
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.dark-mode .command-title {
+    color: var(--wiki-primary-light);
+}
+
+.command-badge {
+    background-color: var(--wiki-primary);
+    color: white;
+    padding: 0.35rem 1rem;
+    border-radius: 1.5rem;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    transition: all 0.3s ease;
+}
+
+.command-card:hover .command-badge {
+    background-color: var(--wiki-primary-dark);
+    transform: scale(1.05);
+}
+
+.command-desc {
+    color: var(--wiki-gray);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.dark-mode .command-desc {
+    color: var(--wiki-gray-600);
+}
+
+.command-subsection {
+    background-color: rgba(88, 214, 141, 0.08);
+    border-radius: var(--wiki-border-radius);
+    padding: 0.75rem;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 2;
+    border-left: 2px solid var(--wiki-primary-light);
+}
+
+.dark-mode .command-subsection {
+    background-color: rgba(39, 174, 96, 0.1);
+    border-left-color: var(--wiki-primary-dark);
+}
+
+.command-subitem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed rgba(88, 214, 141, 0.3);
+}
+
+.command-subitem:last-child {
+    border-bottom: none;
+}
+
+.dark-mode .command-subitem {
+    border-bottom-color: rgba(88, 214, 141, 0.2);
+}
+
+.command-subtitle {
+    font-size: 0.95rem;
+    color: var(--wiki-dark);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dark-mode .command-subtitle {
+    color: var(--wiki-gray-800);
+}
+
+.command-subbadge {
+    background-color: rgba(88, 214, 141, 0.2);
+    color: var(--wiki-primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.75rem;
+    font-size: 0.85rem;
+    font-family: monospace;
+    transition: all 0.2s ease;
+}
+
+.command-subitem:hover .command-subbadge {
+    background-color: var(--wiki-primary);
+    color: white;
+}
+
+.dark-mode .command-subbadge {
+    color: var(--wiki-primary-light);
+}
+
+/* Category colors */
+.command-card.economy {
+    border-left-color: #f39c12;
+}
+.command-card.economy .command-icon {
+    background-color: rgba(243, 156, 18, 0.1);
+    color: #f39c12;
+}
+.command-card.economy .command-badge {
+    background-color: #f39c12;
+}
+.command-card.economy:hover .command-badge {
+    background-color: #e67e22;
+}
+
+.command-card.gameplay {
+    border-left-color: #3498db;
+}
+.command-card.gameplay .command-icon {
+    background-color: rgba(52, 152, 219, 0.1);
+    color: #3498db;
+}
+.command-card.gameplay .command-badge {
+    background-color: #3498db;
+}
+.command-card.gameplay:hover .command-badge {
+    background-color: #2980b9;
+}
+
+.command-card.social {
+    border-left-color: #9b59b6;
+}
+.command-card.social .command-icon {
+    background-color: rgba(155, 89, 182, 0.1);
+    color: #9b59b6;
+}
+.command-card.social .command-badge {
+    background-color: #9b59b6;
+}
+.command-card.social:hover .command-badge {
+    background-color: #8e44ad;
+}
+
+.command-card.utility {
+    border-left-color: #1abc9c;
+}
+.command-card.utility .command-icon {
+    background-color: rgba(26, 188, 156, 0.1);
+    color: #1abc9c;
+}
+.command-card.utility .command-badge {
+    background-color: #1abc9c;
+}
+.command-card.utility:hover .command-badge {
+    background-color: #16a085;
+}
+
+
+
+
+
+/*
+
+    ____                                         
+    |  _ \ _   _ _ __   __ _  ___  ___  _ __  ___ 
+    | | | | | | | '_ \ / _` |/ _ \/ _ \| '_ \/ __|
+    | |_| | |_| | | | | (_| |  __/ (_) | | | \__ \
+    |____/ \__,_|_| |_|\__, |\___|\___/|_| |_|___/
+                    |___/             
+*/
+
+
+/* Dungeon Cards - Enhanced */
+.dungeons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.dungeon-card {
+    background-color: white;
+    border-radius: var(--wiki-border-radius);
+    padding: 2rem;
+    box-shadow: var(--wiki-box-shadow);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-top: 5px solid var(--wiki-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.dungeon-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.05) 0%, rgba(46, 204, 113, 0) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.dungeon-card:hover::before {
+    opacity: 1;
+}
+
+.dungeon-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode .dungeon-card {
+    background-color: var(--wiki-dark-secondary);
+    border-color: var(--wiki-primary-dark);
+}
+
+/* Dungeon Header - Enhanced */
+.dungeon-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(88, 214, 141, 0.3);
+    position: relative;
+}
+
+.dark-mode .dungeon-header {
+    border-bottom-color: rgba(88, 214, 141, 0.2);
+}
+
+.dungeon-title {
+    font-size: 1.6rem;
+    color: var(--wiki-dark);
+    margin: 0;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    line-height: 1.3;
+}
+
+.dark-mode .dungeon-title {
+    color: var(--wiki-primary-light);
+}
+
+.difficulty-badge {
+    font-size: 1.1rem;
+    margin-left: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.dungeon-level {
+    font-size: 0.9rem;
+    background-color: var(--wiki-primary-light);
+    color: var(--wiki-primary-dark);
+    padding: 0.35rem 1rem;
+    border-radius: 1.5rem;
+    font-weight: 700;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.dark-mode .dungeon-level {
+    background-color: var(--wiki-primary-dark);
+    color: white;
+}
+
+/* Dungeon Description - Enhanced */
+.dungeon-desc {
+    color: var(--wiki-gray);
+    line-height: 1.75;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    position: relative;
+}
+
+.dark-mode .dungeon-desc {
+    color: var(--wiki-gray-600);
+}
+
+/* Mobs & Boss Section - Enhanced */
+.dungeon-mobs, .dungeon-boss {
+    margin-bottom: 2rem;
+}
+
+.mobs-title, .boss-title {
+    font-size: 1.25rem;
+    color: var(--wiki-dark);
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mobs-title::before, .boss-title::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--wiki-primary);
+    border-radius: 50%;
+}
+
+.dark-mode .mobs-title,
+.dark-mode .boss-title {
+    color: var(--wiki-primary-light);
+}
+
+/* Mobs Grid - Enhanced */
+.mobs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.mob-card, .boss-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    transition: var(--wiki-transition);
+    position: relative;
+}
+
+.mob-card:hover, .boss-card:hover {
+    transform: translateY(-5px);
+}
+
+.mob-image, .boss-image {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 0.75rem;
+    border: 3px solid var(--wiki-primary-light);
+    transition: var(--wiki-transition);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.mob-image::before, .boss-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.1) 0%, rgba(46, 204, 113, 0) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mob-card:hover .mob-image::before,
+.boss-card:hover .boss-image::before {
+    opacity: 1;
+}
+
+.boss-image {
+    width: 120px;
+    height: 120px;
+    border-color: var(--wiki-secondary);
+    border-width: 4px;
+}
+
+.mob-card:hover .mob-image {
+    border-color: var(--wiki-primary);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.boss-card:hover .boss-image {
+    border-color: var(--wiki-secondary-dark);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.mob-name, .boss-name {
+    color: var(--wiki-dark);
+    font-weight: 600;
+    text-align: center;
+    transition: var(--wiki-transition);
+    font-size: 1rem;
+}
+
+.dark-mode .mob-name,
+.dark-mode .boss-name {
+    color: var(--wiki-gray-800);
+}
+
+.mob-card:hover .mob-name,
+.boss-card:hover .boss-name {
+    color: var(--wiki-primary);
+}
+
+/* Rewards Grid - Enhanced */
+.rewards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.reward-card {
+    background-color: white;
+    border-radius: var(--wiki-border-radius);
+    padding: 1.75rem;
+    box-shadow: var(--wiki-box-shadow);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-left: 4px solid var(--wiki-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.reward-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.1) 0%, rgba(46, 204, 113, 0) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.reward-card:hover::before {
+    opacity: 1;
+}
+
+.dark-mode .reward-card {
+    background-color: var(--wiki-dark-secondary);
+}
+
+.reward-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.reward-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--wiki-primary-light);
+    color: var(--wiki-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: var(--wiki-transition);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.reward-card:hover .reward-icon {
+    background-color: var(--wiki-primary);
+    color: white;
+    transform: scale(1.1);
+}
+
+.reward-title {
+    font-size: 1.3rem;
+    color: var(--wiki-dark);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.dark-mode .reward-title {
+    color: var(--wiki-primary-light);
+}
+
+.reward-desc {
+    color: var(--wiki-gray);
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.dark-mode .reward-desc {
+    color: var(--wiki-gray-600);
+}
+
+
+/* Enhanced Tips Section */
+.tips-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.tip-card {
+    background-color: white;
+    border-radius: var(--wiki-border-radius);
+    padding: 1.75rem;
+    box-shadow: var(--wiki-box-shadow);
+    transition: all 0.3s ease;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    border-left: 4px solid var(--wiki-primary);
+}
+
+.dark-mode .tip-card {
+    background-color: var(--wiki-dark-secondary);
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.tip-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--wiki-primary-light);
+    color: var(--wiki-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    transition: var(--wiki-transition);
+}
+
+.tip-card:hover .tip-icon {
+    background-color: var(--wiki-primary);
+    color: white;
+    transform: scale(1.1);
+}
+
+.tip-content {
+    flex: 1;
+}
+
+.tip-title {
+    font-size: 1.2rem;
+    color: var(--wiki-dark);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.dark-mode .tip-title {
+    color: var(--wiki-primary-light);
+}
+
+.tip-desc {
+    color: var(--wiki-gray);
+    line-height: 1.7;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+.dark-mode .tip-desc {
+    color: var(--wiki-gray-600);
+}
+
+/* Difficulty Indicators */
+.dungeon-card.easy {
+    border-top-color: #2ecc71;
+}
+.dungeon-card.medium {
+    border-top-color: #f39c12;
+}
+.dungeon-card.hard {
+    border-top-color: #e74c3c;
+}
+.dungeon-card.insane {
+    border-top-color: #9b59b6;
+}
+.dungeon-card.legendary {
+    border-top-color: #3498db;
+}
+
+
+
+/* Mine Dungeon Specific Styles */
+.mine-dungeon {
+    width: 100%;
+}
+
+.dungeon-card.full-width {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* ======================
+    MINERALS SECTION ENHANCEMENTS
+   ====================== */
+
+.minerals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.75rem;
+    margin-top: 1.5rem;
+}
+
+.mineral-card {
+    background-color: white;
+    border-radius: var(--wiki-border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--wiki-box-shadow);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: none;
+}
+
+.dark-mode .mineral-card {
+    background-color: var(--wiki-dark-secondary);
+}
+
+.mineral-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.05) 0%, rgba(46, 204, 113, 0) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.mineral-card:hover::before {
+    opacity: 0.3;
+}
+
+.mineral-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.mineral-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.mineral-card:hover .mineral-image {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.mineral-name {
+    font-weight: 700;
+    color: var(--wiki-dark);
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.dark-mode .mineral-name {
+    color: var(--wiki-gray-800);
+}
+
+.mineral-difficulty {
+    font-size: 0.85rem;
+    color: var(--wiki-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    position: relative;
+    z-index: 2;
+}
+
+.dark-mode .mineral-difficulty {
+    color: var(--wiki-gray-600);
+}
+
+/* Mineral specific colors */
+.mineral-card.anthracite .mineral-image {
+    background: linear-gradient(135deg, #333333 0%, #1a1a1a 100%);
+    color: #a8a8a8;
+}
+
+.mineral-card.malachite .mineral-image {
+    background: linear-gradient(135deg, #1e8449 0%, #145a32 100%);
+    color: #82e0aa;
+}
+
+.mineral-card.carnelian .mineral-image {
+    background: linear-gradient(135deg, #f1c40f 0%, #f39c12 100%); /* Amarillo claro */
+    color: #fef9e7;
+}
+
+.mineral-card.azurite .mineral-image {
+    background: linear-gradient(135deg, #3498db 0%, #2874a6 100%);
+    color: #d6eaf8;
+}
+
+.mineral-card.jade .mineral-image {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); /* Rojo */
+    color: #fadbd8;
+}
+
+.mineral-card.topaz .mineral-image {
+    background: linear-gradient(135deg, #f39c12 0%, #d35400 100%); /* Dorado */
+    color: #fdebd0;
+}
+
+.mineral-card.kunzite .mineral-image {
+    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%); /* Morado */
+    color: #e8daef;
+}
+
+.mineral-card.brucite .mineral-image {
+    background: linear-gradient(135deg, #f5f5f5 0%, #bdc3c7 100%); /* Blanco */
+    color: #333333;
+}
+
+/* Difficulty indicators */
+.mineral-difficulty {
+    display: flex;
+    justify-content: center;
+    gap: 0.25rem;
+    font-size: 0.85rem;
+    color: var(--wiki-gray);
+}
+
+.mineral-difficulty i {
+    font-size: 0.9rem;
+    color: var(--wiki-gray);
+}
+
+.mineral-difficulty i.active {
+    color: var(--wiki-primary);
+}
+
+.dark-mode .mineral-difficulty i.active {
+    color: var(--wiki-primary-light);
+}
+
+/* Mineral rarity glow effects */
+.mineral-card {
+    position: relative;
+}
+
+.mineral-card::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: var(--wiki-border-radius);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mineral-card:hover::after {
+    opacity: 0.7;
+}
+
+.mineral-card.anthracite::after {
+    background: linear-gradient(45deg, #333333, #1a1a1a, #333333);
+    box-shadow: 0 0 15px rgba(51, 51, 51, 0.6);
+}
+
+.mineral-card.malachite::after {
+    background: linear-gradient(45deg, #1e8449, #145a32, #1e8449);
+    box-shadow: 0 0 15px rgba(30, 132, 73, 0.6);
+}
+
+.mineral-card.carnelian::after {
+    background: linear-gradient(45deg, #f1c40f, #f39c12, #f1c40f); /* Amarillo claro */
+    box-shadow: 0 0 15px rgba(241, 196, 15, 0.6);
+}
+
+.mineral-card.azurite::after {
+    background: linear-gradient(45deg, #3498db, #2874a6, #3498db);
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.6);
+}
+
+.mineral-card.jade::after {
+    background: linear-gradient(45deg, #e74c3c, #c0392b, #e74c3c); /* Rojo */
+    box-shadow: 0 0 15px rgba(231, 76, 60, 0.6);
+}
+
+.mineral-card.topaz::after {
+    background: linear-gradient(45deg, #f39c12, #d35400, #f39c12); /* Dorado */
+    box-shadow: 0 0 15px rgba(243, 156, 18, 0.6);
+}
+
+.mineral-card.kunzite::after {
+    background: linear-gradient(45deg, #9b59b6, #8e44ad, #9b59b6); /* Morado */
+    box-shadow: 0 0 15px rgba(155, 89, 182, 0.6);
+}
+
+.mineral-card.brucite::after {
+    background: linear-gradient(45deg, #f5f5f5, #bdc3c7, #f5f5f5); /* Blanco */
+    box-shadow: 0 0 15px rgba(245, 245, 245, 0.6);
+}
+
+
+
+
+
+@media (max-width: 1200px) {
+    .dungeons-grid {
+        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    }
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .wiki-title {
+        font-size: 2.25rem;
+    }
+    
+    .wiki-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .feature-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .minerals-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .wiki-header {
+        padding: 1.75rem;
+    }
+    
+    .wiki-title {
+        font-size: 2rem;
+    }
+    
+    .feature-grid,
+    .tips-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .quick-info {
+        grid-template-columns: 1fr 1fr;
+    }
+    /* Menus */
+    .command-grid {
+        grid-template-columns: 1fr;
+    }
+    .command-card {
+        padding: 1.25rem;
+    }
+
+
+    /* Dungeons */
+    .dungeons-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .rewards-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .tips-list {
+        grid-template-columns: 1fr;
+    }
+    .tips-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .tip-card {
+        padding: 1.5rem;
+    }
+    
+    .dungeon-card {
+        padding: 1.75rem;
+    }
+    
+    .boss-image {
+        width: 100px;
+        height: 100px;
+    }
+
+
+
+    .minerals-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+    
+    .mineral-image {
+        width: 70px;
+        height: 70px;
+        font-size: 1.75rem;
+    }
+    
+    .mineral-name {
+        font-size: 1rem;
+    }
+    
+    .mineral-difficulty {
+        font-size: 0.75rem;
+    }
+}
+
+
+
+
+@media (max-width: 576px) {
+    .wiki-header {
+        padding: 1.5rem;
+    }
+    
+    .wiki-title {
+        font-size: 1.75rem;
+    }
+    
+    .quick-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .progression-step {
+        padding-left: 3.5rem;
+    }
+    
+    .progression-step::before {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+    
+    .content-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .content-nav-link {
+        width: 100%;
+        justify-content: center;
+    }
+    /* Menus */
+    .command-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    .command-title-wrapper {
+        width: 100%;
+    }
+
+
+
+
+
+
+    /* Dungeons */
+
+    .rewards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .mobs-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 1rem;
+    }
+    
+    .dungeon-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    
+    .dungeon-title {
+        font-size: 1.4rem;
+    }
+    
+    .dungeon-level {
+        margin-left: 0;
+    }
+    
+    .boss-image {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .reward-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+
+    .tip-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .tip-icon {
+        margin-bottom: 1rem;
+    }
+
+    .minerals-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 1.25rem;
+    }
+    
+    .mineral-card {
+        padding: 1.25rem;
+    }
+    
+    .mineral-image {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .mineral-name {
+        font-size: 1rem;
+    }
+}

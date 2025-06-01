@@ -396,9 +396,6 @@
     position: relative;
     display: inline-block;
     max-width: 100%; /* Ajuste para la rareza */
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .material-name::after {
@@ -874,13 +871,10 @@
     }
     
     .material-name {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
+        max-width: 100%;
     }
     
-    .material-rarity {
-        font-size: 0.7rem;
-        padding: 0.2rem 0.6rem;
-    }
     
     .recipe-item {
         padding: 0.5rem 1rem;
@@ -890,7 +884,6 @@
         font-size: 1rem;
     }
 
-    /* Ajustes adicionales para rarezas en pantallas muy pequeñas */
     .material-info {
         padding-right: 75px;
     }
@@ -899,8 +892,5 @@
         font-size: 0.65rem;
         padding: 0.2rem 0.6rem;
     }
-    
-    .material-name {
-        max-width: 100%;
-    }
+
 }

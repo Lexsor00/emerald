@@ -64,7 +64,7 @@
                         <li class="sidebar-item"><a href="survivalop.html" class="sidebar-link" data-text-es="Introducción" data-text-en="Introduction">Introducción</a></li>
                         <li class="sidebar-item"><a href="survivalop-dungeons.html" class="sidebar-link" data-text-es="Mazmorras" data-text-en="Dungeons">Mazmorras</a></li>
                         <li class="sidebar-item"><a href="survivalop-mobs.html" class="sidebar-link" data-text-es="Criaturas" data-text-en="Mobs">Criaturas</a></li>
-                        <li class="sidebar-item active"><a href="" class="sidebar-link" data-text-es="Materiales" data-text-en="Materials">Materiales</a></li>
+                        <li class="sidebar-item active"><a href="survivalop-materials.html" class="sidebar-link" data-text-es="Materiales" data-text-en="Materials">Materiales</a></li>
                     </ul>
                 </div>
             </div>
@@ -180,7 +180,7 @@
                         <option value="secret" data-text-es="Secreta" data-text-en="Secret">Secreta</option>
                     </select>
                 </div>
-                -->
+                
 
                 <div class="filter-group">
                     <span class="filter-label" data-text-es="Tipo:" data-text-en="Type:">Tipo:</span>
@@ -190,7 +190,7 @@
                         <option value="crafted" data-text-es="Fabricado" data-text-en="Crafted">Fabricado</option>
                     </select>
                 </div>
-                
+                -->
                 <button class="btn-primary btn-reset" id="resetFilters" data-text-es="Restablecer" data-text-en="Reset">
                     <i class="fas fa-undo"></i> <span class="reset-text" data-text-es="Restablecer" data-text-en="Reset">Restablecer</span>
                 </button>
@@ -435,7 +435,340 @@
                         </div>
                     </div>
                 </div>
+                <!-- Mazmorra Cueva -->
+                <div class="material-category">
+                    <h3 class="material-category-title">
+                        <i class="fa-solid fa-cube"></i>
+                        <span data-text-es="Cueva" data-text-en="Cave">Cueva</span>
+                    </h3>
+
+
+                    <div class="materials-grid">
+                        <!-- Seta Envenenada -->
+                        <div class="material-card expanded" data-dungeon="cave" data-rarity="common" data-type="drop">
+                            <div class="material-header">
+                                <i class="fas fa-dragon"></i>
+                                <span data-text-es="Seta Envenenada" data-text-en="Poisonous Mushroom">Seta Envenenada</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/cueva/seta-envenenada.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Seta Envenenada" data-text-en="Poisonous Mushroom">Seta Envenenada</h4>
+                                        <div class="material-rarity common" data-text-es="Común" data-text-en="Common">Común</div>
+                                        <div class="material-drop-rate">
+                                            <i class="fas fa-percentage"></i>
+                                            <span data-text-es="75% de drop" data-text-en="75% drop rate">75% de drop</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/cueva/frasco-veneno.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Frasco de Veneno" data-text-en="Poison Vial">Frasco de Veneno</h4>
+                                        <div class="material-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</div>
+                                        <div class="material-drop-rate">
+                                            <i class="fas fa-percentage"></i>
+                                            <span data-text-es="25% de drop" data-text-en="25% drop rate">25% de drop</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Material fabricable:" data-text-en="Craftable material:">Material fabricable:</h5>
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">10x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/seta-envenenada.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/setas-envenenadas.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Setas Envenenadas" data-text-en="Poisonous Mushrooms">Setas Envenenadas</span>
+                                            <span class="recipe-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Planta Venenosa -->
+                        <div class="material-card expanded" data-dungeon="cave" data-rarity="common" data-type="drop">
+                            <div class="material-header">
+                                <i class="fas fa-dragon"></i>
+                                <span data-text-es="Planta Venenosa" data-text-en="Poisonous Plant">Planta Venenosa</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/cueva/seta-envenenada.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Seta Envenenada" data-text-en="Poisonous Mushroom">Seta Envenenada</h4>
+                                        <div class="material-rarity common" data-text-es="Común" data-text-en="Common">Común</div>
+                                        <div class="material-drop-rate">
+                                            <i class="fas fa-percentage"></i>
+                                            <span data-text-es="65% de drop" data-text-en="65% drop rate">65% de drop</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/cueva/frasco-veneno.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Frasco de Veneno" data-text-en="Poison Vial">Frasco de Veneno</h4>
+                                        <div class="material-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</div>
+                                        <div class="material-drop-rate">
+                                            <i class="fas fa-percentage"></i>
+                                            <span data-text-es="25% de drop" data-text-en="25% drop rate">25% de drop</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/cueva/setas-envenenadas.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Setas Envenenadas" data-text-en="Poisonous Mushrooms">Setas Envenenadas</h4>
+                                        <div class="material-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</div>
+                                        <div class="material-drop-rate">
+                                            <i class="fas fa-percentage"></i>
+                                            <span data-text-es="35% de drop" data-text-en="15% drop rate">35% de drop</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Material fabricable:" data-text-en="Craftable material:">Material fabricable:</h5>
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">15x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/setas-envenenadas.png');"></div>
+                                    </div>
+                                    <div class="recipe-plus">+</div>
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">10x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/frasco-veneno.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/jarro-veneno.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Jarro de Veneno" data-text-en="Poison Jar">Jarro de Veneno</span>
+                                            <span class="recipe-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Raptor -->
+                        <div class="material-card expanded" data-dungeon="cave" data-rarity="common" data-type="drop">
+                            <div class="material-header">
+                                <i class="fas fa-dragon"></i>
+                                <span data-text-es="Raptor" data-text-en="Raptor">Raptor</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/cueva/fosil.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Fósiles" data-text-en="Fossils">Fósiles</h4>
+                                        <div class="material-rarity common" data-text-es="Común" data-text-en="Common">Común</div>
+                                        <div class="material-drop-rate">
+                                            <i class="fas fa-percentage"></i>
+                                            <span data-text-es="65% de drop" data-text-en="65% drop rate">65% de drop</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/cueva/fosil-espina.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Fósil de Espina" data-text-en="Spine Fossil">Fósil de Espina</h4>
+                                        <div class="material-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</div>
+                                        <div class="material-drop-rate">
+                                            <i class="fas fa-percentage"></i>
+                                            <span data-text-es="35% de drop" data-text-en="35% drop rate">35% de drop</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/cueva/fosil-garras.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Fósil de las Garras" data-text-en="Claw Fossil">Fósil de las Garras</h4>
+                                        <div class="material-rarity epic" data-text-es="Épica" data-text-en="Epic">Épica</div>
+                                        <div class="material-drop-rate">
+                                            <i class="fas fa-percentage"></i>
+                                            <span data-text-es="15% de drop" data-text-en="15% drop rate">15% de drop</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Materiales fabricables:" data-text-en="Craftable materials:">Materiales fabricables:</h5>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">16x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/fosil.png');"></div>
+                                    </div>
+                                    <div class="recipe-plus">+</div>
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">7x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/fosil-espina.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/fosil-pie.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Fósil del Pie" data-text-en="Foot Fossil">Fósil del Pie</span>
+                                            <span class="recipe-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">2x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/fosil-pie.png');"></div>
+                                    </div>
+                                    <div class="recipe-plus">+</div>
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">6x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/fosil-garras.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/fosil-columna.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Fósil de la Columna" data-text-en="Spine Column Fossil">Fósil de la Columna</span>
+                                            <span class="recipe-rarity epic" data-text-es="Épica" data-text-en="Epic">Épica</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Vilhortis (Boss) -->
+                        <div class="material-card expanded" data-dungeon="cave" data-rarity="rare" data-type="drop">
+                            <div class="material-header boss">
+                                <i class="fas fa-crown"></i>
+                                <span data-text-es="Vilhortis (Jefe)" data-text-en="Vilhortis (Boss)">Vilhortis (Jefe)</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/cueva/flor-durmiente.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Flor Durmiente" data-text-en="Sleeping Flower">Flor Durmiente</h4>
+                                        <div class="material-rarity common" data-text-es="Común" data-text-en="Common">Común</div>
+                                        <div class="material-drop-rate">
+                                            <i class="fas fa-percentage"></i>
+                                            <span data-text-es="65% de drop" data-text-en="65% drop rate">65% de drop</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/cueva/flor-radiante.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Flor Radiante" data-text-en="Radiant Flower">Flor Radiante</h4>
+                                        <div class="material-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</div>
+                                        <div class="material-drop-rate">
+                                            <i class="fas fa-percentage"></i>
+                                            <span data-text-es="35% de drop" data-text-en="35% drop rate">35% de drop</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/cueva/amuleto-perdido.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Amuleto Perdido" data-text-en="Lost Amulet">Amuleto Perdido</h4>
+                                        <div class="material-rarity epic" data-text-es="Épica" data-text-en="Epic">Épica</div>
+                                        <div class="material-drop-rate">
+                                            <i class="fas fa-percentage"></i>
+                                            <span data-text-es="15% de drop" data-text-en="15% drop rate">15% de drop</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/cueva/daga-bosque.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Daga del Bosque" data-text-en="Forest Dagger">Daga del Bosque</h4>
+                                        <div class="material-rarity legendary" data-text-es="Legendaria" data-text-en="Legendary">Legendaria</div>
+                                        <div class="material-drop-rate">
+                                            <i class="fas fa-percentage"></i>
+                                            <span data-text-es="3% de drop" data-text-en="3% drop rate">3% de drop</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/cueva/copa-virtud.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Copa de la Virtud" data-text-en="Virtue Cup">Copa de la Virtud</h4>
+                                        <div class="material-rarity mythic" data-text-es="Mítica" data-text-en="Mythic">Mítica</div>
+                                        <div class="material-drop-rate">
+                                            <i class="fas fa-percentage"></i>
+                                            <span data-text-es="1% de drop" data-text-en="1% drop rate">1% de drop</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Materiales fabricables:" data-text-en="Craftable materials:">Materiales fabricables:</h5>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">4x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/jarro-veneno.png');"></div>
+                                    </div>
+                                    <div class="recipe-plus">+</div>
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">2x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/flor-radiante.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/flor-envenenada.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Flor Envenenada" data-text-en="Poisoned Flower">Flor Envenenada</span>
+                                            <span class="recipe-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">4x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/flor-envenenada.png');"></div>
+                                    </div>
+                                    <div class="recipe-plus">+</div>
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">3x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/flor-durmiente.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/tronco-seco.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Tronco Seco" data-text-en="Dry Trunk">Tronco Seco</span>
+                                            <span class="recipe-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+
             
             <div class="materials-tab-content" id="crafted-materials">
                 <!-- Contenido de materiales fabricados -->
@@ -667,6 +1000,289 @@
                         </div>
                     </div>
                 </div>
+
+
+                <!-- Materiales fabricados de la Cueva -->
+                <div class="material-category">
+                    <h3 class="material-category-title">
+                        <i class="fa-solid fa-cube"></i>
+                        <span data-text-es="Materiales de la Cueva" data-text-en="Cave Materials">Materiales de la Cueva</span>
+                    </h3>
+
+                    <div class="materials-grid">
+
+                        <!-- Jarro de Veneno -->
+                        <div class="material-card expanded" data-dungeon="cave" data-rarity="rare" data-type="crafted">
+                            <div class="material-header">
+                                <i class="fas fa-hammer"></i>
+                                <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/cueva/jarro-veneno.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Jarro de Veneno" data-text-en="Poison Jar">Jarro de Veneno</h4>
+                                        <div class="material-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</div>
+                                        <div class="material-crafted">
+                                            <i class="fas fa-hammer"></i>
+                                            <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Receta de fabricación:" data-text-en="Crafting recipe:">Receta de fabricación:</h5>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">15x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/setas-envenenadas.png');"></div>
+                                    </div>
+                                    <div class="recipe-plus">+</div>
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">10x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/frasco-veneno.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/jarro-veneno.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Jarro de Veneno" data-text-en="Poison Jar">Jarro de Veneno</span>
+                                            <span class="recipe-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fósil del Pie -->
+                        <div class="material-card expanded" data-dungeon="cave" data-rarity="rare" data-type="crafted">
+                            <div class="material-header">
+                                <i class="fas fa-hammer"></i>
+                                <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/cueva/fosil-pie.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Fósil del Pie" data-text-en="Foot Fossil">Fósil del Pie</h4>
+                                        <div class="material-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</div>
+                                        <div class="material-crafted">
+                                            <i class="fas fa-hammer"></i>
+                                            <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Receta de fabricación:" data-text-en="Crafting recipe:">Receta de fabricación:</h5>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">16x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/fosil.png');"></div>
+                                    </div>
+                                    <div class="recipe-plus">+</div>
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">7x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/fosil-espina.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/fosil-pie.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Fósil del Pie" data-text-en="Foot Fossil">Fósil del Pie</span>
+                                            <span class="recipe-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fósil de la Columna -->
+                        <div class="material-card expanded" data-dungeon="cave" data-rarity="epic" data-type="crafted">
+                            <div class="material-header">
+                                <i class="fas fa-hammer"></i>
+                                <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/cueva/fosil-columna.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Fósil de la Columna" data-text-en="Spine Column Fossil">Fósil de la Columna</h4>
+                                        <div class="material-rarity epic" data-text-es="Épica" data-text-en="Epic">Épica</div>
+                                        <div class="material-crafted">
+                                            <i class="fas fa-hammer"></i>
+                                            <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Receta de fabricación:" data-text-en="Crafting recipe:">Receta de fabricación:</h5>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">2x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/fosil-pie.png');"></div>
+                                    </div>
+                                    <div class="recipe-plus">+</div>
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">6x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/fosil-garras.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/fosil-columna.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Fósil de la Columna" data-text-en="Spine Column Fossil">Fósil de la Columna</span>
+                                            <span class="recipe-rarity epic" data-text-es="Épica" data-text-en="Epic">Épica</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Flor Envenenada -->
+                        <div class="material-card expanded" data-dungeon="cave" data-rarity="rare" data-type="crafted">
+                            <div class="material-header">
+                                <i class="fas fa-hammer"></i>
+                                <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/cueva/flor-envenenada.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Flor Envenenada" data-text-en="Poisoned Flower">Flor Envenenada</h4>
+                                        <div class="material-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</div>
+                                        <div class="material-crafted">
+                                            <i class="fas fa-hammer"></i>
+                                            <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Receta de fabricación:" data-text-en="Crafting recipe:">Receta de fabricación:</h5>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">4x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/jarro-veneno.png');"></div>
+                                    </div>
+                                    <div class="recipe-plus">+</div>
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">2x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/flor-radiante.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/flor-envenenada.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Flor Envenenada" data-text-en="Poisoned Flower">Flor Envenenada</span>
+                                            <span class="recipe-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tronco Seco -->
+                        <div class="material-card expanded" data-dungeon="cave" data-rarity="rare" data-type="crafted">
+                            <div class="material-header">
+                                <i class="fas fa-hammer"></i>
+                                <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/cueva/tronco-seco.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Tronco Seco" data-text-en="Dry Trunk">Tronco Seco</h4>
+                                        <div class="material-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</div>
+                                        <div class="material-crafted">
+                                            <i class="fas fa-hammer"></i>
+                                            <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Receta de fabricación:" data-text-en="Crafting recipe:">Receta de fabricación:</h5>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">4x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/flor-envenenada.png');"></div>
+                                    </div>
+                                    <div class="recipe-plus">+</div>
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">3x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/flor-durmiente.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/tronco-seco.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Tronco Seco" data-text-en="Dry Trunk">Tronco Seco</span>
+                                            <span class="recipe-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Linterna del Bosque -->
+                        <div class="material-card expanded" data-dungeon="cave" data-rarity="epic" data-type="crafted">
+                            <div class="material-header">
+                                <i class="fas fa-hammer"></i>
+                                <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/cueva/linterna-bosque.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Linterna del Bosque" data-text-en="Forest Lantern">Linterna del Bosque</h4>
+                                        <div class="material-rarity epic" data-text-es="Épica" data-text-en="Epic">Épica</div>
+                                        <div class="material-crafted">
+                                            <i class="fas fa-hammer"></i>
+                                            <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Receta de fabricación:" data-text-en="Crafting recipe:">Receta de fabricación:</h5>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">2x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/tronco-seco.png');"></div>
+                                    </div>
+                                    <div class="recipe-plus">+</div>
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">5x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/fosil-pie.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/linterna-bosque.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Linterna del Bosque" data-text-en="Forest Lantern">Linterna del Bosque</span>
+                                            <span class="recipe-rarity epic" data-text-es="Épica" data-text-en="Epic">Épica</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             
             <div class="content-nav">
@@ -674,8 +1290,8 @@
                     <i class="fas fa-arrow-left"></i>
                     <span data-text-es="Volver a Criaturas" data-text-en="Back to Mobs">Volver a Criaturas</span>
                 </a>
-                <a href="survivalop-weapons.html" class="content-nav-link">
-                    <span data-text-es="Armas" data-text-en="Weapons">Armas</span>
+                <a href="" class="content-nav-link">
+                    <span data-text-es="Proximamente" data-text-en="Soon">Proximamente</span>
                     <i class="fas fa-arrow-right"></i>
                 </a>
             </div>

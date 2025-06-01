@@ -580,6 +580,7 @@ img {
     .header-container {
         flex-wrap: wrap;
         gap: calc(var(--emerald-spacing-unit) * 2);
+        margin-left: 0;
     }
     
     .logo {

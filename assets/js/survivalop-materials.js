@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
         materialsTabs: document.querySelectorAll('.materials-tab'),
         materialsTabContents: document.querySelectorAll('.materials-tab-content'),
         dungeonFilter: document.getElementById('dungeon-filter'),
-        typeFilter: document.getElementById('type-filter'),
         searchInput: document.querySelector('.materials-filters .search-box input'),
         resetButton: document.getElementById('resetFilters'),
         materialCards: document.querySelectorAll('.material-card'),
@@ -39,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function filterMaterials() {
         const filters = {
             dungeon: elements.dungeonFilter.value,
-            type: elements.typeFilter.value,
             search: elements.searchInput.value.toLowerCase()
         };
 
@@ -55,15 +53,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const cardData = {
                 dungeon: card.getAttribute('data-dungeon'),
-                type: card.getAttribute('data-type'),
                 name: card.querySelector('.material-name').textContent.toLowerCase()
             };
 
             const matchesDungeon = filters.dungeon === 'all' || cardData.dungeon === filters.dungeon;
-            const matchesType = filters.type === 'all' || cardData.type === filters.type;
             const matchesSearch = cardData.name.includes(filters.search);
 
-            if (matchesDungeon && matchesType && matchesSearch) {
+            if (matchesDungeon && matchesSearch) {
                 card.style.display = 'block';
                 hasVisibleCards = true;
             } else {
@@ -83,7 +79,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Resetear filtros
     function resetFilters() {
         elements.dungeonFilter.value = 'all';
-        elements.typeFilter.value = 'all';
         elements.searchInput.value = '';
 
         filterMaterials();
@@ -133,7 +128,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function setupEventListeners() {
         // Filtros
         elements.dungeonFilter.addEventListener('change', filterMaterials);
-        elements.typeFilter.addEventListener('change', filterMaterials);
         elements.searchInput.addEventListener('input', filterMaterials);
         
         // Reset

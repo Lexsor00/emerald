@@ -1,0 +1,906 @@
+/* =============================================
+    MATERIALS TABS SYSTEM
+   ============================================= */
+.materials-tabs-wrapper {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.materials-tabs {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+    margin-bottom: -10px;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.materials-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.materials-tab {
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--wiki-gray);
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    flex: 0 0 auto;
+    font-size: 0.95rem;
+}
+
+.materials-tab.active {
+    color: var(--wiki-primary);
+    border-bottom-color: var(--wiki-primary);
+}
+
+.materials-tab:hover:not(.active) {
+    color: var(--wiki-dark);
+    background-color: rgba(88, 214, 141, 0.1);
+}
+
+.materials-tab .badge {
+    background-color: var(--wiki-primary-light);
+    color: white;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    margin-left: 0.5rem;
+    font-weight: 700;
+}
+
+.materials-tab.active .badge {
+    background-color: var(--wiki-primary);
+}
+
+.materials-tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.materials-tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =============================================
+    ENHANCED FILTER SYSTEM
+   ============================================= */
+.materials-filters {
+    background-color: white;
+    border-radius: var(--wiki-border-radius);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--wiki-box-shadow);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .materials-filters {
+    background-color: var(--wiki-dark-secondary);
+    border-color: rgba(88, 214, 141, 0.2);
+}
+
+.materials-filters .search-box {
+    flex: 1;
+    min-width: 250px;
+    position: relative;
+}
+
+.materials-filters .search-box input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 1px solid var(--wiki-gray-200);
+    border-radius: var(--wiki-border-radius);
+    font-size: 0.95rem;
+    transition: var(--wiki-transition);
+    background-color: var(--wiki-light);
+}
+
+.dark-mode .materials-filters .search-box input {
+    background-color: var(--wiki-dark-tertiary);
+    border-color: var(--wiki-dark-border);
+    color: white;
+}
+
+.materials-filters .search-box input:focus {
+    border-color: var(--wiki-primary);
+    box-shadow: 0 0 0 3px rgba(88, 214, 141, 0.2);
+    outline: none;
+}
+
+.materials-filters .search-box i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--wiki-gray);
+}
+
+.materials-filters .filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.materials-filters .filter-label {
+    font-size: 0.9rem;
+    color: var(--wiki-gray);
+    white-space: nowrap;
+}
+
+.dark-mode .materials-filters .filter-label {
+    color: var(--wiki-gray-600);
+}
+
+.materials-filters .filter-select {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--wiki-gray-200);
+    border-radius: var(--wiki-border-radius);
+    font-size: 0.9rem;
+    background-color: var(--wiki-light);
+    cursor: pointer;
+    transition: var(--wiki-transition);
+    min-width: 120px;
+}
+
+.dark-mode .materials-filters .filter-select {
+    background-color: var(--wiki-dark-tertiary);
+    border-color: var(--wiki-dark-border);
+    color: white;
+}
+
+.materials-filters .filter-select:focus {
+    border-color: var(--wiki-primary);
+    box-shadow: 0 0 0 3px rgba(88, 214, 141, 0.2);
+    outline: none;
+}
+
+.materials-filters .btn-reset {
+    background-color: var(--wiki-gray-100);
+    color: var(--wiki-gray);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--wiki-border-radius);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--wiki-transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dark-mode .materials-filters .btn-reset {
+    background-color: var(--wiki-dark-tertiary);
+    color: var(--wiki-gray-600);
+}
+
+.materials-filters .btn-reset:hover {
+    background-color: var(--wiki-gray-200);
+    color: var(--wiki-dark);
+}
+
+.dark-mode .materials-filters .btn-reset:hover {
+    background-color: var(--wiki-dark-border);
+    color: white;
+}
+
+/* =============================================
+    ENHANCED MATERIALS STYLES
+   ============================================= */
+.material-category {
+    margin-bottom: 3rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--wiki-border-radius);
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(88, 214, 141, 0.1);
+    transition: all 0.3s ease;
+}
+
+.dark-mode .material-category {
+    background: rgba(30, 41, 59, 0.3);
+    border-color: rgba(88, 214, 141, 0.2);
+}
+
+.material-category:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.material-category-title {
+    font-size: 1.5rem;
+    color: var(--wiki-primary);
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(88, 214, 141, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.material-category-title::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100px;
+    height: 2px;
+    background: var(--wiki-primary);
+    transition: width 0.3s ease;
+}
+
+.material-category:hover .material-category-title::after {
+    width: 150px;
+}
+
+/* =============================================
+    MATERIALS GRID ADJUSTMENTS
+   ============================================= */
+.materials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+/* Enhanced material card */
+.material-card {
+    position: relative;
+    background-color: white;
+    border-radius: var(--wiki-border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--wiki-primary);
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .material-card {
+    background-color: var(--wiki-dark-secondary);
+    border-left-color: var(--wiki-primary-dark);
+    border-color: rgba(88, 214, 141, 0.2);
+}
+
+.material-header {
+    padding: 1.25rem 1.5rem;
+    background-color: rgba(88, 214, 141, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 700;
+    color: var(--wiki-dark);
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(88, 214, 141, 0.2);
+}
+
+.dark-mode .material-header {
+    background-color: rgba(39, 174, 96, 0.2);
+    color: var(--wiki-primary-light);
+}
+
+.material-header.boss {
+    background: linear-gradient(135deg, rgba(155, 89, 182, 0.1) 0%, rgba(155, 89, 182, 0.2) 100%);
+    color: #9b59b6;
+}
+
+.dark-mode .material-header.boss {
+    background: linear-gradient(135deg, rgba(155, 89, 182, 0.2) 0%, rgba(155, 89, 182, 0.3) 100%);
+}
+
+/* Enhanced material content */
+.material-content {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.material-item {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1rem;
+    background-color: rgba(88, 214, 141, 0.05);
+    border-radius: var(--wiki-border-radius);
+    transition: var(--wiki-transition);
+    border: 1px solid var(--wiki-gray-100);
+    position: relative;
+    overflow: hidden;
+}
+
+.material-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--wiki-primary);
+    transition: all 0.3s ease;
+    transform: translateX(-100%);
+}
+
+.material-item:hover::before {
+    transform: translateX(0);
+}
+
+.dark-mode .material-item {
+    background-color: rgba(39, 174, 96, 0.1);
+    border-color: var(--wiki-dark-border);
+}
+
+.material-item:hover {
+    background-color: rgba(88, 214, 141, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced material image - SMALLER SIZE */
+.material-image {
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border: 2px solid var(--wiki-gray-200);
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    background-color: white;
+    padding: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.material-item:hover .material-image {
+    transform: scale(1.1) rotate(5deg);
+    border-color: var(--wiki-primary);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .material-image {
+    border-color: var(--wiki-dark-border);
+    background-color: var(--wiki-dark-tertiary);
+}
+
+.material-info {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    padding-right: 80px; /* Espacio para la rareza */
+}
+
+.material-name {
+    font-weight: 700;
+    color: var(--wiki-dark);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    position: relative;
+    display: inline-block;
+    max-width: 100%; /* Ajuste para la rareza */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.material-name::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--wiki-primary);
+    transition: width 0.3s ease;
+}
+
+.material-item:hover .material-name::after {
+    width: 100%;
+}
+
+.dark-mode .material-name {
+    color: var(--wiki-primary-light);
+}
+
+/* Enhanced rarity badges - POSITIONED TO RIGHT */
+.material-rarity {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Recipe rarity badges - FIXED COLORS */
+.recipe-rarity.common,
+.material-rarity.common {
+    background: linear-gradient(135deg, #7f8c8d 0%, #95a5a6 100%);
+}
+
+.recipe-rarity.rare,
+.material-rarity.rare {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+}
+
+.recipe-rarity.epic,
+.material-rarity.epic {
+    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+}
+
+.recipe-rarity.legendary,
+.material-rarity.legendary {
+    background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+}
+
+.recipe-rarity.mythic,
+.material-rarity.mythic {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.recipe-rarity.secret,
+.material-rarity.secret {
+    background: linear-gradient(135deg, #f1c40f 0%, #e74c3c 50%, #9b59b6 100%);
+    animation: secretRarity 3s infinite alternate;
+}
+
+@keyframes secretRarity {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Enhanced drop/crafted info */
+.material-drop-rate, .material-crafted {
+    font-size: 0.85rem;
+    color: var(--wiki-gray);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.dark-mode .material-drop-rate,
+.dark-mode .material-crafted {
+    color: var(--wiki-gray-600);
+}
+
+.material-drop-rate i, .material-crafted i {
+    color: var(--wiki-primary);
+    font-size: 1rem;
+}
+
+/* =============================================
+    ENHANCED CRAFTING SECTION - IMPROVED STYLING
+   ============================================= */
+.material-crafting {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(241, 196, 15, 0.05) 0%, rgba(241, 196, 15, 0.1) 100%);
+    border-top: 1px dashed var(--wiki-gray-200);
+    position: relative;
+    border-radius: 0 0 var(--wiki-border-radius) var(--wiki-border-radius);
+}
+
+.material-crafting::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--wiki-primary), transparent);
+    opacity: 0.3;
+}
+
+.dark-mode .material-crafting {
+    background: linear-gradient(135deg, rgba(241, 196, 15, 0.1) 0%, rgba(241, 196, 15, 0.15) 100%);
+    border-top-color: var(--wiki-dark-border);
+}
+
+.crafting-title {
+    font-size: 1.1rem;
+    color: var(--wiki-secondary);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+}
+
+.crafting-title::before {
+    content: '\f0c3';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: var(--wiki-secondary);
+    font-size: 1rem;
+}
+
+.dark-mode .crafting-title {
+    color: var(--wiki-secondary-light);
+}
+
+.crafting-recipe {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 1.5rem;
+    border-radius: var(--wiki-border-radius);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--wiki-gray-100);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .crafting-recipe {
+    background: rgba(30, 41, 59, 0.3);
+    border-color: var(--wiki-dark-border);
+}
+
+.crafting-recipe::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    pointer-events: none;
+}
+
+.recipe-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+    transition: all 0.3s ease;
+    border: 1px solid var(--wiki-gray-100);
+}
+
+.recipe-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    border-color: var(--wiki-primary-light);
+}
+
+.dark-mode .recipe-item {
+    background: var(--wiki-dark-tertiary);
+    border-color: var(--wiki-dark-border);
+}
+
+.recipe-count {
+    font-weight: 700;
+    color: var(--wiki-dark);
+    font-size: 1rem;
+    min-width: 30px;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+}
+
+.dark-mode .recipe-count {
+    color: var(--wiki-primary-light);
+}
+
+/* Smaller recipe images */
+.recipe-image {
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    border: 2px solid var(--wiki-gray-200);
+    transition: all 0.3s ease;
+    background-color: white;
+    padding: 3px;
+}
+
+.recipe-item:hover .recipe-image {
+    transform: scale(1.1) rotate(5deg);
+    border-color: var(--wiki-primary);
+}
+
+.dark-mode .recipe-image {
+    border-color: var(--wiki-dark-border);
+    background-color: var(--wiki-dark-tertiary);
+}
+
+.recipe-plus, .recipe-equals {
+    font-weight: 700;
+    color: var(--wiki-gray);
+    font-size: 1.5rem;
+    min-width: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.dark-mode .recipe-plus,
+.dark-mode .recipe-equals {
+    color: var(--wiki-gray-600);
+}
+
+/* Enhanced recipe result */
+.recipe-result {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    background: linear-gradient(135deg, rgba(88, 214, 141, 0.2) 0%, rgba(88, 214, 141, 0.3) 100%);
+    padding: 1rem 1.75rem;
+    border-radius: 30px;
+    margin-left: 0.5rem;
+    box-shadow: 0 4px 15px rgba(88, 214, 141, 0.2);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(88, 214, 141, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.recipe-result::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(30deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) rotate(30deg); }
+    100% { transform: translateX(100%) rotate(30deg); }
+}
+
+.recipe-result:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(88, 214, 141, 0.3);
+    background: linear-gradient(135deg, rgba(88, 214, 141, 0.25) 0%, rgba(88, 214, 141, 0.35) 100%);
+}
+
+.dark-mode .recipe-result {
+    background: linear-gradient(135deg, rgba(39, 174, 96, 0.3) 0%, rgba(39, 174, 96, 0.4) 100%);
+    border-color: rgba(39, 174, 96, 0.4);
+}
+
+.recipe-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.recipe-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--wiki-dark);
+    position: relative;
+    display: inline-block;
+}
+
+.recipe-name::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--wiki-primary);
+    transition: width 0.3s ease;
+}
+
+.recipe-result:hover .recipe-name::after {
+    width: 100%;
+}
+
+.dark-mode .recipe-name {
+    color: var(--wiki-primary-light);
+}
+
+.recipe-rarity {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Crafting animation */
+@keyframes craftingPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.01); }
+    100% { transform: scale(1); }
+}
+
+.crafting-recipe:hover {
+    animation: craftingPulse 1.5s infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .materials-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .materials-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .materials-filters .search-box {
+        min-width: 100%;
+    }
+    
+    .materials-filters .filter-group {
+        width: 100%;
+    }
+    
+    .materials-filters .filter-select {
+        flex: 1;
+    }
+
+    .material-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .material-category {
+        padding: 1.5rem;
+    }
+    
+    .material-category-title {
+        font-size: 1.3rem;
+    }
+    
+    .crafting-recipe {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    
+    .recipe-plus, .recipe-equals {
+        display: none;
+    }
+    
+    .recipe-result {
+        margin-left: 0;
+        margin-top: 0.5rem;
+        width: 100%;
+    }
+    
+    .materials-tabs {
+        flex-direction: column;
+        border-bottom: none;
+        gap: 0.5rem;
+        padding-bottom: 0;
+        margin-bottom: 1.5rem;
+    }
+    
+    .materials-tab {
+        border-bottom: none;
+        border-left: 3px solid transparent;
+        padding: 0.75rem 1rem;
+        justify-content: space-between;
+        border-radius: var(--wiki-border-radius);
+        background-color: var(--wiki-gray-100);
+    }
+    
+    .dark-mode .materials-tab {
+        background-color: var(--wiki-dark-tertiary);
+    }
+    
+    .materials-tab.active {
+        border-left-color: var(--wiki-primary);
+        background-color: rgba(88, 214, 141, 0.1);
+    }
+    
+    .dark-mode .materials-tab.active {
+        background-color: rgba(39, 174, 96, 0.2);
+    }
+    
+    .materials-tab .badge {
+        margin-left: auto;
+        margin-right: 0.5rem;
+    }
+    
+    .material-content {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ajustes para rarezas en móvil */
+    .material-info {
+        padding-right: 80px;
+    }
+    
+    .material-rarity {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+    }
+    
+    .material-name {
+        max-width: 0.95rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .material-card {
+        border-left-width: 3px;
+    }
+    
+    .material-name {
+        font-size: 0.95rem;
+    }
+    
+    .material-rarity {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+    }
+    
+    .recipe-item {
+        padding: 0.5rem 1rem;
+    }
+
+    .recipe-name {
+        font-size: 1rem;
+    }
+
+    /* Ajustes adicionales para rarezas en pantallas muy pequeñas */
+    .material-info {
+        padding-right: 75px;
+    }
+    
+    .material-rarity {
+        font-size: 0.65rem;
+        padding: 0.2rem 0.6rem;
+    }
+    
+    .material-name {
+        max-width: 100%;
+    }
+}

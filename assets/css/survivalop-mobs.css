@@ -8,28 +8,19 @@
     |_|  |_|\___/|_.__/|___/
 
 */
-/*
-    _____ _____ _____ _____ _____ _____ _____ 
-   |     |     |     |     |     |     |     |
-   |  S  |  U  |  R  |  V  |  I  |  V  |  A  |
-   |_____|_____|_____|_____|_____|_____|_____|
-   |     |     |     |     |     |     |     |
-   |  L  |  O  |  P  |  -  |  M  |  O  |  B  |
-   |_____|_____|_____|_____|_____|_____|_____|
-   |     |     |     |     |     |     |     |
-   |  S  |     |  S  |  T  |  Y  |  L  |  E  |
-   |_____|_____|_____|_____|_____|_____|_____|
-*/
+
 
 /* =============================================
-   SYSTEM TABS
+    SYSTEM TABS
    ============================================= */
 .mobs-tabs {
     display: flex;
     margin-bottom: 2rem;
     border-bottom: 2px solid var(--wiki-primary-light);
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Mejor desplazamiento en iOS */
     scrollbar-width: none; /* Firefox */
+    padding-bottom: 5px; /* Espacio para el scroll */
 }
 
 .mobs-tabs::-webkit-scrollbar {
@@ -88,6 +79,57 @@
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+.mobs-tabs-wrapper {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.mobs-tabs {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -webkit-overflow-scrolling: touch; /* Safari */
+    padding-bottom: 10px; /* Espacio para scroll */
+    margin-bottom: -10px; /* Compensar padding */
+}
+
+.mobs-tabs::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.mobs-tab {
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--wiki-gray);
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    flex: 0 0 auto; /* No crecer, no encoger, tamaño automático */
+    font-size: 0.95rem;
+}
+
+/* Indicador de más contenido */
+.mobs-tabs-wrapper::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    background: linear-gradient(90deg, transparent 0%, var(--wiki-light) 90%);
+    pointer-events: none;
+}
+
+.dark-mode .mobs-tabs-wrapper::after {
+    background: linear-gradient(90deg, transparent 0%, var(--wiki-dark-secondary) 90%);
+}
+
 
 /* =============================================
     FILTER SYSTEM
@@ -439,14 +481,14 @@
 }
 
 /* Resistances/Weaknesses */
-.mob-resistances {
+.mob-classes {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-top: 1rem;
 }
 
-.resistance-badge, .weakness-badge {
+.class-badge {
     display: flex;
     align-items: center;
     gap: 0.3rem;
@@ -454,25 +496,139 @@
     padding: 0.3rem 0.6rem;
     border-radius: 4px;
     font-weight: 600;
+    color: white;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
 }
 
-.resistance-badge {
-    background-color: rgba(46, 204, 113, 0.1);
-    color: #27ae60;
+/* Hielo */
+.class-badge.ice {
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+    border: 1px solid #0984e3;
 }
 
-.dark-mode .resistance-badge {
-    background-color: rgba(46, 204, 113, 0.2);
+.class-badge.ice i {
+    color: #dfe6ff;
 }
 
-.weakness-badge {
-    background-color: rgba(231, 76, 60, 0.1);
-    color: #e74c3c;
+/* Veneno */
+.class-badge.poison {
+    background: linear-gradient(135deg, #00b894 0%, #006266 100%);
+    border: 1px solid #006266;
 }
 
-.dark-mode .weakness-badge {
-    background-color: rgba(231, 76, 60, 0.2);
+.class-badge.poison i {
+    color: #55efc4;
 }
+
+/* Mordedura */
+.class-badge.bite {
+    background: linear-gradient(135deg, #e17055 0%, #d63031 100%);
+    border: 1px solid #d63031;
+}
+
+.class-badge.bite i {
+    color: #ff7675;
+}
+
+/* Patada */
+.class-badge.kick {
+    background: linear-gradient(135deg, #fdcb6e 0%, #e17055 100%);
+    border: 1px solid #e17055;
+}
+
+.class-badge.kick i {
+    color: #ffeaa7;
+}
+
+/* Gladiador */
+.class-badge.gladiator {
+    background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+    border: 1px solid #6c5ce7;
+}
+
+.class-badge.gladiator i {
+    color: #d6a2e8;
+}
+
+/* Fuego */
+.class-badge.fire {
+    background: linear-gradient(135deg, #fab1a0 0%, #e74c3c 100%);
+    border: 1px solid #e74c3c;
+}
+
+.class-badge.fire i {
+    color: #ffefec;
+}
+
+/* Oscuridad */
+.class-badge.dark {
+    background: linear-gradient(135deg, #636e72 0%, #2d3436 100%);
+    border: 1px solid #2d3436;
+}
+
+.class-badge.dark i {
+    color: #b2bec3;
+}
+
+/* Tierra */
+.class-badge.earth {
+    background: linear-gradient(135deg, #ccae62 0%, #795548 100%);
+    border: 1px solid #795548;
+}
+
+.class-badge.earth i {
+    color: #d7ccc8;
+}
+
+/* Sartenazo */
+.class-badge.pan-hit {
+    background: linear-gradient(135deg, #b2b2b2 0%, #616161 100%);
+    border: 1px solid #616161;
+}
+
+.class-badge.pan-hit i {
+    color: #eeeeee;
+}
+
+/* Luz */
+.class-badge.light {
+    background: linear-gradient(135deg, #f9f9f9 0%, #f5f6fa 100%);
+    border: 1px solid #dcdde1;
+    color: #2f3640;
+    text-shadow: none;
+}
+
+.class-badge.light i {
+    color: #fbc531;
+}
+
+/* Physical Type */
+.class-badge.physical {
+    background-color: #7f8c8d;
+    border: 1px solid #34495e;
+}
+
+.class-badge.physical i {
+    color: #ecf0f1;
+}
+
+/* Magic Type */
+.class-badge.magic {
+    background-color: #9b59b6;
+    border: 1px solid #8e44ad;
+}
+
+.class-badge.magic i {
+    color: #e8daef;
+}
+
+/* Summoner Type */
+.class-badge.summoner {
+    background-color: #3498db;
+    border: 1px solid #2980b9;
+}
+
+
 
 .mob-content {
     padding: 0 1.5rem 1.5rem;
@@ -852,12 +1008,12 @@
     }
     
     .mobs-tab {
-        padding: 0.75rem 1rem;
-        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
     }
     
-    .mob-difficulty {
-        font-size: 0.6rem;
-        padding: 0.2rem 0.5rem;
+    .mobs-tab .badge {
+        font-size: 0.65rem;
+        padding: 0.15rem 0.4rem;
     }
 }

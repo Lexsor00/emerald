@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criaturas - SurvivalOP | Emerald Wiki</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="../assets/multimedia/img/esmeralda.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/survivalop.css">
+    <link rel="stylesheet" href="../assets/css/survivalop-mobs.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="../assets/multimedia/img/esmeralda.png" alt="Emerald Wiki Logo">
+                <div class="logo-text">
+                    <h1 id="main-title">Emerald Wiki</h1>
+                    <span id="main-subtitle" data-text-es="La Wiki oficial de EsmeraldaMC" data-text-en="The official EsmeraldaMC Wiki">La Wiki oficial de EsmeraldaMC</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="navbar">
+        <div class="container nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> <span class="nav-text" data-text-es="Página Principal" data-text-en="Main Page">Página Principal</span></a></li>
+                <li class="nav-item"><a href="survivalop.html" class="nav-link"><i class="fas fa-list"></i> <span class="nav-text" data-text-es="SurvivalOP" data-text-en="SurvivalOP">SurvivalOP</span></a></li>
+                <li class="nav-item"><a href="survivalop-dungeons.html" class="nav-link"><i class="fas fa-dungeon"></i> <span class="nav-text" data-text-es="Mazmorras" data-text-en="Dungeons">Mazmorras</span></a></li>
+                <li class="nav-item active"><a href="survivalop-mobs.html" class="nav-link"><i class="fas fa-dragon"></i> <span class="nav-text" data-text-es="Criaturas" data-text-en="Mobs">Criaturas</span></a></li>
+                <li class="nav-item"><a href="survivalop-materials.html" class="nav-link"><i class="fas fa-gem"></i> <span class="nav-text" data-text-es="Materiales" data-text-en="Materials">Materiales</span></a></li>
+            </ul>
+            
+            <div class="nav-tools">
+                <div class="nav-tool" id="themeToggle">
+                    <i class="fas fa-moon"></i> <span class="theme-text" data-text-es="Modo Oscuro" data-text-en="Dark Mode">Modo Oscuro</span>
+                </div>
+                
+                <div class="nav-tool language-selector">
+                    <i class="fas fa-globe"></i> <span class="language-text">Español</span>
+                    <div class="language-options">
+                        <div class="language-option active" data-lang="es">
+                            <i class="fas fa-check"></i> Español
+                        </div>
+                        <div class="language-option" data-lang="en">
+                            <span>English</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="container main-layout">
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <div class="sidebar-header">
+                    <i class="fas fa-compass"></i> <span class="sidebar-header-text" data-text-es="Navegación" data-text-en="Navigation">Navegación</span>
+                </div>
+                <div class="sidebar-content">
+                    <ul class="sidebar-list">
+                        <li class="sidebar-item"><a href="survivalop.html" class="sidebar-link" data-text-es="Introducción" data-text-en="Introduction">Introducción</a></li>
+                        <li class="sidebar-item"><a href="survivalop-dungeons.html" class="sidebar-link" data-text-es="Mazmorras" data-text-en="Dungeons">Mazmorras</a></li>
+                        <li class="sidebar-item active"><a href="survivalop-mobs.html" class="sidebar-link" data-text-es="Criaturas" data-text-en="Mobs">Criaturas</a></li>
+                        <li class="sidebar-item"><a href="survivalop-materials.html" class="sidebar-link" data-text-es="Materiales" data-text-en="Materials">Materiales</a></li>
+                        <li class="sidebar-item"><a href="survivalop-weapons.html" class="sidebar-link" data-text-es="Armas" data-text-en="Weapons">Armas</a></li>
+                        <li class="sidebar-item"><a href="survivalop-armor.html" class="sidebar-link" data-text-es="NPC" data-text-en="NPC">NPC</a></li>
+                        <li class="sidebar-item"><a href="survivalop-quests.html" class="sidebar-link" data-text-es="Mascotas" data-text-en="Pets">Mascotas</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="sidebar-card">
+                <div class="sidebar-header">
+                    <i class="fa-solid fa-gem"></i> <span class="sidebar-header-text" data-text-es="EsmeraldaMC" data-text-en="EmeraldMC">EsmeraldaMC</span>
+                </div>
+                <div class="sidebar-content">
+                    <ul class="sidebar-list">
+                        <li class="sidebar-item"><p class="sidebar-link" data-text-es="Ip: play.esmeraldamc.com" data-text-en="Ip: play.esmeraldamc.com">Ip: play.esmeraldamc.com</p></li>
+                        <li class="sidebar-item"><p class="sidebar-link" data-text-es="Puerto: 25525" data-text-en="Port: 25525">Puerto: 25525</p></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="sidebar-card pulse">
+                <div class="sidebar-header">
+                    <i class="fas fa-gamepad"></i> <span class="sidebar-header-text" data-text-es="Modalidades Populares" data-text-en="Popular Modalities">Modalidades Populares</span>
+                </div>
+                <div class="sidebar-content">
+                    <ul class="sidebar-list">
+                        <li class="sidebar-item"><a href="survivalop.html" class="sidebar-link"><i class="fas fa-cloud-sun"></i> <span data-text-es="SurvivalOp" data-text-en="SurvivalOp">SurvivalOp</span></a></li>
+                        <li class="sidebar-item"><p href="#" class="sidebar-link"><i class="fa-solid fa-tractor"></i> <span data-text-es="FarmBox" data-text-en="FarmBox">FarmBox</span></p></li>
+                        <li class="sidebar-item"><p href="#" class="sidebar-link"><i class="fa-solid fa-earth-europe"></i> <span data-text-es="LandBox" data-text-en="LandBox">LandBox</span></p></li>
+                        <li class="sidebar-item"><p href="#" class="sidebar-link"><i class="fa-solid fa-skull"></i> <span data-text-es="SurvivalSMP" data-text-en="SurvivalSMP">SurvivalSMP</span></p></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sidebar-card">
+                <div class="sidebar-header">
+                    <i class="fas fa-users"></i> <span class="sidebar-header-text" data-text-es="Comunidad" data-text-en="Community">Comunidad</span>
+                </div>
+                <div class="sidebar-content">
+                    <ul class="sidebar-list">
+                        <li class="sidebar-item"><a href="https://discord.gg/xDxEKtsMRa" class="sidebar-link" target="_blank" rel="noopener" rel="noreferrer" rel="nofollow"><i class="fab fa-discord"></i> <span data-text-es="Discord" data-text-en="Discord">Discord</span></a></li>
+                        <li class="sidebar-item"><a href="https://kick.com/theelivan" class="sidebar-link" target="_blank" rel="noopener" rel="noreferrer" rel="nofollow"><i class="fa-brands fa-kickstarter"></i> <span data-text-es="Kick" data-text-en="Kick">Kick</span></a></li>
+                        <li class="sidebar-item"><a href="https://www.tiktok.com/@theelivann" class="sidebar-link" target="_blank" rel="noopener" rel="noreferrer" rel="nofollow"><i class="fa-brands fa-tiktok"></i> <span data-text-es="Tiktok" data-text-en="Tiktok">Tiktok</span></a></li>
+                        <li class="sidebar-item"><a href="https://www.youtube.com/@TheElivan" class="sidebar-link" target="_blank" rel="noopener" rel="noreferrer" rel="nofollow"><i class="fa-brands fa-youtube"></i> <span data-text-es="YouTube" data-text-en="YouTube">YouTube</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        
+        <div class="content">
+            <div class="wiki-header">
+                <span class="wiki-badge" data-text-es="Criaturas" data-text-en="Mobs">Criaturas</span>
+                <h1 class="wiki-title" data-text-es="Criaturas y Jefes" data-text-en="Mobs and Bosses">Criaturas y Jefes</h1>
+                <p class="wiki-subtitle" data-text-es="Todas las criaturas y jefes que encontrarás en las mazmorras de SurvivalOP, con sus estadísticas, habilidades y estrategias para derrotarlos." data-text-en="All mobs and bosses you'll find in SurvivalOP dungeons, with their stats, abilities and strategies to defeat them.">
+                    Todas las criaturas y jefes que encontrarás en las mazmorras de SurvivalOP, con sus estadísticas, habilidades y estrategias para derrotarlos.
+                </p>
+                <div class="quick-info">
+                    <div class="quick-info-item">
+                        <div class="quick-info-label" data-text-es="Criaturas" data-text-en="Mobs">Criaturas</div>
+                        <div class="quick-info-value">16</div>
+                    </div>
+                    <div class="quick-info-item">
+                        <div class="quick-info-label" data-text-es="Mini Jefes" data-text-en="Mini Bosses">Mini Jefes</div>
+                        <div class="quick-info-value">5</div>
+                    </div>
+                    <div class="quick-info-item">
+                        <div class="quick-info-label" data-text-es="Jefes" data-text-en="Bosses">Jefes</div>
+                        <div class="quick-info-value">2</div>
+                    </div>
+                    <div class="quick-info-item">
+                        <div class="quick-info-label" data-text-es="Dificultad" data-text-en="Difficulty">Dificultad</div>
+                        <div class="quick-info-value" data-text-es="Variable" data-text-en="Variable">Variable</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Sistema de pestañas -->
+            <div class="mobs-tabs-wrapper">
+                <div class="mobs-tabs">
+                    <div class="mobs-tab active" data-tab="common-mobs">
+                        <i class="fas fa-dragon"></i>
+                        <span data-text-es="Comunes" data-text-en="Common">Comunes</span>
+                        <span class="badge">16</span>
+                    </div>
+                    <div class="mobs-tab" data-tab="mini-bosses">
+                        <i class="fas fa-star"></i>
+                        <span data-text-es="Mini-Jefes" data-text-en="Mini-Bosses">Mini-Jefes</span>
+                        <span class="badge">5</span>
+                    </div>
+                    <div class="mobs-tab" data-tab="bosses">
+                        <i class="fas fa-crown"></i>
+                        <span data-text-es="Jefes" data-text-en="Bosses">Jefes</span>
+                        <span class="badge">2</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sistema de filtrado -->
+            <div class="mobs-filters">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Buscar criaturas..." data-text-es="Buscar criaturas..." data-text-en="Search mobs...">
+                </div>
+                
+                <div class="filter-group">
+                    <span class="filter-label" data-text-es="Mazmorra:" data-text-en="Dungeon:">Mazmorra:</span>
+                    <select class="filter-select" id="dungeon-filter">
+                        <option value="all" data-text-es="Todas" data-text-en="All">Todas</option>
+                        <option value="north-pole" data-text-es="Polo Norte" data-text-en="North Pole">Polo Norte</option>
+                        <option value="cave" data-text-es="Cueva" data-text-en="Cave">Cueva</option>
+                        <option value="medieval" data-text-es="Medieval" data-text-en="Medieval">Medieval</option>
+                        <option value="cathedral" data-text-es="Catedral" data-text-en="Cathedral">Catedral</option>
+                        <option value="mine" data-text-es="La Mina" data-text-en="The Mine">La Mina</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <span class="filter-label" data-text-es="Dificultad:" data-text-en="Difficulty:">Dificultad:</span>
+                    <select class="filter-select" id="difficulty-filter">
+                        <option value="all" data-text-es="Todas" data-text-en="All">Todas</option>
+                        <option value="easy" data-text-es="Fácil" data-text-en="Easy">Fácil</option>
+                        <option value="medium" data-text-es="Media" data-text-en="Medium">Media</option>
+                        <option value="hard" data-text-es="Difícil" data-text-en="Hard">Difícil</option>
+                        <option value="boss" data-text-es="Jefe" data-text-en="Boss">Jefe</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <span class="filter-label" data-text-es="Tipo:" data-text-en="Type:">Tipo:</span>
+                    <select class="filter-select" id="type-filter">
+                        <option value="all" data-text-es="Todos" data-text-en="All">Todos</option>
+                        <option value="melee" data-text-es="Melee" data-text-en="Melee">Melee</option>
+                        <option value="magic" data-text-es="Mágico" data-text-en="Magic">Mágico</option>
+                        <option value="summoner" data-text-es="Invocador" data-text-en="Summoner">Invocador</option>
+                    </select>
+                </div>
+                
+                <button class="btn-primary btn-reset" id="resetFilters" data-text-es="Restablecer" data-text-en="Reset">
+                    <i class="fas fa-undo"></i> <span class="reset-text" data-text-es="Restablecer" data-text-en="Reset">Restablecer</span>
+                </button>
+            </div>
+
+            <!-- Contenido de pestañas -->
+            <div class="mobs-tab-content active" id="common-mobs">
+                <div class="mob-category">
+                    <h3 class="mob-category-title">
+                        <i class="fas fa-snowflake"></i>
+                        <span data-text-es="Polo Norte" data-text-en="North Pole">Polo Norte</span>
+                    </h3>
+                    
+                    <div class="mobs-grid">
+                        <!-- Oso Helado -->
+                        <div class="mob-card expanded easy" data-dungeon="north-pole" data-difficulty="easy" data-type="melee">
+                            <div class="mob-difficulty" data-text-es="Fácil" data-text-en="Easy">Fácil</div>
+                            <div class="mob-header">
+                                <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/oso-helado.png');"></div>
+                                <div class="mob-info">
+                                    <h4 class="mob-name" data-text-es="Oso Helado" data-text-en="Frozen Bear">Oso Helado</h4>
+                                    <div class="mob-stats">
+                                        <div class="mob-stat">
+                                            <i class="fas fa-heart"></i>
+                                            <span data-text-es="150 ❤" data-text-en="150 ❤">150 ❤</span>
+                                        </div>
+                                        <div class="mob-stat">
+                                            <i class="fas fa-bolt"></i>
+                                            <span data-text-es="Daño: 25" data-text-en="Damage: 25">Daño: 25</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Estadísticas mejoradas -->
+                                    <div class="mob-stats-enhanced">
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Salud:" data-text-en="Health:">Salud:</span>
+                                            <div class="stat-progress health">
+                                                <div class="stat-progress-fill" style="width: 7%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="150" data-text-en="150">150</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Daño:" data-text-en="Damage:">Daño:</span>
+                                            <div class="stat-progress damage">
+                                                <div class="stat-progress-fill" style="width: 10%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="25" data-text-en="25">25</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Velocidad:" data-text-en="Speed:">Velocidad:</span>
+                                            <div class="stat-progress speed">
+                                                <div class="stat-progress-fill" style="width: 40%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="Media" data-text-en="Medium">Media</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Etiquetas -->
+                                    <div class="mob-classes">
+                                        <div class="class-badge physical">
+                                            <i class="fas fa-fist-raised"></i>
+                                            <span data-text-es="Físico" data-text-en="Physical">Físico</span>
+                                        </div>
+                                        <div class="class-badge ice">
+                                            <i class="fas fa-snowflake"></i>
+                                            <span data-text-es="Hielo" data-text-en="Ice">Hielo</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Regalo Sorpresa - Tarjeta mejorada -->
+                        <div class="mob-card expanded medium" data-dungeon="north-pole" data-difficulty="medium" data-type="melee">
+                            <div class="mob-difficulty" data-text-es="Media" data-text-en="Medium">Media</div>
+                            <div class="mob-header">
+                                <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/regalo-sorpresa.png');"></div>
+                                <div class="mob-info">
+                                    <h4 class="mob-name" data-text-es="Regalo Sorpresa" data-text-en="Surprise Gift">Regalo Sorpresa</h4>
+                                    <div class="mob-stats">
+                                        <div class="mob-stat">
+                                            <i class="fas fa-heart"></i>
+                                            <span data-text-es="150 ❤" data-text-en="150 ❤">150 ❤</span>
+                                        </div>
+                                        <div class="mob-stat">
+                                            <i class="fas fa-bolt"></i>
+                                            <span data-text-es="Daño: 40" data-text-en="Damage: 40">Daño: 40</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mob-stats-enhanced">
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Salud:" data-text-en="Health:">Salud:</span>
+                                            <div class="stat-progress health">
+                                                <div class="stat-progress-fill" style="width: 7%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="150" data-text-en="150">150</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Daño:" data-text-en="Damage:">Daño:</span>
+                                            <div class="stat-progress damage">
+                                                <div class="stat-progress-fill" style="width: 15%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="40" data-text-en="40">40</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Velocidad:" data-text-en="Speed:">Velocidad:</span>
+                                            <div class="stat-progress speed">
+                                                <div class="stat-progress-fill" style="width: 40%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="Media" data-text-en="Medium">Media</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Etiquetas -->
+                                    <div class="mob-classes">
+                                        <div class="class-badge physical">
+                                            <i class="fas fa-fist-raised"></i>
+                                            <span data-text-es="Físico" data-text-en="Physical">Físico</span>
+                                        </div>
+                                        <div class="class-badge ice">
+                                            <i class="fas fa-snowflake"></i>
+                                            <span data-text-es="Hielo" data-text-en="Ice">Hielo</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mob-category">
+                    <h3 class="mob-category-title">
+                        <i class="fa-solid fa-cube"></i>
+                        <span data-text-es="Cueva" data-text-en="Cave">Cueva</span>
+                    </h3>
+                    <div class="mobs-grid">
+                        <!-- Planta Venenosa Mini -->
+                        <div class="mob-card expanded easy" data-dungeon="cave" data-difficulty="easy" data-type="melee">
+                            <div class="mob-difficulty" data-text-es="Fácil" data-text-en="Easy">Fácil</div>
+                            <div class="mob-header">
+                                <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/planta-mini.png');"></div>
+                                <div class="mob-info">
+                                    <h4 class="mob-name" data-text-es="Planta Venenosa Mini" data-text-en="Mini Poisonous Plant">Planta Venenosa Mini</h4>
+                                    <div class="mob-stats">
+                                        <div class="mob-stat">
+                                            <i class="fas fa-heart"></i>
+                                            <span data-text-es="110 ❤" data-text-en="110 ❤">110 ❤</span>
+                                        </div>
+                                        <div class="mob-stat">
+                                            <i class="fas fa-bolt"></i>
+                                            <span data-text-es="Daño: 10" data-text-en="Damage: 10">Daño: 10</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mob-stats-enhanced">
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Salud:" data-text-en="Health:">Salud:</span>
+                                            <div class="stat-progress health">
+                                                <div class="stat-progress-fill" style="width: 5%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="110" data-text-en="110">110</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Daño:" data-text-en="Damage:">Daño:</span>
+                                            <div class="stat-progress damage">
+                                                <div class="stat-progress-fill" style="width: 4%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="10" data-text-en="10">10</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Velocidad:" data-text-en="Speed:">Velocidad:</span>
+                                            <div class="stat-progress speed">
+                                                <div class="stat-progress-fill" style="width: 40%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="Media" data-text-en="Medium">Media</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Etiquetas -->
+                                    <div class="mob-classes">
+                                        <div class="class-badge physical">
+                                            <i class="fas fa-fist-raised"></i>
+                                            <span data-text-es="Físico" data-text-en="Physical">Físico</span>
+                                        </div>
+                                        <div class="class-badge poison">
+                                            <i class="fas fa-skull-crossbones"></i>
+                                            <span data-text-es="Veneno" data-text-en="Poison">Veneno</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Planta Venenosa -->
+                        <div class="mob-card expanded hard" data-dungeon="cave" data-difficulty="hard" data-type="melee">
+                            <div class="mob-difficulty" data-text-es="Difícil" data-text-en="Hard">Difícil</div>
+                            <div class="mob-header">
+                                <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/planta-venenosa.png');"></div>
+                                <div class="mob-info">
+                                    <h4 class="mob-name" data-text-es="Planta Venenosa" data-text-en="Poisonous Plant">Planta Venenosa</h4>
+                                    <div class="mob-stats">
+                                        <div class="mob-stat">
+                                            <i class="fas fa-heart"></i>
+                                            <span data-text-es="230 ❤" data-text-en="230 ❤">230 ❤</span>
+                                        </div>
+                                        <div class="mob-stat">
+                                            <i class="fas fa-bolt"></i>
+                                            <span data-text-es="Daño: 30" data-text-en="Damage: 30">Daño: 30</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mob-stats-enhanced">
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Salud:" data-text-en="Health:">Salud:</span>
+                                            <div class="stat-progress health">
+                                                <div class="stat-progress-fill" style="width: 14%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="230" data-text-en="230">230</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Daño:" data-text-en="Damage:">Daño:</span>
+                                            <div class="stat-progress damage">
+                                                <div class="stat-progress-fill" style="width: 17%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="30" data-text-en="30">30</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Velocidad:" data-text-en="Speed:">Velocidad:</span>
+                                            <div class="stat-progress speed">
+                                                <div class="stat-progress-fill" style="width: 50%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="Alta" data-text-en="High">Alta</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Etiquetas -->
+                                    <div class="mob-classes">
+                                        <div class="class-badge physical">
+                                            <i class="fas fa-fist-raised"></i>
+                                            <span data-text-es="Físico" data-text-en="Physical">Físico</span>
+                                        </div>
+                                        <div class="class-badge poison">
+                                            <i class="fas fa-skull-crossbones"></i>
+                                            <span data-text-es="Veneno" data-text-en="Poison">Veneno</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Raptor -->
+                        <div class="mob-card expanded medium" data-dungeon="cave" data-difficulty="medium" data-type="melee">
+                            <div class="mob-difficulty" data-text-es="Media" data-text-en="Medium">Media</div>
+                            <div class="mob-header">
+                                <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/raptor.png');"></div>
+                                <div class="mob-info">
+                                    <h4 class="mob-name">Raptor</h4>
+                                    <div class="mob-stats">
+                                        <div class="mob-stat">
+                                            <i class="fas fa-heart"></i>
+                                            <span data-text-es="300 ❤" data-text-en="300 ❤">300 ❤</span>
+                                        </div>
+                                        <div class="mob-stat">
+                                            <i class="fas fa-bolt"></i>
+                                            <span data-text-es="Daño: 40" data-text-en="Damage: 40">Daño: 40</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mob-stats-enhanced">
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Salud:" data-text-en="Health:">Salud:</span>
+                                            <div class="stat-progress health">
+                                                <div class="stat-progress-fill" style="width: 20%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="300" data-text-en="300">300</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Daño:" data-text-en="Damage:">Daño:</span>
+                                            <div class="stat-progress damage">
+                                                <div class="stat-progress-fill" style="width: 15%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="40" data-text-en="40">40</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Velocidad:" data-text-en="Speed:">Velocidad:</span>
+                                            <div class="stat-progress speed">
+                                                <div class="stat-progress-fill" style="width: 45%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="Media" data-text-en="Medium">Media</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Etiquetas -->
+                                    <div class="mob-classes">
+                                        <div class="class-badge physical">
+                                            <i class="fas fa-fist-raised"></i>
+                                            <span data-text-es="Físico" data-text-en="Physical">Físico</span>
+                                        </div>
+                                        <div class="class-badge bite">
+                                            <i class="fas fa-teeth"></i>
+                                            <span data-text-es="Mordedura" data-text-en="Bite">Mordedura</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mob-category">
+                    <h3 class="mob-category-title">
+                        <i class="fa-solid fa-chess-rook"></i>
+                        <span data-text-es="Castillo" data-text-en="Castle">Castillo</span>
+                    </h3>
+                    <div class="mobs-grid">
+                        <!-- Conejo Saltarín -->
+                        <div class="mob-card expanded easy" data-dungeon="medieval" data-difficulty="easy" data-type="melee">
+                            <div class="mob-difficulty" data-text-es="Fácil" data-text-en="Easy">Fácil</div>
+                            <div class="mob-header">
+                                <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/conejo-saltarin.png');"></div>
+                                <div class="mob-info">
+                                    <h4 class="mob-name" data-text-es="Conejo Saltarín" data-text-en="Jumping Rabbit">Conejo Saltarín</h4>
+                                    <div class="mob-stats">
+                                        <div class="mob-stat">
+                                            <i class="fas fa-heart"></i>
+                                            <span data-text-es="300 ❤" data-text-en="300 ❤">300 ❤</span>
+                                        </div>
+                                        <div class="mob-stat">
+                                            <i class="fas fa-bolt"></i>
+                                            <span data-text-es="Daño: 55" data-text-en="Damage: 55">Daño: 55</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mob-stats-enhanced">
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Salud:" data-text-en="Health:">Salud:</span>
+                                            <div class="stat-progress health">
+                                                <div class="stat-progress-fill" style="width: 18%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="300" data-text-en="300">300</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Daño:" data-text-en="Damage:">Daño:</span>
+                                            <div class="stat-progress damage">
+                                                <div class="stat-progress-fill" style="width: 20%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="55" data-text-en="55">55</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Velocidad:" data-text-en="Speed:">Velocidad:</span>
+                                            <div class="stat-progress speed">
+                                                <div class="stat-progress-fill" style="width: 45%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="Media" data-text-en="Medium">Media</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Etiquetas -->
+                                    <div class="mob-classes">
+                                        <div class="class-badge physical">
+                                            <i class="fas fa-fist-raised"></i>
+                                            <span data-text-es="Físico" data-text-en="Physical">Físico</span>
+                                        </div>
+                                        <div class="class-badge kick">
+                                            <i class="fas fa-shoe-prints"></i>
+                                            <span data-text-es="Patada" data-text-en="Kick">Patada</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cortapicos -->
+                        <div class="mob-card expanded hard" data-dungeon="medieval" data-difficulty="hard" data-type="melee">
+                            <div class="mob-difficulty" data-text-es="Difícil" data-text-en="Hard">Difícil</div>
+                            <div class="mob-header">
+                                <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/cortapicos.png');"></div>
+                                <div class="mob-info">
+                                    <h4 class="mob-name" data-text-es="Cortapicos" data-text-en="Cutter Pickaxe">Cortapicos</h4>
+                                    <div class="mob-stats">
+                                        <div class="mob-stat">
+                                            <i class="fas fa-heart"></i>
+                                            <span data-text-es="500 ❤" data-text-en="500 ❤">500 ❤</span>
+                                        </div>
+                                        <div class="mob-stat">
+                                            <i class="fas fa-bolt"></i>
+                                            <span data-text-es="Daño: 45 +(35)" data-text-en="Damage: 45 +(35)">Daño: 45 +(35)</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mob-stats-enhanced">
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Salud:" data-text-en="Health:">Salud:</span>
+                                            <div class="stat-progress health">
+                                                <div class="stat-progress-fill" style="width: 35%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="500" data-text-en="500">500</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Daño:" data-text-en="Damage:">Daño:</span>
+                                            <div class="stat-progress damage">
+                                                <div class="stat-progress-fill" style="width: 40%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="80" data-text-en="80">80</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Velocidad:" data-text-en="Speed:">Velocidad:</span>
+                                            <div class="stat-progress speed">
+                                                <div class="stat-progress-fill" style="width: 20%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="Baja" data-text-en="Low">Baja</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Etiquetas -->
+                                    <div class="mob-classes">
+                                        <div class="class-badge physical">
+                                            <i class="fas fa-fist-raised"></i>
+                                            <span data-text-es="Físico" data-text-en="Physical">Físico</span>
+                                        </div>
+                                        <div class="class-badge gladiator">
+                                            <i class="fa-solid fa-khanda"></i>
+                                            <span data-text-es="Gladiador" data-text-en="Gladiator">Gladiador</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mob-category">
+                    <h3 class="mob-category-title">
+                        <i class="fa-solid fa-church"></i>
+                        <span data-text-es="Catedral" data-text-en="Cathedral">Catedral</span>
+                    </h3>
+                    <div class="mobs-grid">
+                        <!-- Flamegor -->
+                        <div class="mob-card expanded medium" data-dungeon="cathedral" data-difficulty="medium" data-type="magic">
+                            <div class="mob-difficulty" data-text-es="Media" data-text-en="Medium">Media</div>
+                            <div class="mob-header">
+                                <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/flamegor.png');"></div>
+                                <div class="mob-info">
+                                    <h4 class="mob-name">Flamegor</h4>
+                                    <div class="mob-stats">
+                                        <div class="mob-stat">
+                                            <i class="fas fa-heart"></i>
+                                            <span data-text-es="275 ❤" data-text-en="275 ❤">275 ❤</span>
+                                        </div>
+                                        <div class="mob-stat">
+                                            <i class="fas fa-bolt"></i>
+                                            <span data-text-es="Daño: 30/70" data-text-en="Damage: 30/70">Daño: 30/70</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mob-stats-enhanced">
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Salud:" data-text-en="Health:">Salud:</span>
+                                            <div class="stat-progress health">
+                                                <div class="stat-progress-fill" style="width: 15%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="270" data-text-en="270">270</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Daño:" data-text-en="Damage:">Daño:</span>
+                                            <div class="stat-progress damage">
+                                                <div class="stat-progress-fill" style="width: 34%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="30/70" data-text-en="30/70">30/70</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Velocidad:" data-text-en="Speed:">Velocidad:</span>
+                                            <div class="stat-progress speed">
+                                                <div class="stat-progress-fill" style="width: 40%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="Media" data-text-en="Medium">Media</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Etiquetas -->
+                                    <div class="mob-classes">
+                                        <div class="class-badge magic">
+                                            <i class="fas fa-hat-wizard"></i>
+                                            <span data-text-es="Mágico" data-text-en="Magic">Mágico</span>
+                                        </div>
+                                        <div class="class-badge fire">
+                                            <i class="fas fa-fire"></i>
+                                            <span data-text-es="Fuego" data-text-en="Fire">Fuego</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Erebyss -->
+                        <div class="mob-card expanded medium" data-dungeon="cathedral" data-difficulty="medium" data-type="magic">
+                            <div class="mob-difficulty" data-text-es="Media" data-text-en="Medium">Media</div>
+                            <div class="mob-header">
+                                <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/erebys.png');"></div>
+                                <div class="mob-info">
+                                    <h4 class="mob-name">Erebyss</h4>
+                                    <div class="mob-stats">
+                                        <div class="mob-stat">
+                                            <i class="fas fa-heart"></i>
+                                            <span data-text-es="450 ❤" data-text-en="450 ❤">450 ❤</span>
+                                        </div>
+                                        <div class="mob-stat">
+                                            <i class="fas fa-bolt"></i>
+                                            <span data-text-es="Daño: 45" data-text-en="Damage: 45">Daño: 45</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mob-stats-enhanced">
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Salud:" data-text-en="Health:">Salud:</span>
+                                            <div class="stat-progress health">
+                                                <div class="stat-progress-fill" style="width: 38%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="450" data-text-en="450">450</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Daño:" data-text-en="Damage:">Daño:</span>
+                                            <div class="stat-progress damage">
+                                                <div class="stat-progress-fill" style="width: 31%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="45" data-text-en="45">45</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Velocidad:" data-text-en="Speed:">Velocidad:</span>
+                                            <div class="stat-progress speed">
+                                                <div class="stat-progress-fill" style="width: 40%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="Media" data-text-en="Medium">Media</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Etiquetas -->
+                                    <div class="mob-classes">
+                                        <div class="class-badge magic">
+                                            <i class="fas fa-hat-wizard"></i>
+                                            <span data-text-es="Mágico" data-text-en="Magic">Mágico</span>
+                                        </div>
+                                        <div class="class-badge dark">
+                                            <i class="fas fa-moon"></i>
+                                            <span data-text-es="Oscuridad" data-text-en="Dark">Oscuridad</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Shirayuki -->
+                        <div class="mob-card expanded hard" data-dungeon="cathedral" data-difficulty="hard" data-type="magic">
+                            <div class="mob-difficulty" data-text-es="Dificil" data-text-en="Hard">Dificil</div>
+                            <div class="mob-header">
+                                <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/shirayuki.png');"></div>
+                                <div class="mob-info">
+                                    <h4 class="mob-name">Shirayuki</h4>
+                                    <div class="mob-stats">
+                                        <div class="mob-stat">
+                                            <i class="fas fa-heart"></i>
+                                            <span data-text-es="600 ❤" data-text-en="600 ❤">600 ❤</span>
+                                        </div>
+                                        <div class="mob-stat">
+                                            <i class="fas fa-bolt"></i>
+                                            <span data-text-es="Daño: 65x2/3" data-text-en="Damage: 65x2/3">Daño: 65x2/3</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mob-stats-enhanced">
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Salud:" data-text-en="Health:">Salud:</span>
+                                            <div class="stat-progress health">
+                                                <div class="stat-progress-fill" style="width: 50%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="600" data-text-en="600">600</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Daño:" data-text-en="Damage:">Daño:</span>
+                                            <div class="stat-progress damage">
+                                                <div class="stat-progress-fill" style="width: 45%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="65x2/3" data-text-en="65x2/3">65x2/3</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Velocidad:" data-text-en="Speed:">Velocidad:</span>
+                                            <div class="stat-progress speed">
+                                                <div class="stat-progress-fill" style="width: 40%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="Media" data-text-en="Medium">Media</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Etiquetas -->
+                                    <div class="mob-classes">
+                                        <div class="class-badge magic">
+                                            <i class="fas fa-hat-wizard"></i>
+                                            <span data-text-es="Mágico" data-text-en="Magic">Mágico</span>
+                                        </div>
+                                        <div class="class-badge fire">
+                                            <i class="fas fa-fire"></i>
+                                            <span data-text-es="Fuego" data-text-en="Fire">Fuego</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mob-category">
+                    <h3 class="mob-category-title">
+                        <i class="fa-solid fa-hammer"></i>
+                        <span data-text-es="Mina" data-text-en="Mine">Mina</span>
+                    </h3>
+                    <div class="mobs-grid">
+                        <!-- Murciélago de la Cueva -->
+                        <div class="mob-card expanded easy" data-dungeon="mine" data-difficulty="easy" data-type="melee">
+                            <div class="mob-difficulty" data-text-es="Fácil" data-text-en="Easy">Fácil</div>
+                            <div class="mob-header">
+                                <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/murcielago-cueva.gif');"></div>
+                                <div class="mob-info">
+                                    <h4 class="mob-name" data-text-es="Murciélago de la Cueva" data-text-en="Cave Bat">Murciélago de la Cueva</h4>
+                                    <div class="mob-stats">
+                                        <div class="mob-stat">
+                                            <i class="fas fa-heart"></i>
+                                            <span data-text-es="200 ❤" data-text-en="200 ❤">200 ❤</span>
+                                        </div>
+                                        <div class="mob-stat">
+                                            <i class="fas fa-bolt"></i>
+                                            <span data-text-es="Daño: 45" data-text-en="Damage: 45">Daño: 45</span>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="mob-stats-enhanced">
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Salud:" data-text-en="Health:">Salud:</span>
+                                            <div class="stat-progress health">
+                                                <div class="stat-progress-fill" style="width: 8%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="200" data-text-en="200">200</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Daño:" data-text-en="Damage:">Daño:</span>
+                                            <div class="stat-progress damage">
+                                                <div class="stat-progress-fill" style="width: 25%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="45" data-text-en="45">45</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Velocidad:" data-text-en="Speed:">Velocidad:</span>
+                                            <div class="stat-progress speed">
+                                                <div class="stat-progress-fill" style="width: 60%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="Alta" data-text-en="High">Alta</span>
+                                        </div>
+                                    </div>
+                                
+                                    <!-- Etiquetas -->
+                                    <div class="mob-classes">
+                                        <div class="class-badge physical">
+                                            <i class="fas fa-fist-raised"></i>
+                                            <span data-text-es="Físico" data-text-en="Physical">Físico</span>
+                                        </div>
+                                        <div class="class-badge bite">
+                                            <i class="fas fa-teeth"></i>
+                                            <span data-text-es="Mordedura" data-text-en="Bite">Mordedura</span>
+                                        </div>
+                                        <div class="class-badge dark">
+                                            <i class="fas fa-moon"></i>
+                                            <span data-text-es="Oscuridad" data-text-en="Dark">Oscuridad</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Guardian de la Cueva -->
+                        <div class="mob-card expanded medium" data-dungeon="mine" data-difficulty="medium" data-type="magic">
+                            <div class="mob-difficulty" data-text-es="Media" data-text-en="Medium">Media</div>
+                            <div class="mob-header">
+                                <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/guardian-cueva.gif');"></div>
+                                <div class="mob-info">
+                                    <h4 class="mob-name" data-text-es="Guardian de la Cueva" data-text-en="Cave Guardian">Guardian de la Cueva</h4>
+                                    <div class="mob-stats">
+                                        <div class="mob-stat">
+                                            <i class="fas fa-heart"></i>
+                                            <span data-text-es="300 ❤" data-text-en="300 ❤">300 ❤</span>
+                                        </div>
+                                        <div class="mob-stat">
+                                            <i class="fas fa-bolt"></i>
+                                            <span data-text-es="Daño: 40" data-text-en="Damage: 40">Daño: 40</span>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="mob-stats-enhanced">
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Salud:" data-text-en="Health:">Salud:</span>
+                                            <div class="stat-progress health">
+                                                <div class="stat-progress-fill" style="width: 18%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="300" data-text-en="300">300</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Daño:" data-text-en="Damage:">Daño:</span>
+                                            <div class="stat-progress damage">
+                                                <div class="stat-progress-fill" style="width: 45%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="40" data-text-en="40">40</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Velocidad:" data-text-en="Speed:">Velocidad:</span>
+                                            <div class="stat-progress speed">
+                                                <div class="stat-progress-fill" style="width: 40%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="Media" data-text-en="Medium">Media</span>
+                                        </div>
+                                    </div>
+                                
+                                    <!-- Etiquetas -->
+                                    <div class="mob-classes">
+                                        <div class="class-badge magic">
+                                            <i class="fas fa-hat-wizard"></i>
+                                            <span data-text-es="Mágico" data-text-en="Magic">Mágico</span>
+                                        </div>
+                                        <div class="class-badge earth">
+                                            <i class="fas fa-mountain"></i> 
+                                            <span data-text-es="Tierra" data-text-en="Earth">Tierra</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Sartin -->
+                        <div class="mob-card expanded medium" data-dungeon="mine" data-difficulty="medium" data-type="melee">
+                            <div class="mob-difficulty" data-text-es="Media" data-text-en="Medium">Media</div>
+                            <div class="mob-header">
+                                <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/sartin.gif');"></div>
+                                <div class="mob-info">
+                                    <h4 class="mob-name">Sartin</h4>
+                                    <div class="mob-stats">
+                                        <div class="mob-stat">
+                                            <i class="fas fa-heart"></i>
+                                            <span data-text-es="400 ❤" data-text-en="400 ❤">400 ❤</span>
+                                        </div>
+                                        <div class="mob-stat">
+                                            <i class="fas fa-bolt"></i>
+                                            <span data-text-es="Daño: 60" data-text-en="Damage: 60">Daño: 60</span>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="mob-stats-enhanced">
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Salud:" data-text-en="Health:">Salud:</span>
+                                            <div class="stat-progress health">
+                                                <div class="stat-progress-fill" style="width: 34%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="400" data-text-en="400">400</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Daño:" data-text-en="Damage:">Daño:</span>
+                                            <div class="stat-progress damage">
+                                                <div class="stat-progress-fill" style="width: 38%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="60" data-text-en="60">60</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Velocidad:" data-text-en="Speed:">Velocidad:</span>
+                                            <div class="stat-progress speed">
+                                                <div class="stat-progress-fill" style="width: 45%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="Media" data-text-en="Medium">Media</span>
+                                        </div>
+                                    </div>
+                                
+                                    <!-- Etiquetas -->
+                                    <div class="mob-classes">
+                                        <div class="class-badge physical">
+                                            <i class="fas fa-fist-raised"></i>
+                                            <span data-text-es="Físico" data-text-en="Physical">Físico</span>
+                                        </div>
+                                        <div class="class-badge pan-hit">
+                                            <i class="fas fa-utensils"></i>
+                                            <span data-text-es="Sartenazo" data-text-en="Pan Hit">Sartenazo</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Abeja Reina -->
+                        <div class="mob-card expanded hard" data-dungeon="mine" data-difficulty="hard" data-type="magic">
+                            <div class="mob-difficulty" data-text-es="Difícil" data-text-en="Hard">Difícil</div>
+                            <div class="mob-header">
+                                <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/abeja-reina.gif');"></div>
+                                <div class="mob-info">
+                                    <h4 class="mob-name" data-text-es="Abeja Reina" data-text-en="Queen Bee">Abeja Reina</h4>
+                                    <div class="mob-stats">
+                                        <div class="mob-stat">
+                                            <i class="fas fa-heart"></i>
+                                            <span data-text-es="500 ❤" data-text-en="500 ❤">500 ❤</span>
+                                        </div>
+                                        <div class="mob-stat">
+                                            <i class="fas fa-bolt"></i>
+                                            <span data-text-es="Daño: 65" data-text-en="Damage: 65">Daño: 65</span>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="mob-stats-enhanced">
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Salud:" data-text-en="Health:">Salud:</span>
+                                            <div class="stat-progress health">
+                                                <div class="stat-progress-fill" style="width: 43%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="500" data-text-en="500">500</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Daño:" data-text-en="Damage:">Daño:</span>
+                                            <div class="stat-progress damage">
+                                                <div class="stat-progress-fill" style="width: 47%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="65" data-text-en="65">65</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Velocidad:" data-text-en="Speed:">Velocidad:</span>
+                                            <div class="stat-progress speed">
+                                                <div class="stat-progress-fill" style="width: 37%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="Media" data-text-en="Medium">Media</span>
+                                        </div>
+                                    </div>
+                                
+                                    <!-- Etiquetas -->
+                                    <div class="mob-classes">
+                                        <div class="class-badge magic">
+                                            <i class="fas fa-hat-wizard"></i>
+                                            <span data-text-es="Mágico" data-text-en="Magic">Mágico</span>
+                                        </div>
+                                        <div class="class-badge earth">
+                                            <i class="fas fa-mountain"></i> 
+                                            <span data-text-es="Tierra" data-text-en="Earth">Tierra</span>
+                                        </div>
+                                        <div class="class-badge poison">
+                                            <i class="fas fa-skull-crossbones"></i>
+                                            <span data-text-es="Veneno" data-text-en="Poison">Veneno</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Aprendiz de Magia Oscura -->
+                        <div class="mob-card expanded hard" data-dungeon="mine" data-difficulty="hard" data-type="magic">
+                            <div class="mob-difficulty" data-text-es="Dificil" data-text-en="Hard">Dificil</div>
+                            <div class="mob-header">
+                                <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/aprendiz-magia.gif');"></div>
+                                <div class="mob-info">
+                                    <h4 class="mob-name" data-text-es="Aprendiz de Magia Oscura" data-text-en="Dark Magic Apprentice">Aprendiz de Magia Oscura</h4>
+                                    <div class="mob-stats">
+                                        <div class="mob-stat">
+                                            <i class="fas fa-heart"></i>
+                                            <span data-text-es="600 ❤" data-text-en="600 ❤">600 ❤</span>
+                                        </div>
+                                        <div class="mob-stat">
+                                            <i class="fas fa-bolt"></i>
+                                            <span data-text-es="Daño: 60" data-text-en="Damage: 60">Daño: 60</span>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="mob-stats-enhanced">
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Salud:" data-text-en="Health:">Salud:</span>
+                                            <div class="stat-progress health">
+                                                <div class="stat-progress-fill" style="width: 47%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="600" data-text-en="600">600</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Daño:" data-text-en="Damage:">Daño:</span>
+                                            <div class="stat-progress damage">
+                                                <div class="stat-progress-fill" style="width: 43%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="60" data-text-en="60">60</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Velocidad:" data-text-en="Speed:">Velocidad:</span>
+                                            <div class="stat-progress speed">
+                                                <div class="stat-progress-fill" style="width: 50%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="Media" data-text-en="Medium">Media</span>
+                                        </div>
+                                    </div>
+                                
+                                    <!-- Etiquetas -->
+                                    <div class="mob-classes">
+                                        <div class="class-badge magic">
+                                            <i class="fas fa-hat-wizard"></i>
+                                            <span data-text-es="Mágico" data-text-en="Magic">Mágico</span>
+                                        </div>
+                                        <div class="class-badge dark">
+                                            <i class="fas fa-moon"></i>
+                                            <span data-text-es="Oscuridad" data-text-en="Dark">Oscuridad</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Escupin -->
+                        <div class="mob-card expanded medium" data-dungeon="mine" data-difficulty="medium" data-type="ranged">
+                            <div class="mob-difficulty" data-text-es="Media" data-text-en="Medium">Media</div>
+                            <div class="mob-header">
+                                <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/escupin.gif');"></div>
+                                <div class="mob-info">
+                                    <h4 class="mob-name">Escupin</h4>
+                                    <div class="mob-stats">
+                                        <div class="mob-stat">
+                                            <i class="fas fa-heart"></i>
+                                            <span data-text-es="600 ❤" data-text-en="600 ❤">600 ❤</span>
+                                        </div>
+                                        <div class="mob-stat">
+                                            <i class="fas fa-bolt"></i>
+                                            <span data-text-es="Daño: 30/80" data-text-en="Damage: 30/80">Daño: 30/80</span>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="mob-stats-enhanced">
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Salud:" data-text-en="Health:">Salud:</span>
+                                            <div class="stat-progress health">
+                                                <div class="stat-progress-fill" style="width: 47%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="600" data-text-en="600">600</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Daño:" data-text-en="Damage:">Daño:</span>
+                                            <div class="stat-progress damage">
+                                                <div class="stat-progress-fill" style="width: 54%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="30/80" data-text-en="30/80">30/80</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Velocidad:" data-text-en="Speed:">Velocidad:</span>
+                                            <div class="stat-progress speed">
+                                                <div class="stat-progress-fill" style="width: 30%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="Media" data-text-en="Medium">Media</span>
+                                        </div>
+                                    </div>
+                                
+                                    <!-- Etiquetas -->
+                                    <div class="mob-classes">
+                                        <div class="class-badge magic">
+                                            <i class="fas fa-hat-wizard"></i>
+                                            <span data-text-es="Mágico" data-text-en="Magic">Mágico</span>
+                                        </div>
+                                        <div class="class-badge earth">
+                                            <i class="fas fa-mountain"></i> 
+                                            <span data-text-es="Tierra" data-text-en="Earth">Tierra</span>
+                                        </div>
+                                        <div class="class-badge fire">
+                                            <i class="fas fa-fire"></i>
+                                            <span data-text-es="Fuego" data-text-en="Fire">Fuego</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+
+            <div class="mobs-tab-content" id="bosses">
+                <!-- Sección de Jefes (contenido existente) -->
+            </div>
+            
+            <div class="mobs-tab-content" id="mini-bosses">
+                <div class="mob-category">
+                    <h3 class="mob-category-title">
+                        <i class="fas fa-snowflake"></i>
+                        <span data-text-es="Polo Norte" data-text-en="North Pole">Polo Norte</span>
+                    </h3>
+                    <div class="mobs-grid">
+                        <!-- Sylfrig -->
+                        <div class="mob-card expanded boss" data-dungeon="north-pole" data-difficulty="boss" data-type="melee">
+                            <div class="mob-difficulty" data-text-es="Jefe" data-text-en="Boss">Jefe</div>
+                            <div class="mob-header">
+                                <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/sylfrig.gif');"></div>
+                                <div class="mob-info">
+                                    <h4 class="mob-name">Sylfrig</h4>
+                                    <div class="mob-stats">
+                                        <div class="mob-stat">
+                                            <i class="fas fa-heart"></i>
+                                            <span data-text-es="500 ❤" data-text-en="500 ❤">500 ❤</span>
+                                        </div>
+                                        <div class="mob-stat">
+                                            <i class="fas fa-bolt"></i>
+                                            <span data-text-es="Daño: 50-100" data-text-en="Damage: 50-100">Daño: 50-100</span>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="mob-stats-enhanced">
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Salud:" data-text-en="Health:">Salud:</span>
+                                            <div class="stat-progress health">
+                                                <div class="stat-progress-fill" style="width: 36%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="500" data-text-en="500">500</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Daño:" data-text-en="Damage:">Daño:</span>
+                                            <div class="stat-progress damage">
+                                                <div class="stat-progress-fill" style="width: 54%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="50-100" data-text-en="50-100">50-100</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Velocidad:" data-text-en="Speed:">Velocidad:</span>
+                                            <div class="stat-progress speed">
+                                                <div class="stat-progress-fill" style="width: 25%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="Baja" data-text-en="Low">Baja</span>
+                                        </div>
+                                    </div>
+                                
+                                    <!-- Etiquetas -->
+                                    <div class="mob-classes">
+                                        <div class="class-badge physical">
+                                            <i class="fas fa-fist-raised"></i>
+                                            <span data-text-es="Físico" data-text-en="Physical">Físico</span>
+                                        </div>
+                                        <div class="class-badge earth">
+                                            <i class="fas fa-mountain"></i> 
+                                            <span data-text-es="Tierra" data-text-en="Earth">Tierra</span>
+                                        </div>
+                                        <div class="class-badge ice">
+                                            <i class="fas fa-snowflake"></i>
+                                            <span data-text-es="Hielo" data-text-en="Ice">Hielo</span>
+                                        </div>
+                                        <div class="class-badge kick">
+                                            <i class="fas fa-shoe-prints"></i>
+                                            <span data-text-es="Patada" data-text-en="Kick">Patada</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mob-category">
+                    <h3 class="mob-category-title">
+                        <i class="fa-solid fa-cube"></i>
+                        <span data-text-es="Cueva" data-text-en="Cave">Cueva</span>
+                    </h3>
+                    <div class="mobs-grid">
+                        <!-- Vilhortis -->
+                        <div class="mob-card expanded boss" data-dungeon="cave" data-difficulty="boss" data-type="melee">
+                            <div class="mob-difficulty" data-text-es="Jefe" data-text-en="Boss">Jefe</div>
+                            <div class="mob-header">
+                                <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/vilhortis.gif');"></div>
+                                <div class="mob-info">
+                                    <h4 class="mob-name">Vilhortis</h4>
+                                    <div class="mob-stats">
+                                        <div class="mob-stat">
+                                            <i class="fas fa-heart"></i>
+                                            <span data-text-es="600 ❤" data-text-en="600 ❤">600 ❤</span>
+                                        </div>
+                                        <div class="mob-stat">
+                                            <i class="fas fa-bolt"></i>
+                                            <span data-text-es="Daño: 60-180" data-text-en="Damage: 60-180">Daño: 60-180</span>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="mob-stats-enhanced">
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Salud:" data-text-en="Health:">Salud:</span>
+                                            <div class="stat-progress health">
+                                                <div class="stat-progress-fill" style="width: 42%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="600" data-text-en="600">600</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Daño:" data-text-en="Damage:">Daño:</span>
+                                            <div class="stat-progress damage">
+                                                <div class="stat-progress-fill" style="width: 62%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="60-180" data-text-en="60-180">60-180</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Velocidad:" data-text-en="Speed:">Velocidad:</span>
+                                            <div class="stat-progress speed">
+                                                <div class="stat-progress-fill" style="width: 25%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="Baja" data-text-en="Low">Baja</span>
+                                        </div>
+                                    </div>
+                                
+                                    <!-- Etiquetas -->
+                                    <div class="mob-classes">
+                                        <div class="class-badge physical">
+                                            <i class="fas fa-fist-raised"></i>
+                                            <span data-text-es="Físico" data-text-en="Physical">Físico</span>
+                                        </div>
+                                        <div class="class-badge magic">
+                                            <i class="fas fa-hat-wizard"></i>
+                                            <span data-text-es="Mágico" data-text-en="Magic">Mágico</span>
+                                        </div>
+                                        <div class="class-badge earth">
+                                            <i class="fas fa-mountain"></i> 
+                                            <span data-text-es="Tierra" data-text-en="Earth">Tierra</span>
+                                        </div>
+                                        <div class="class-badge dark">
+                                            <i class="fas fa-moon"></i>
+                                            <span data-text-es="Oscuridad" data-text-en="Dark">Oscuridad</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mob-category">
+                    <h3 class="mob-category-title">
+                        <i class="fa-solid fa-chess-rook"></i>
+                        <span data-text-es="Castillo" data-text-en="Castle">Castillo</span>
+                    </h3>
+                    <div class="mobs-grid">
+                        <!-- Maltherion -->
+                        <div class="mob-card expanded boss" data-dungeon="medieval" data-difficulty="boss" data-type="summoner">
+                            <div class="mob-difficulty" data-text-es="Jefe" data-text-en="Boss">Jefe</div>
+                            <div class="mob-header">
+                                <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/maltherion.gif');"></div>
+                                <div class="mob-info">
+                                    <h4 class="mob-name">Maltherion</h4>
+                                    <div class="mob-stats">
+                                        <div class="mob-stat">
+                                            <i class="fas fa-heart"></i>
+                                            <span data-text-es="1250 ❤" data-text-en="1250 ❤">1250 ❤</span>
+                                        </div>
+                                        <div class="mob-stat">
+                                            <i class="fas fa-bolt"></i>
+                                            <span data-text-es="Daño: 40-70" data-text-en="Damage: 40-70">Daño: 40-70</span>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="mob-stats-enhanced">
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Salud:" data-text-en="Health:">Salud:</span>
+                                            <div class="stat-progress health">
+                                                <div class="stat-progress-fill" style="width: 75%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="1250" data-text-en="1250">1250</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Daño:" data-text-en="Damage:">Daño:</span>
+                                            <div class="stat-progress damage">
+                                                <div class="stat-progress-fill" style="width: 46%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="40-70" data-text-en="40-70">40-70</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Velocidad:" data-text-en="Speed:">Velocidad:</span>
+                                            <div class="stat-progress speed">
+                                                <div class="stat-progress-fill" style="width: 35%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="Media" data-text-en="Medium">Media</span>
+                                        </div>
+                                    </div>
+                                
+                                    <!-- Etiquetas -->
+                                    <div class="mob-classes">
+                                        <div class="class-badge summoner">
+                                            <i class="fas fa-ghost"></i>
+                                            <span data-text-es="Invocador" data-text-en="Summoner">Invocador</span>
+                                        </div>
+                                        <div class="class-badge magic">
+                                            <i class="fas fa-hat-wizard"></i>
+                                            <span data-text-es="Mágico" data-text-en="Magic">Mágico</span>
+                                        </div>
+                                        <div class="class-badge dark">
+                                            <i class="fas fa-moon"></i>
+                                            <span data-text-es="Oscuridad" data-text-en="Dark">Oscuridad</span>
+                                        </div>
+                                        <div class="class-badge poison">
+                                            <i class="fas fa-skull-crossbones"></i>
+                                            <span data-text-es="Veneno" data-text-en="Poison">Veneno</span>
+                                        </div>
+                                        <div class="class-badge fire">
+                                            <i class="fas fa-fire"></i>
+                                            <span data-text-es="Fuego" data-text-en="Fire">Fuego</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mob-category">
+                    <h3 class="mob-category-title">
+                        <i class="fa-solid fa-church"></i>
+                        <span data-text-es="Catedral" data-text-en="Cathedral">Catedral</span>
+                    </h3>
+                    <div class="mobs-grid">
+                        <!-- Anubis -->
+                        <div class="mob-card expanded boss" data-dungeon="cathedral" data-difficulty="boss" data-type="summoner">
+                            <div class="mob-difficulty" data-text-es="Jefe" data-text-en="Boss">Jefe</div>
+                            <div class="mob-header">
+                                <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/anubis.gif');"></div>
+                                <div class="mob-info">
+                                    <h4 class="mob-name">Anubis</h4>
+                                    <div class="mob-stats">
+                                        <div class="mob-stat">
+                                            <i class="fas fa-heart"></i>
+                                            <span data-text-es="1750 ❤" data-text-en="1750 ❤">1750 ❤</span>
+                                        </div>
+                                        <div class="mob-stat">
+                                            <i class="fas fa-bolt"></i>
+                                            <span data-text-es="Daño: 50-340" data-text-en="Damage: 50-340">Daño: 50-340</span>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="mob-stats-enhanced">
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Salud:" data-text-en="Health:">Salud:</span>
+                                            <div class="stat-progress health">
+                                                <div class="stat-progress-fill" style="width: 80%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="1750" data-text-en="1750">1750</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Daño:" data-text-en="Damage:">Daño:</span>
+                                            <div class="stat-progress damage">
+                                                <div class="stat-progress-fill" style="width: 84%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="50-340" data-text-en="50-340">50-340</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Velocidad:" data-text-en="Speed:">Velocidad:</span>
+                                            <div class="stat-progress speed">
+                                                <div class="stat-progress-fill" style="width: 25%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="Baja" data-text-en="Low">Baja</span>
+                                        </div>
+                                    </div>
+                                
+                                    <!-- Etiquetas -->
+                                    <div class="mob-classes">
+                                        <div class="class-badge summoner">
+                                            <i class="fas fa-ghost"></i>
+                                            <span data-text-es="Invocador" data-text-en="Summoner">Invocador</span>
+                                        </div>
+                                        <div class="class-badge magic">
+                                            <i class="fas fa-hat-wizard"></i>
+                                            <span data-text-es="Mágico" data-text-en="Magic">Mágico</span>
+                                        </div>
+                                        <div class="class-badge dark">
+                                            <i class="fas fa-moon"></i>
+                                            <span data-text-es="Oscuridad" data-text-en="Dark">Oscuridad</span>
+                                        </div>
+                                        <div class="class-badge gladiator">
+                                            <i class="fa-solid fa-khanda"></i>
+                                            <span data-text-es="Gladiador" data-text-en="Gladiator">Gladiador</span>
+                                        </div>
+                                        <div class="class-badge fire">
+                                            <i class="fas fa-fire"></i>
+                                            <span data-text-es="Fuego" data-text-en="Fire">Fuego</span>
+                                        </div>
+                                        <div class="class-badge earth">
+                                            <i class="fas fa-mountain"></i>
+                                            <span data-text-es="Tierra" data-text-en="Earth">Tierra</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mob-category">
+                    <h3 class="mob-category-title">
+                        <i class="fa-solid fa-hammer"></i>
+                        <span data-text-es="Mina" data-text-en="Mine">Mina</span>
+                    </h3>
+                    <div class="mobs-grid">
+                        <!-- Luxtharion -->
+                        <div class="mob-card expanded boss" data-dungeon="mine" data-difficulty="boss" data-type="magic">
+                            <div class="mob-difficulty" data-text-es="Jefe" data-text-en="Boss">Jefe</div>
+                            <div class="mob-header">
+                                <div class="mob-image" style="background-image: url('../assets/multimedia/img/mobs/luxtharion.gif');"></div>
+                                <div class="mob-info">
+                                    <h4 class="mob-name">Luxtharion</h4>
+                                    <div class="mob-stats">
+                                        <div class="mob-stat">
+                                            <i class="fas fa-heart"></i>
+                                            <span data-text-es="700 ❤" data-text-en="700 ❤">700 ❤</span>
+                                        </div>
+                                        <div class="mob-stat">
+                                            <i class="fas fa-bolt"></i>
+                                            <span data-text-es="Daño: 70" data-text-en="Damage: 70">Daño: 70</span>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="mob-stats-enhanced">
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Salud:" data-text-en="Health:">Salud:</span>
+                                            <div class="stat-progress health">
+                                                <div class="stat-progress-fill" style="width: 48%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="700" data-text-en="700">700</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Daño:" data-text-en="Damage:">Daño:</span>
+                                            <div class="stat-progress damage">
+                                                <div class="stat-progress-fill" style="width: 60%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="70" data-text-en="70">70</span>
+                                        </div>
+                                        <div class="stat-bar">
+                                            <span class="stat-label" data-text-es="Velocidad:" data-text-en="Speed:">Velocidad:</span>
+                                            <div class="stat-progress speed">
+                                                <div class="stat-progress-fill" style="width: 40%;"></div>
+                                            </div>
+                                            <span class="stat-value" data-text-es="Media" data-text-en="Medium">Media</span>
+                                        </div>
+                                    </div>
+                                
+                                    <!-- Etiquetas -->
+                                    <div class="mob-classes">
+                                        <div class="class-badge magic">
+                                            <i class="fas fa-hat-wizard"></i>
+                                            <span data-text-es="Mágico" data-text-en="Magic">Mágico</span>
+                                        </div>
+                                        <div class="class-badge light">
+                                            <i class="fas fa-sun"></i>
+                                            <span data-text-es="Luz" data-text-en="Light">Luz</span>
+                                        </div>
+                                        <div class="class-badge gladiator">
+                                            <i class="fa-solid fa-khanda"></i>
+                                            <span data-text-es="Gladiador" data-text-en="Gladiator">Gladiador</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-nav">
+                <!-- Navegación existente... -->
+            </div>
+            <div class="content-nav">
+                <a href="survivalop-dungeons.html" class="content-nav-link">
+                    <i class="fas fa-arrow-left"></i>
+                    <span data-text-es="Volver a Mazmorras" data-text-en="Back to Dungeons">Volver a Mazmorras</span>
+                </a>
+                <a href="survivalop-mobs.html" class="content-nav-link">
+                    <span data-text-es="Materiales" data-text-en="Materials">Materiales</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="copyright" data-text-es="Esta wiki no está afiliada a Minecraft o Mojang. Última edición el 31 de mayo, 2025." data-text-en="This wiki is not affiliated with Minecraft or Mojang. Last edited on May 31, 2025.">Esta wiki no está afiliada a Minecraft o Mojang. Última edición el 31 de mayo, 2025.</div>
+            <ul class="footer-links">
+                <li class="footer-item"><a href="#" class="footer-link" data-text-es="Política de Privacidad" data-text-en="Privacy Policy">Política de Privacidad</a></li>
+                <li class="footer-item"><a href="#" class="footer-link" data-text-es="Acerca de Emerald Wiki" data-text-en="About Emerald Wiki">Acerca de Emerald Wiki</a></li>
+                <li class="footer-item"><a href="#" class="footer-link" data-text-es="Descargo de Responsabilidad" data-text-en="Disclaimers">Descargo de Responsabilidad</a></li>
+                <li class="footer-item"><a href="#" class="footer-link" data-text-es="Términos de Uso" data-text-en="Terms of Use">Términos de Uso</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="../assets/js/main-page.js"></script>
+    <script src="../assets/js/survivalop.js"></script>
+</body>
+</html>

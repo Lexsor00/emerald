@@ -120,7 +120,7 @@
                 <div class="quick-info">
                     <div class="quick-info-item">
                         <div class="quick-info-label" data-text-es="Materiales" data-text-en="Materials">Materiales</div>
-                        <div class="quick-info-value">67</div>
+                        <div class="quick-info-value">75</div>
                     </div>
                     <div class="quick-info-item">
                         <div class="quick-info-label" data-text-es="Rarezas" data-text-en="Rarities">Rarezas</div>
@@ -145,6 +145,11 @@
                         <i class="fas fa-hammer"></i>
                         <span data-text-es="Fabricados" data-text-en="Crafted">Fabricados</span>
                         <span class="badge">21</span>
+                    </div>
+                    <div class="materials-tab" data-tab="mine-materials">
+                        <i class="fa-solid fa-gem"></i>
+                        <span data-text-es="Minerales" data-text-en="Ores">Minerales</span>
+                        <span class="badge">8</span>
                     </div>
                 </div>
             </div>
@@ -2328,8 +2333,583 @@
                         </div>
                     </div>
                 </div>
-
             </div>
+
+
+            <div class="materials-tab-content" id="mine-materials">
+                <!-- Contenido de minerales -->
+                <div class="material-category">
+                    <h3 class="material-category-title">
+                        <i class="fas fa-mountain"></i>
+                        <span data-text-es="Minerales de la Mina" data-text-en="Mine Minerals">Minerales de la Mina</span>
+                    </h3>
+
+                    <div class="materials-grid">
+                        <!-- Antracita -->
+                        <div class="material-card expanded" data-dungeon="mine" data-rarity="common" data-type="mineral">
+                            <div class="material-header">
+                                <i class="fas fa-gem"></i>
+                                <span data-text-es="Antracita" data-text-en="Anthracite">Antracita</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/mine/antracita-i.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Antracita I" data-text-en="Anthracite I">Antracita I</h4>
+                                        <div class="material-rarity common" data-text-es="Común" data-text-en="Common">Común</div>
+                                        <div class="material-mine">
+                                            <i class="fas fa-mountain"></i>
+                                            <span data-text-es="Minado" data-text-en="Mined">Minado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Materiales fabricables:" data-text-en="Craftable materials:">Materiales fabricables:</h5>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">64x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/antracita-i.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/antracita-ii.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Antracita II" data-text-en="Anthracite II">Antracita II</span>
+                                            <span class="recipe-rarity common" data-text-es="Común" data-text-en="Common">Común</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">32x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/antracita-ii.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/antracita-iii.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Antracita III" data-text-en="Anthracite III">Antracita III</span>
+                                            <span class="recipe-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">16x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/antracita-iii.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/antracita-iv.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Antracita IV" data-text-en="Anthracite IV">Antracita IV</span>
+                                            <span class="recipe-rarity epic" data-text-es="Épica" data-text-en="Epic">Épica</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Malaquita -->
+                        <div class="material-card expanded" data-dungeon="mine" data-rarity="common" data-type="mineral">
+                            <div class="material-header">
+                                <i class="fas fa-gem"></i>
+                                <span data-text-es="Malaquita" data-text-en="Malachite">Malaquita</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/mine/malaquita-i.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Malaquita I" data-text-en="Malachite I">Malaquita I</h4>
+                                        <div class="material-rarity common" data-text-es="Común" data-text-en="Common">Común</div>
+                                        <div class="material-mine">
+                                            <i class="fas fa-mountain"></i>
+                                            <span data-text-es="Minado" data-text-en="Mined">Minado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Materiales fabricables:" data-text-en="Craftable materials:">Materiales fabricables:</h5>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">64x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/malaquita-i.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/malaquita-ii.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Malaquita II" data-text-en="Malachite II">Malaquita II</span>
+                                            <span class="recipe-rarity common" data-text-es="Común" data-text-en="Common">Común</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">32x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/malaquita-ii.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/malaquita-iii.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Malaquita III" data-text-en="Malachite III">Malaquita III</span>
+                                            <span class="recipe-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">16x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/malaquita-iii.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/malaquita-iv.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Malaquita IV" data-text-en="Malachite IV">Malaquita IV</span>
+                                            <span class="recipe-rarity epic" data-text-es="Épica" data-text-en="Epic">Épica</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cornalina -->
+                        <div class="material-card expanded" data-dungeon="mine" data-rarity="common" data-type="mineral">
+                            <div class="material-header">
+                                <i class="fas fa-gem"></i>
+                                <span data-text-es="Cornalina" data-text-en="Carnelian">Cornalina</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/mine/cornalina-i.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Cornalina I" data-text-en="Carnelian I">Cornalina I</h4>
+                                        <div class="material-rarity common" data-text-es="Común" data-text-en="Common">Común</div>
+                                        <div class="material-mine">
+                                            <i class="fas fa-mountain"></i>
+                                            <span data-text-es="Minado" data-text-en="Mined">Minado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Materiales fabricables:" data-text-en="Craftable materials:">Materiales fabricables:</h5>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">64x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/cornalina-i.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/cornalina-ii.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Cornalina II" data-text-en="Carnelian II">Cornalina II</span>
+                                            <span class="recipe-rarity common" data-text-es="Común" data-text-en="Common">Común</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">32x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/cornalina-ii.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/cornalina-iii.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Cornalina III" data-text-en="Carnelian III">Cornalina III</span>
+                                            <span class="recipe-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">16x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/cornalina-iii.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/cornalina-iv.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Cornalina IV" data-text-en="Carnelian IV">Cornalina IV</span>
+                                            <span class="recipe-rarity epic" data-text-es="Épica" data-text-en="Epic">Épica</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Azurite -->
+                        <div class="material-card expanded" data-dungeon="mine" data-rarity="common" data-type="mineral">
+                            <div class="material-header">
+                                <i class="fas fa-gem"></i>
+                                <span data-text-es="Azurite" data-text-en="Azurite">Azurite</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/mine/azurite-i.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Azurite I" data-text-en="Azurite I">Azurite I</h4>
+                                        <div class="material-rarity common" data-text-es="Común" data-text-en="Common">Común</div>
+                                        <div class="material-mine">
+                                            <i class="fas fa-mountain"></i>
+                                            <span data-text-es="Minado" data-text-en="Mined">Minado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Materiales fabricables:" data-text-en="Craftable materials:">Materiales fabricables:</h5>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">64x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/azurite-i.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/azurite-ii.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Azurite II" data-text-en="Azurite II">Azurite II</span>
+                                            <span class="recipe-rarity common" data-text-es="Común" data-text-en="Common">Común</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">32x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/azurite-ii.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/azurite-iii.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Azurite III" data-text-en="Azurite III">Azurite III</span>
+                                            <span class="recipe-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">16x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/azurite-iii.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/azurite-iv.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Azurite IV" data-text-en="Azurite IV">Azurite IV</span>
+                                            <span class="recipe-rarity epic" data-text-es="Épica" data-text-en="Epic">Épica</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Jade -->
+                        <div class="material-card expanded" data-dungeon="mine" data-rarity="common" data-type="mineral">
+                            <div class="material-header">
+                                <i class="fas fa-gem"></i>
+                                <span data-text-es="Jade" data-text-en="Jade">Jade</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/mine/jade-i.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Jade I" data-text-en="Jade I">Jade I</h4>
+                                        <div class="material-rarity common" data-text-es="Común" data-text-en="Common">Común</div>
+                                        <div class="material-mine">
+                                            <i class="fas fa-mountain"></i>
+                                            <span data-text-es="Minado" data-text-en="Mined">Minado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Materiales fabricables:" data-text-en="Craftable materials:">Materiales fabricables:</h5>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">64x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/jade-i.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/jade-ii.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Jade II" data-text-en="Jade II">Jade II</span>
+                                            <span class="recipe-rarity common" data-text-es="Común" data-text-en="Common">Común</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">32x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/jade-ii.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/jade-iii.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Jade III" data-text-en="Jade III">Jade III</span>
+                                            <span class="recipe-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">16x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/jade-iii.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/jade-iv.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Jade IV" data-text-en="Jade IV">Jade IV</span>
+                                            <span class="recipe-rarity epic" data-text-es="Épica" data-text-en="Epic">Épica</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Topacio -->
+                        <div class="material-card expanded" data-dungeon="mine" data-rarity="common" data-type="mineral">
+                            <div class="material-header">
+                                <i class="fas fa-gem"></i>
+                                <span data-text-es="Topacio" data-text-en="Topaz">Topacio</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/mine/topacio-i.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Topacio I" data-text-en="Topaz I">Topacio I</h4>
+                                        <div class="material-rarity common" data-text-es="Común" data-text-en="Common">Común</div>
+                                        <div class="material-mine">
+                                            <i class="fas fa-mountain"></i>
+                                            <span data-text-es="Minado" data-text-en="Mined">Minado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Materiales fabricables:" data-text-en="Craftable materials:">Materiales fabricables:</h5>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">64x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/topacio-i.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/topacio-ii.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Topacio II" data-text-en="Topaz II">Topacio II</span>
+                                            <span class="recipe-rarity common" data-text-es="Común" data-text-en="Common">Común</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">32x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/topacio-ii.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/topacio-iii.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Topacio III" data-text-en="Topaz III">Topacio III</span>
+                                            <span class="recipe-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">16x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/topacio-iii.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/topacio-iv.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Topacio IV" data-text-en="Topaz IV">Topacio IV</span>
+                                            <span class="recipe-rarity epic" data-text-es="Épica" data-text-en="Epic">Épica</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Kuncita -->
+                        <div class="material-card expanded" data-dungeon="mine" data-rarity="common" data-type="mineral">
+                            <div class="material-header">
+                                <i class="fas fa-gem"></i>
+                                <span data-text-es="Kuncita" data-text-en="Kunzite">Kuncita</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/mine/kuncita-i.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Kuncita I" data-text-en="Kunzite I">Kuncita I</h4>
+                                        <div class="material-rarity common" data-text-es="Común" data-text-en="Common">Común</div>
+                                        <div class="material-mine">
+                                            <i class="fas fa-mountain"></i>
+                                            <span data-text-es="Minado" data-text-en="Mined">Minado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Materiales fabricables:" data-text-en="Craftable materials:">Materiales fabricables:</h5>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">64x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/kuncita-i.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/kuncita-ii.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Kuncita II" data-text-en="Kunzite II">Kuncita II</span>
+                                            <span class="recipe-rarity common" data-text-es="Común" data-text-en="Common">Común</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">32x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/kuncita-ii.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/kuncita-iii.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Kuncita III" data-text-en="Kunzite III">Kuncita III</span>
+                                            <span class="recipe-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">16x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/kuncita-iii.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/kuncita-iv.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Kuncita IV" data-text-en="Kunzite IV">Kuncita IV</span>
+                                            <span class="recipe-rarity epic" data-text-es="Épica" data-text-en="Epic">Épica</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Brucite -->
+                        <div class="material-card expanded" data-dungeon="mine" data-rarity="common" data-type="mineral">
+                            <div class="material-header">
+                                <i class="fas fa-gem"></i>
+                                <span data-text-es="Brucite" data-text-en="Brucite">Brucite</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/mine/brucite-i.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Brucite I" data-text-en="Brucite I">Brucite I</h4>
+                                        <div class="material-rarity common" data-text-es="Común" data-text-en="Common">Común</div>
+                                        <div class="material-mine">
+                                            <i class="fas fa-mountain"></i>
+                                            <span data-text-es="Minado" data-text-en="Mined">Minado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Materiales fabricables:" data-text-en="Craftable materials:">Materiales fabricables:</h5>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">64x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/brucite-i.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/brucite-ii.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Brucite II" data-text-en="Brucite II">Brucite II</span>
+                                            <span class="recipe-rarity common" data-text-es="Común" data-text-en="Common">Común</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">32x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/brucite-ii.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/brucite-iii.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Brucite III" data-text-en="Brucite III">Brucite III</span>
+                                            <span class="recipe-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">16x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/brucite-iii.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/brucite-iv.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Brucite IV" data-text-en="Brucite IV">Brucite IV</span>
+                                            <span class="recipe-rarity epic" data-text-es="Épica" data-text-en="Epic">Épica</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
             
             <div class="content-nav">
                 <a href="survivalop-mobs.html" class="content-nav-link">

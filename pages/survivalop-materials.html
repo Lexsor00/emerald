@@ -120,7 +120,7 @@
                 <div class="quick-info">
                     <div class="quick-info-item">
                         <div class="quick-info-label" data-text-es="Materiales" data-text-en="Materials">Materiales</div>
-                        <div class="quick-info-value">75</div>
+                        <div class="quick-info-value">86</div>
                     </div>
                     <div class="quick-info-item">
                         <div class="quick-info-label" data-text-es="Rarezas" data-text-en="Rarities">Rarezas</div>
@@ -128,7 +128,7 @@
                     </div>
                     <div class="quick-info-item">
                         <div class="quick-info-label" data-text-es="Recetas" data-text-en="Recipes">Recetas</div>
-                        <div class="quick-info-value">21</div>
+                        <div class="quick-info-value">32</div>
                     </div>
                 </div>
             </div>
@@ -144,7 +144,7 @@
                     <div class="materials-tab" data-tab="crafted-materials">
                         <i class="fas fa-hammer"></i>
                         <span data-text-es="Fabricados" data-text-en="Crafted">Fabricados</span>
-                        <span class="badge">21</span>
+                        <span class="badge">32</span>
                     </div>
                     <div class="materials-tab" data-tab="mine-materials">
                         <i class="fa-solid fa-gem"></i>
@@ -162,13 +162,15 @@
                 </div>
                 
                 <div class="filter-group">
-                    <span class="filter-label" data-text-es="Mazmorra:" data-text-en="Dungeon:">Mazmorra:</span>
+                    <span class="filter-label" data-text-es="Zona:" data-text-en="Zone:">Zona:</span>
                     <select class="filter-select" id="dungeon-filter">
                         <option value="all" data-text-es="Todas" data-text-en="All">Todas</option>
                         <option value="north-pole" data-text-es="Polo Norte" data-text-en="North Pole">Polo Norte</option>
                         <option value="cave" data-text-es="Cueva" data-text-en="Cave">Cueva</option>
                         <option value="medieval" data-text-es="Medieval" data-text-en="Medieval">Medieval</option>
                         <option value="cathedral" data-text-es="Catedral" data-text-en="Cathedral">Catedral</option>
+                        <option value="mine" data-text-es="Mina" data-text-en="Mine">Mina</option>
+                        <option value="spawn" data-text-es="Spawn" data-text-en="Spawn">Spawn</option>
                     </select>
                 </div>
                 <!-- 
@@ -2326,6 +2328,507 @@
                                         <div class="recipe-info">
                                             <span class="recipe-name" data-text-es="Cuernos Demoniacos" data-text-en="Demonic Horns">Cuernos Demoniacos</span>
                                             <span class="recipe-rarity epic" data-text-es="Épica" data-text-en="Epic">Épica</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Materiales fabricados del Spawn -->
+                <div class="material-category">
+                    <h3 class="material-category-title">
+                        <i class="fa-solid fa-house-medical-flag"></i>
+                        <span data-text-es="Materiales del Spawn" data-text-en="Spawn Materials">Materiales del Spawn</span>
+                    </h3>
+                
+                    <div class="materials-grid">
+                        <!-- Fragmento de Mejora (Navideño) -->
+                        <div class="material-card expanded" data-dungeon="spawn" data-rarity="epic" data-type="crafted">
+                            <div class="material-header">
+                                <i class="fas fa-hammer"></i>
+                                <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/spawn/fragmento-mejora-helado.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Fragmento de Mejora" data-text-en="Upgrade Fragment">Fragmento de Mejora</h4>
+                                        <div class="material-rarity epic" data-text-es="Épica" data-text-en="Epic">Épica</div>
+                                        <div class="material-crafted">
+                                            <i class="fas fa-hammer"></i>
+                                            <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Receta de fabricación:" data-text-en="Crafting recipe:">Receta de fabricación:</h5>
+                                
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">8x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/polo-norte/calcetin-navideno.png');"></div>
+                                    </div>
+                                    <div class="recipe-plus">+</div>
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">5x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/polo-norte/sudadera-navideno.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/spawn/fragmento-mejora-helado.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Fragmento de Mejora" data-text-en="Upgrade Fragment">Fragmento de Mejora</span>
+                                            <span class="recipe-rarity epic" data-text-es="Épica" data-text-en="Epic">Épica</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Fragmento de Mejora (Demoniaco) -->
+                        <div class="material-card expanded" data-dungeon="spawn" data-rarity="epic" data-type="crafted">
+                            <div class="material-header">
+                                <i class="fas fa-hammer"></i>
+                                <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/spawn/fragmento-mejora-alma.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Fragmento de Mejora" data-text-en="Upgrade Fragment">Fragmento de Mejora</h4>
+                                        <div class="material-rarity epic" data-text-es="Épica" data-text-en="Epic">Épica</div>
+                                        <div class="material-crafted">
+                                            <i class="fas fa-hammer"></i>
+                                            <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Receta de fabricación:" data-text-en="Crafting recipe:">Receta de fabricación:</h5>
+                                
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">24x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/catedral/arbol-demoniaco.png');"></div>
+                                    </div>
+                                    <div class="recipe-plus">+</div>
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">20x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/catedral/llamas-erebyss.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/spawn/fragmento-mejora-alma.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Fragmento de Mejora" data-text-en="Upgrade Fragment">Fragmento de Mejora</span>
+                                            <span class="recipe-rarity epic" data-text-es="Épica" data-text-en="Epic">Épica</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Palo I -->
+                        <div class="material-card expanded" data-dungeon="spawn" data-rarity="common" data-type="crafted">
+                            <div class="material-header">
+                                <i class="fas fa-hammer"></i>
+                                <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/spawn/palo-i.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Palo I" data-text-en="Stick I">Palo I</h4>
+                                        <div class="material-rarity common" data-text-es="Común" data-text-en="Common">Común</div>
+                                        <div class="material-crafted">
+                                            <i class="fas fa-hammer"></i>
+                                            <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Receta de fabricación:" data-text-en="Crafting recipe:">Receta de fabricación:</h5>
+                                
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">32x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/antracita-ii.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/spawn/palo-i.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Palo I" data-text-en="Stick I">Palo I</span>
+                                            <span class="recipe-rarity common" data-text-es="Común" data-text-en="Common">Común</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Palo II -->
+                        <div class="material-card expanded" data-dungeon="spawn" data-rarity="rare" data-type="crafted">
+                            <div class="material-header">
+                                <i class="fas fa-hammer"></i>
+                                <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/spawn/palo-ii.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Palo II" data-text-en="Stick II">Palo II</h4>
+                                        <div class="material-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</div>
+                                        <div class="material-crafted">
+                                            <i class="fas fa-hammer"></i>
+                                            <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Receta de fabricación:" data-text-en="Crafting recipe:">Receta de fabricación:</h5>
+                                
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">4x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/spawn/palo-i.png');"></div>
+                                    </div>
+                                    <div class="recipe-plus">+</div>
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">12x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/cornalina-ii.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/spawn/palo-ii.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Palo II" data-text-en="Stick II">Palo II</span>
+                                            <span class="recipe-rarity rare" data-text-es="Rara" data-text-en="Rare">Rara</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Palo III -->
+                        <div class="material-card expanded" data-dungeon="spawn" data-rarity="epic" data-type="crafted">
+                            <div class="material-header">
+                                <i class="fas fa-hammer"></i>
+                                <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/spawn/palo-iii.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Palo III" data-text-en="Stick III">Palo III</h4>
+                                        <div class="material-rarity epic" data-text-es="Épica" data-text-en="Epic">Épica</div>
+                                        <div class="material-crafted">
+                                            <i class="fas fa-hammer"></i>
+                                            <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Receta de fabricación:" data-text-en="Crafting recipe:">Receta de fabricación:</h5>
+                                
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">2x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/spawn/palo-ii.png');"></div>
+                                    </div>
+                                    <div class="recipe-plus">+</div>
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">6x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/mine/topacio-ii.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/spawn/palo-iii.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Palo III" data-text-en="Stick III">Palo III</span>
+                                            <span class="recipe-rarity epic" data-text-es="Épica" data-text-en="Epic">Épica</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Fragmento de Ala -->
+                        <div class="material-card expanded" data-dungeon="spawn" data-rarity="legendary" data-type="crafted">
+                            <div class="material-header">
+                                <i class="fas fa-hammer"></i>
+                                <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/spawn/fragmento-ala.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Fragmento de Ala" data-text-en="Wing Fragment">Fragmento de Ala</h4>
+                                        <div class="material-rarity legendary" data-text-es="Legendaria" data-text-en="Legendary">Legendaria</div>
+                                        <div class="material-crafted">
+                                            <i class="fas fa-hammer"></i>
+                                            <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Receta de fabricación:" data-text-en="Crafting recipe:">Receta de fabricación:</h5>
+                                
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">2x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/catedral/ala-anubis.png');"></div>
+                                    </div>
+                                    <div class="recipe-plus">+</div>
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">10x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/catedral/frasco-anubis.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/spawn/fragmento-ala.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Fragmento de Ala" data-text-en="Wing Fragment">Fragmento de Ala</span>
+                                            <span class="recipe-rarity legendary" data-text-es="Legendaria" data-text-en="Legendary">Legendaria</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Varita del Bosque -->
+                        <div class="material-card expanded" data-dungeon="spawn" data-rarity="legendary" data-type="crafted">
+                            <div class="material-header">
+                                <i class="fas fa-hammer"></i>
+                                <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/spawn/varita-bosque.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Varita del Bosque" data-text-en="Forest Wand">Varita del Bosque</h4>
+                                        <div class="material-rarity legendary" data-text-es="Legendaria" data-text-en="Legendary">Legendaria</div>
+                                        <div class="material-crafted">
+                                            <i class="fas fa-hammer"></i>
+                                            <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Receta de fabricación:" data-text-en="Crafting recipe:">Receta de fabricación:</h5>
+                                
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">2x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/spawn/orbe-bosque.png');"></div>
+                                    </div>
+                                    <div class="recipe-plus">+</div>
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">10x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/cueva/amuleto-perdido.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/spawn/varita-bosque.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Varita del Bosque" data-text-en="Forest Wand">Varita del Bosque</span>
+                                            <span class="recipe-rarity legendary" data-text-es="Legendaria" data-text-en="Legendary">Legendaria</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Ala Demoniaca del Bosque -->
+                        <div class="material-card expanded" data-dungeon="spawn" data-rarity="mythic" data-type="crafted">
+                            <div class="material-header">
+                                <i class="fas fa-hammer"></i>
+                                <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/spawn/ala-demoniaca-bosque.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Ala Demoniaca del Bosque" data-text-en="Demonic Forest Wing">Ala Demoniaca del Bosque</h4>
+                                        <div class="material-rarity mythic" data-text-es="Mítica" data-text-en="Mythic">Mítica</div>
+                                        <div class="material-crafted">
+                                            <i class="fas fa-hammer"></i>
+                                            <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Receta de fabricación:" data-text-en="Crafting recipe:">Receta de fabricación:</h5>
+                                
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">1x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/spawn/fragmento-ala.png');"></div>
+                                    </div>
+                                    <div class="recipe-plus">+</div>
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">2x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/spawn/varita-bosque.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/spawn/ala-demoniaca-bosque.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Ala Demoniaca del Bosque" data-text-en="Demonic Forest Wing">Ala Demoniaca del Bosque</span>
+                                            <span class="recipe-rarity mythic" data-text-es="Mítica" data-text-en="Mythic">Mítica</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Orbe Navideño -->
+                        <div class="material-card expanded" data-dungeon="spawn" data-rarity="legendary" data-type="crafted">
+                            <div class="material-header">
+                                <i class="fas fa-hammer"></i>
+                                <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/spawn/orbe-navideno.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Orbe Navideño" data-text-en="Christmas Orb">Orbe Navideño</h4>
+                                        <div class="material-rarity legendary" data-text-es="Legendaria" data-text-en="Legendary">Legendaria</div>
+                                        <div class="material-crafted">
+                                            <i class="fas fa-hammer"></i>
+                                            <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Receta de fabricación:" data-text-en="Crafting recipe:">Receta de fabricación:</h5>
+                                
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">1x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/spawn/corona-navideno.png');"></div>
+                                    </div>
+                                    <div class="recipe-plus">+</div>
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">10x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/polo-norte/sudadera-navideno.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/spawn/orbe-navideno.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Orbe Navideño" data-text-en="Christmas Orb">Orbe Navideño</span>
+                                            <span class="recipe-rarity legendary" data-text-es="Legendaria" data-text-en="Legendary">Legendaria</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Orbe de Maltherion Corrupto -->
+                        <div class="material-card expanded" data-dungeon="spawn" data-rarity="legendary" data-type="crafted">
+                            <div class="material-header">
+                                <i class="fas fa-hammer"></i>
+                                <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/spawn/orbe-maltherion-corrupto.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Orbe de Maltherion Corrupto" data-text-en="Corrupted Maltherion Orb">Orbe de Maltherion Corrupto</h4>
+                                        <div class="material-rarity legendary" data-text-es="Legendaria" data-text-en="Legendary">Legendaria</div>
+                                        <div class="material-crafted">
+                                            <i class="fas fa-hammer"></i>
+                                            <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Receta de fabricación:" data-text-en="Crafting recipe:">Receta de fabricación:</h5>
+                                
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">1x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/spawn/orbe-maltherion.png');"></div>
+                                    </div>
+                                    <div class="recipe-plus">+</div>
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">4x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/medieval/portal-maltherion.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/spawn/orbe-maltherion-corrupto.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Orbe de Maltherion Corrupto" data-text-en="Corrupted Maltherion Orb">Orbe de Maltherion Corrupto</span>
+                                            <span class="recipe-rarity legendary" data-text-es="Legendaria" data-text-en="Legendary">Legendaria</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Núcleo Final -->
+                        <div class="material-card expanded" data-dungeon="spawn" data-rarity="mythic" data-type="crafted">
+                            <div class="material-header">
+                                <i class="fas fa-hammer"></i>
+                                <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                            </div>
+                            <div class="material-content">
+                                <div class="material-item">
+                                    <div class="material-image" style="background-image: url('../assets/multimedia/img/materials/spawn/nucleo-final.png');"></div>
+                                    <div class="material-info">
+                                        <h4 class="material-name" data-text-es="Núcleo Final" data-text-en="Final Core">Núcleo Final</h4>
+                                        <div class="material-rarity mythic" data-text-es="Mítica" data-text-en="Mythic">Mítica</div>
+                                        <div class="material-crafted">
+                                            <i class="fas fa-hammer"></i>
+                                            <span data-text-es="Material fabricado" data-text-en="Crafted material">Material fabricado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="material-crafting">
+                                <h5 class="crafting-title" data-text-es="Receta de fabricación:" data-text-en="Crafting recipe:">Receta de fabricación:</h5>
+                                
+                                <div class="crafting-recipe">
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">2x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/spawn/orbe-navideno.png');"></div>
+                                    </div>
+                                    <div class="recipe-plus">+</div>
+                                    <div class="recipe-item">
+                                        <span class="recipe-count">1x</span>
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/spawn/orbe-maltherion-corrupto.png');"></div>
+                                    </div>
+                                    <div class="recipe-equals">=</div>
+                                    <div class="recipe-result">
+                                        <div class="recipe-image" style="background-image: url('../assets/multimedia/img/materials/spawn/nucleo-final.png');"></div>
+                                        <div class="recipe-info">
+                                            <span class="recipe-name" data-text-es="Núcleo Final" data-text-en="Final Core">Núcleo Final</span>
+                                            <span class="recipe-rarity mythic" data-text-es="Mítica" data-text-en="Mythic">Mítica</span>
                                         </div>
                                     </div>
                                 </div>

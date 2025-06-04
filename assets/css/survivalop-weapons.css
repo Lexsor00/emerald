@@ -1,0 +1,944 @@
+
+/* =============================================
+    WEAPON TABS SYSTEM
+   ============================================= */
+.weapons-tabs-wrapper {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.weapons-tabs {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+    margin-bottom: -10px;
+    flex-wrap: wrap;
+}
+
+.weapons-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.weapons-tab {
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--wiki-gray);
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    flex: 0 0 auto;
+    font-size: 0.95rem;
+}
+
+.dark-mode .weapons-tab {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.weapons-tab.active {
+    color: var(--wiki-primary);
+    border-bottom-color: var(--wiki-primary);
+}
+
+.dark-mode .weapons-tab.active {
+    background-color: rgba(39, 174, 96, 0.2);
+}
+
+.weapons-tab:hover:not(.active) {
+    color: var(--wiki-dark);
+    background-color: rgba(88, 214, 141, 0.1);
+}
+
+.dark-mode .weapons-tab:hover:not(.active) {
+    color: var(--wiki-primary-light);
+}
+
+.weapons-tab .badge {
+    background-color: var(--wiki-primary-light);
+    color: white;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    margin-left: 0.5rem;
+    font-weight: 700;
+}
+
+.weapons-tab.active .badge {
+    background-color: var(--wiki-primary);
+}
+
+.weapons-tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.weapons-tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =============================================
+    FILTER SYSTEM
+   ============================================= */
+.weapons-filters {
+    background-color: white;
+    border-radius: var(--wiki-border-radius);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--wiki-box-shadow);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .weapons-filters {
+    background-color: var(--wiki-dark-secondary);
+    border-color: rgba(88, 214, 141, 0.2);
+}
+
+.search-box {
+    flex: 1;
+    min-width: 250px;
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 1px solid var(--wiki-gray-200);
+    border-radius: var(--wiki-border-radius);
+    font-size: 0.95rem;
+    transition: var(--wiki-transition);
+    background-color: var(--wiki-light);
+}
+
+.dark-mode .search-box input {
+    background-color: var(--wiki-dark-tertiary);
+    border-color: var(--wiki-dark-border);
+    color: white;
+}
+
+.search-box input:focus {
+    border-color: var(--wiki-primary);
+    box-shadow: 0 0 0 3px rgba(88, 214, 141, 0.2);
+    outline: none;
+}
+
+.search-box i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--wiki-gray);
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-label {
+    font-size: 0.9rem;
+    color: var(--wiki-gray);
+    white-space: nowrap;
+}
+
+.dark-mode .filter-label {
+    color: var(--wiki-gray-600);
+}
+
+.filter-select {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--wiki-gray-200);
+    border-radius: var(--wiki-border-radius);
+    font-size: 0.9rem;
+    background-color: var(--wiki-light);
+    cursor: pointer;
+    transition: var(--wiki-transition);
+    min-width: 120px;
+}
+
+.dark-mode .filter-select {
+    background-color: var(--wiki-dark-tertiary);
+    border-color: var(--wiki-dark-border);
+    color: white;
+}
+
+.filter-select:focus {
+    border-color: var(--wiki-primary);
+    box-shadow: 0 0 0 3px rgba(88, 214, 141, 0.2);
+    outline: none;
+}
+
+.btn-reset {
+    background-color: var(--wiki-gray-100);
+    color: var(--wiki-gray);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--wiki-border-radius);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--wiki-transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dark-mode .btn-reset {
+    background-color: var(--wiki-dark-tertiary);
+    color: var(--wiki-gray-600);
+}
+
+.btn-reset:hover {
+    background-color: var(--wiki-gray-200);
+    color: var(--wiki-dark);
+}
+
+.dark-mode .btn-reset:hover {
+    background-color: var(--wiki-dark-border);
+    color: white;
+}
+
+.btn-reset .reset-text {
+    display: inline-block;
+}
+
+/* =============================================
+    WEAPON CARDS ENHANCED
+   ============================================= */
+.weapon-card {
+    position: relative;
+    background-color: white;
+    border-radius: var(--wiki-border-radius);
+    overflow: hidden;
+    box-shadow: var(--wiki-box-shadow);
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--wiki-primary);
+    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(245,245,245,0.95) 100%);
+}
+
+.dark-mode .weapon-card {
+    background: linear-gradient(135deg, rgba(30,39,46,0.95) 0%, rgba(23,32,39,0.95) 100%);
+    border-left-color: var(--wiki-primary-dark);
+}
+
+.weapon-card:not(.expanded):hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.weapon-card.expanded {
+    display: flex;
+    flex-direction: column;
+}
+
+.weapon-rarity {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-weight: 600;
+    z-index: 2;
+    color: white;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.weapon-rarity.common {
+    background: linear-gradient(135deg, #7f8c8d 0%, #95a5a6 100%);
+}
+
+.weapon-rarity.rare {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+}
+
+.weapon-rarity.epic {
+    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+}
+
+.weapon-rarity.legendary {
+    background: linear-gradient(135deg, #f1c40f 0%, #f39c12 100%);
+    color: #2c3e50;
+}
+
+.weapon-rarity.mythic {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.weapon-rarity.secret {
+    background: linear-gradient(135deg, #636e72 0%, #2d3436 100%);
+}
+
+.weapon-header {
+    display: flex;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--wiki-transition);
+    position: relative;
+}
+
+.weapon-card:not(.expanded) .weapon-header:hover {
+    background-color: rgba(88, 214, 141, 0.1);
+}
+
+.weapon-card:not(.expanded) .weapon-header:hover .weapon-name {
+    color: var(--wiki-primary);
+}
+
+.weapon-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 3px solid var(--wiki-primary-light);
+    flex-shrink: 0;
+    transition: var(--wiki-transition);
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.dark-mode .weapon-image {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.weapon-card:hover .weapon-image {
+    border-color: var(--wiki-primary);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.weapon-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 50%);
+    border-radius: 8px;
+}
+
+.weapon-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.weapon-name {
+    font-size: 1.4rem;
+    color: var(--wiki-dark);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    transition: var(--wiki-transition);
+    position: relative;
+    display: inline-block;
+}
+
+.weapon-name::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--wiki-primary);
+    transition: width 0.3s ease;
+}
+
+.weapon-card:not(.expanded):hover .weapon-name::after {
+    width: 100%;
+}
+
+.dark-mode .weapon-name {
+    color: var(--wiki-primary-light);
+}
+
+.weapon-stats {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.weapon-stat {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--wiki-gray);
+}
+
+.dark-mode .weapon-stat {
+    color: var(--wiki-gray-600);
+}
+
+.weapon-stat i {
+    color: var(--wiki-primary);
+    font-size: 1rem;
+}
+
+/* Enhanced stats */
+.weapon-stats-enhanced {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.stat-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--wiki-gray);
+    width: 70px;
+    font-weight: 500;
+}
+
+.dark-mode .stat-label {
+    color: var(--wiki-gray-600);
+}
+
+.stat-progress {
+    flex: 1;
+    height: 8px;
+    background-color: var(--wiki-gray-100);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.dark-mode .stat-progress {
+    background-color: var(--wiki-dark-tertiary);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.stat-progress-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.damage .stat-progress-fill {
+    background: linear-gradient(90deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.speed .stat-progress-fill {
+    background: linear-gradient(90deg, #3498db 0%, #2980b9 100%);
+}
+.fortune .stat-progress-fill {
+    background: linear-gradient(90deg, #A57DE0 0%, #8E4BF2 100%);
+}
+
+.durability .stat-progress-fill {
+    background: linear-gradient(90deg, #27ae60 0%, #219653 100%);
+}
+
+.stat-value {
+    font-size: 0.8rem;
+    color: var(--wiki-gray);
+    width: 40px;
+    text-align: right;
+    font-weight: 600;
+}
+
+.dark-mode .stat-value {
+    color: var(--wiki-gray-600);
+}
+
+/* Enchantments */
+.weapon-enchantments {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.enchantment-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+
+.enchantment-badge:hover {
+    transform: translateY(-2px);
+}
+
+.enchantment-badge.sharpness {
+    background: linear-gradient(135deg, #e74c3c 0%, #d63031 100%);
+    border: 1px solid #d63031;
+}
+
+.enchantment-badge.unbreaking {
+    background: linear-gradient(135deg, #63E772 0%, #5FE28E 100%);
+    border: 1px solid #5FE28E;
+}
+
+.enchantment-badge.looting {
+    background: linear-gradient(135deg, #fdcb6e 0%, #e17055 100%);
+    border: 1px solid #e17055;
+}
+
+.enchantment-badge.sweeping {
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+    border: 1px solid #0984e3;
+}
+
+.enchantment-badge.abyss {
+    background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+    border: 1px solid #6c5ce7;
+}
+
+.enchantment-badge.gladiator {
+    background: linear-gradient(135deg, #fab1a0 0%, #e74c3c 100%);
+    border: 1px solid #e74c3c;
+}
+
+.enchantment-badge.xp {
+    background: linear-gradient(135deg, #BD9FEB 0%, #9863E7 100%);
+    border: 1px solid #9863E7;
+}
+
+.enchantment-badge.ice-aspect {
+    background: linear-gradient(135deg, #A1EDFF 0%, #49CEFF 100%);
+    border: 1px solid #49CEFF;
+}
+
+.enchantment-badge.blindness {
+    background: linear-gradient(135deg, #A1B3BA 0%, #5B6466 100%);
+    border: 1px solid #5B6466;
+}
+.enchantment-badge.sovereing {
+    background: linear-gradient(135deg, #7C94FF 0%, #5B51FF 100%);
+    border: 1px solid #5B51FF;
+}
+
+.enchantment-badge i {
+    font-size: 0.8rem;
+}
+
+/* Weapon content */
+.weapon-content {
+    padding: 0 1.5rem 1.5rem;
+    display: none;
+}
+
+.weapon-card.expanded .weapon-content {
+    display: block;
+}
+
+.weapon-desc {
+    color: var(--wiki-gray);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.dark-mode .weapon-desc {
+    color: var(--wiki-gray-600);
+}
+
+/* =============================================
+    WEAPON CRAFTING ENHANCED STYLES
+   ============================================= */
+.weapon-crafting {
+    background: linear-gradient(135deg, rgba(241, 196, 15, 0.05) 0%, rgba(241, 196, 15, 0.1) 100%);
+    border-radius: var(--wiki-border-radius);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.dark-mode .weapon-crafting {
+    background: linear-gradient(135deg, rgba(241, 196, 15, 0.1) 0%, rgba(241, 196, 15, 0.15) 100%);
+    border-color: rgba(88, 214, 141, 0.2);
+}
+
+.crafting-title {
+    font-size: 1.1rem;
+    color: var(--wiki-secondary);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 600;
+}
+
+.dark-mode .crafting-title {
+    color: var(--wiki-secondary-light);
+}
+
+.crafting-station {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: var(--wiki-dark);
+    font-weight: 500;
+}
+
+.dark-mode .crafting-station {
+    color: var(--wiki-gray-800);
+}
+
+.crafting-recipe {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.recipe-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: white;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+    border-radius: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid var(--wiki-gray-100);
+}
+
+.dark-mode .recipe-item {
+    background: var(--wiki-dark-tertiary);
+    border-color: var(--wiki-dark-border);
+}
+
+.recipe-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.recipe-image {
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    border: 2px solid var(--wiki-gray-200);
+    transition: all 0.3s ease;
+    background-color: white;
+    padding: 3px;
+}
+
+.dark-mode .recipe-image {
+    border-color: var(--wiki-dark-border);
+    background-color: var(--wiki-dark-tertiary);
+}
+
+.recipe-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--wiki-dark);
+    transition: color 0.3s ease;
+}
+
+.dark-mode .recipe-name {
+    color: var(--wiki-gray-900);
+}
+
+.recipe-count {
+    font-weight: 700;
+    color: var(--wiki-primary);
+    font-size: 0.95rem;
+    min-width: 30px;
+    text-align: center;
+}
+
+.recipe-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    border-color: var(--wiki-primary-light);
+}
+
+.recipe-item:hover .recipe-image {
+    transform: scale(1.1) rotate(5deg);
+    border-color: var(--wiki-primary);
+}
+
+.recipe-item:hover .recipe-name {
+    color: var(--wiki-primary);
+}
+
+/* =============================================
+    WEAPON ATTRIBUTES ENHANCED STYLES
+   ============================================= */
+.weapon-attributes {
+    background: linear-gradient(135deg, rgba(88, 214, 141, 0.05) 0%, rgba(88, 214, 141, 0.1) 100%);
+    border-radius: var(--wiki-border-radius);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .weapon-attributes {
+    background: linear-gradient(135deg, rgba(39, 174, 96, 0.1) 0%, rgba(39, 174, 96, 0.15) 100%);
+    border-color: rgba(88, 214, 141, 0.2);
+}
+
+.attributes-title {
+    font-size: 1.1rem;
+    color: var(--wiki-primary);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 600;
+}
+
+.attributes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.attribute-item {
+    display: flex;
+    gap: 1rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: var(--wiki-border-radius);
+    transition: all 0.3s ease;
+    border: 1px solid var(--wiki-gray-100);
+}
+
+.dark-mode .attribute-item {
+    background: rgba(30, 41, 59, 0.3);
+    border-color: var(--wiki-dark-border);
+}
+
+.attribute-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background: rgba(255, 255, 255, 0.7);
+    border-color: var(--wiki-primary-light);
+}
+
+.dark-mode .attribute-item:hover {
+    background: rgba(30, 41, 59, 0.5);
+}
+
+.attribute-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--wiki-primary-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.attribute-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.attribute-value {
+    font-weight: 700;
+    color: var(--wiki-dark);
+    font-size: 0.95rem;
+}
+
+.dark-mode .attribute-value {
+    color: var(--wiki-gray-900);
+}
+
+.attribute-description {
+    font-size: 0.8rem;
+    color: var(--wiki-gray);
+    opacity: 0.8;
+}
+
+.dark-mode .attribute-description {
+    color: var(--wiki-gray-800);
+}
+
+/* =============================================
+    RESPONSIVE ADJUSTMENTS
+   ============================================= */
+@media (max-width: 992px) {
+    .weapon-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .weapon-stats {
+        justify-content: center;
+    }
+    
+    .weapon-image {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .weapons-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-box {
+        min-width: 100%;
+    }
+    
+    .filter-group {
+        width: 100%;
+    }
+    
+    .filter-select {
+        flex: 1;
+    }
+    
+    .weapons-tabs {
+        flex-direction: column;
+        border-bottom: none;
+        gap: 0.5rem;
+        padding-bottom: 0;
+        margin-bottom: 1.5rem;
+    }
+    
+    .weapons-tab {
+        border-bottom: none;
+        border-left: 3px solid transparent;
+        padding: 0.75rem 1rem;
+        justify-content: space-between;
+        border-radius: var(--wiki-border-radius);
+        background-color: var(--wiki-gray-100);
+    }
+    
+    .dark-mode .weapons-tab {
+        background-color: var(--wiki-dark-tertiary);
+    }
+    
+    .weapons-tab.active {
+        border-left-color: var(--wiki-primary);
+        background-color: rgba(88, 214, 141, 0.1);
+    }
+    
+    .dark-mode .weapons-tab.active {
+        background-color: rgba(39, 174, 96, 0.2);
+    }
+    
+    .weapons-tab .badge {
+        margin-left: auto;
+        margin-right: 0.5rem;
+    }
+    
+    .weapon-stats {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .crafting-recipe {
+        justify-content: center;
+    }
+
+
+    .attributes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .attribute-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+    
+    .attribute-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+    
+    .attribute-content {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .weapon-name {
+        font-size: 1.25rem;
+    }
+    
+    .weapon-stats-enhanced {
+        margin-top: 1.5rem;
+    }
+    
+    .weapons-tab {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .weapons-tab .badge {
+        font-size: 0.65rem;
+        padding: 0.15rem 0.4rem;
+    }
+    
+    .recipe-item {
+        min-width: 70px;
+        padding: 0.5rem;
+    }
+    
+    .recipe-item img {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .attribute-item {
+        padding: 0.75rem;
+    }
+    
+    .weapon-attributes {
+        padding: 1rem;
+    }
+    
+    .attributes-title {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+}
